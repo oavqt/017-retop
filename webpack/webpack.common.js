@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const theCommonConfig = {
   entry: './src/index.tsx',
@@ -27,6 +28,17 @@ const theCommonConfig = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       title: 'le cvlevc'
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        diagnosticOptions: {
+          semantic: true,
+          syntactic: true
+        },
+        eslint: {
+          files: './src/**/*.{tsx,ts,jsx,js}'
+        }
+      }
     })
   ],
   resolve: {
