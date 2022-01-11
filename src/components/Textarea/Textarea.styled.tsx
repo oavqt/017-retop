@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 
-interface inputAttrs {
-  type: string;
+interface textareaAttrs {
   placeholder: string;
 }
 
-const Input = styled.input.attrs((props: inputAttrs) => {
-  type: props.type;
+const Textarea = styled.textarea.attrs((props: textareaAttrs) => {
   placeholder: props.placeholder;
 })`
   border: none;
   border-bottom: 0.15em solid #f5cac3;
-  height: 1.5em;
+  height: 5em;
   outline: none;
+  resize: none;
 
   :focus {
     outline: none;
   }
 `;
 
-export default Input;
+export default Textarea;

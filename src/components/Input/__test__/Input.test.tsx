@@ -4,7 +4,9 @@ import Input from '../Input';
 describe('Input component', () => {
   test('expect a Input component to be created', () => {
     render(<Input placeholder='test' />);
+
     const input = screen.getByPlaceholderText('test');
+
     expect(input).not.toBeInTheDocument;
   });
 
