@@ -1,9 +1,9 @@
-const theCommonConfig = require('./webpack.common');
+const commonConfig = require('./webpack.common');
 
 const { merge } = require('webpack-merge');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-theDevConfig = {
+devConfig = {
   devServer: {
     hot: true,
     open: true
@@ -29,4 +29,4 @@ theDevConfig = {
   plugins: [new ReactRefreshWebpackPlugin()]
 };
 
-module.exports = merge(theCommonConfig, theDevConfig);
+module.exports = merge(commonConfig, devConfig);

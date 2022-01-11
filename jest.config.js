@@ -1,6 +1,7 @@
-const theJestConfig = {
+const jestConfig = {
+  setupFilesAfterEnv: ['./src/__test__/jest.setup.tsx'],
   testEnvironment: 'jsdom',
   verbose: true
 };
 
-module.exports = theJestConfig;
+module.exports = jestConfig;

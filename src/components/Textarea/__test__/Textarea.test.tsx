@@ -3,20 +3,18 @@ import Textarea from '../Textarea';
 
 describe('Textarea component', () => {
   test('expect a Textarea component to be created', () => {
-    render(<Textarea placeholder='test' />);
+    render(<Textarea placeholder='placeholder' />);
 
-    const textarea = screen.getByPlaceholderText('test');
+    const textarea = screen.getByPlaceholderText('placeholder');
 
-    expect(textarea).not.toBeInTheDocument;
+    expect(textarea).toBeInTheDocument();
   });
 
   test('expect a Textarea component with type, placeholder, and etc... attrs', () => {
     render(<Textarea placeholder='placeholder' />);
 
-    const textarea = screen.getByPlaceholderText(
-      'placeholder'
-    ) as HTMLInputElement;
+    const textarea = screen.getByPlaceholderText('placeholder');
 
-    expect(textarea.placeholder).toBe('placeholder');
+    expect(textarea).toHaveAttribute('placeholder', 'placeholder');
   });
 });

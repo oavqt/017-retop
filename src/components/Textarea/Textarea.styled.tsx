@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-interface textareaAttrs {
-  placeholder: string;
-}
-
-const Textarea = styled.textarea.attrs((props: textareaAttrs) => {
+const TextareaStyled = styled.textarea.attrs((props) => {
   placeholder: props.placeholder;
 })`
   border: none;
@@ -18,4 +14,4 @@ const Textarea = styled.textarea.attrs((props: textareaAttrs) => {
   }
 `;
 
-export default Textarea;
+export default TextareaStyled;

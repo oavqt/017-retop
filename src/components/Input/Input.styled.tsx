@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 
-interface inputAttrs {
-  type: string;
-  placeholder: string;
-}
-
-const Input = styled.input.attrs((props: inputAttrs) => {
+const InputStyled = styled.input.attrs((props) => {
   type: props.type;
   placeholder: props.placeholder;
 })`
@@ -19,4 +14,4 @@ const Input = styled.input.attrs((props: inputAttrs) => {
   }
 `;
 
-export default Input;
+export default InputStyled;

@@ -3,21 +3,19 @@ import Input from '../Input';
 
 describe('Input component', () => {
   test('expect a Input component to be created', () => {
-    render(<Input placeholder='test' />);
+    render(<Input placeholder='placeholder' />);
 
-    const input = screen.getByPlaceholderText('test');
+    const input = screen.getByPlaceholderText('placeholder');
 
-    expect(input).not.toBeInTheDocument;
+    expect(input).toBeInTheDocument();
   });
 
   test('expect a Input component with type, placeholder, and etc... attrs', () => {
     render(<Input type='text' placeholder='placeholder' />);
 
-    const input = screen.getByPlaceholderText(
-      'placeholder'
-    ) as HTMLInputElement;
+    const input = screen.getByPlaceholderText('placeholder');
 
-    expect(input.type).toBe('text');
-    expect(input.placeholder).toBe('placeholder');
+    expect(input).toHaveAttribute('type', 'text');
+    expect(input).toHaveAttribute('placeholder', 'placeholder');
   });
 });

@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
-const theCommonConfig = {
+const commonConfig = {
   entry: './src/index.tsx',
   module: {
     rules: [
@@ -46,4 +46,4 @@ const theCommonConfig = {
   }
 };
 
-module.exports = theCommonConfig;
+module.exports = commonConfig;
