@@ -1,6 +1,6 @@
 {
-  "trailingComma": "none",
-  "singleQuote": true,
+  "endOfLine": "auto",
   "jsxSingleQuote": true,
-  "endOfLine": "auto"
+  "singleQuote": true,
+  "trailingComma": "none"
 }

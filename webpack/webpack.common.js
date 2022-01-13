@@ -25,10 +25,6 @@ const commonConfig = {
     path: path.resolve(__dirname, '../dist')
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      title: 'le cvlevc'
-    }),
     new ForkTsCheckerWebpackPlugin({
       typescript: {
         diagnosticOptions: {
@@ -39,6 +35,10 @@ const commonConfig = {
           files: './src/**/*.{tsx,ts,jsx,js}'
         }
       }
+    }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      title: 'le cvlevc'
     })
   ],
   resolve: {
