@@ -1,8 +1,13 @@
-import React from 'react';
+import { Component, ReactNode } from 'react';
+import FieldPersonal from './components/fieldsets/FieldPersonal/FieldPersonal';
 
-class App extends React.Component {
-  render(): React.ReactNode {
-    return <div></div>;
+class App extends Component {
+  render(): ReactNode {
+    return (
+      <div>
+        <FieldPersonal />
+      </div>
+    );
   }
 }
 

@@ -3,7 +3,7 @@ import Textarea from '../Textarea';
 
 describe('Textarea component', () => {
   test('expect a Textarea component to be created', () => {
-    render(<Textarea placeholder='placeholder' />);
+    render(<Textarea attrs={{ placeholder: 'placeholder' }} />);
 
     const textarea = screen.getByPlaceholderText('placeholder');
 
@@ -11,7 +11,7 @@ describe('Textarea component', () => {
   });
 
   test('expect a Textarea component with type, placeholder, and etc... attrs', () => {
-    render(<Textarea placeholder='placeholder' />);
+    render(<Textarea attrs={{ placeholder: 'placeholder' }} />);
 
     const textarea = screen.getByPlaceholderText('placeholder');
 
