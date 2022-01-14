@@ -19,4 +19,12 @@ describe('FieldEducationGroup component', () => {
       expect(FieldEducationGroupElement).toBeInTheDocument();
     }
   );
+
+  test('expeact a FieldEducationGroup component to be created with a ButtonAdd component', () => {
+    render(<FieldEducationGroup />);
+
+    const buttonAdd = screen.getByRole('button');
+
+    expect(buttonAdd).toBeInTheDocument();
+  });
 });

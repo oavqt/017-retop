@@ -7,7 +7,9 @@ const InputStyled = styled.input.attrs((props: input) => ({
 }))`
   border: none;
   border-bottom: 0.15em solid #f5cac3;
+  border-bottom-style: dashed;
   height: 1.5em;
+  margin: 0.2em 0;
   outline: none;
 
   ::placeholder {

@@ -6,13 +6,16 @@ const LabelStyled = styled.label.attrs((props: label) => ({
 }))`
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 const LabelFileStyled = styled(LabelStyled)`
-  border-bottom: 0.15em solid #f5cac3;
+  border: transparent;
+  border-radius: 0.2em;
   color: #0101015c;
   font-size: 1rem;
   height: 1.5em;
+  margin: 0.2em 0;
 `;
 
 export { LabelFileStyled };

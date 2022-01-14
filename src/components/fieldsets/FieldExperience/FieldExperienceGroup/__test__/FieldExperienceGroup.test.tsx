@@ -19,4 +19,12 @@ describe('FieldExperienceGroup component', () => {
       expect(FieldExperienceGroupElement).toBeInTheDocument();
     }
   );
+
+  test('expeact a FieldExperienceGroup component to be created with a ButtonAdd component', () => {
+    render(<FieldExperienceGroup />);
+
+    const buttonAdd = screen.getByRole('button');
+
+    expect(buttonAdd).toBeInTheDocument();
+  });
 });

@@ -6,7 +6,9 @@ const TextareaStyled = styled.textarea.attrs((props: textarea) => ({
 }))`
   border: none;
   border-bottom: 0.15em solid #f5cac3;
+  border-bottom-style: dashed;
   height: 5em;
+  margin: 0.2em 0;
   outline: none;
   resize: none;
 

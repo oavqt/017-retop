@@ -9,7 +9,7 @@ class FieldPersonal extends Component {
   render(): ReactElement {
     return (
       <FieldPersonalStyled>
-        <Legend>Personal information</Legend>
+        <Legend>personal information</Legend>
         <Input attrs={{ placeholder: 'first name', type: 'text' }} />
         <Input attrs={{ placeholder: 'last name', type: 'text' }} />
         <Input attrs={{ placeholder: 'title', type: 'text' }} />

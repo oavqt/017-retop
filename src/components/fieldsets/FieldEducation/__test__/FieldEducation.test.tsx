@@ -9,4 +9,14 @@ describe('FieldEducation component', () => {
 
     expect(fieldEducation).toBeInTheDocument();
   });
+
+  test('expeact a FieldExperience component to be created with a ButtonAdd component', () => {
+    render(<FieldEducation />);
+
+    const buttonAdd = screen.getByText('add');
+
+    expect(buttonAdd).toBeInTheDocument();
+    expect(buttonAdd).toHaveProperty('type', 'button');
+    expect(buttonAdd).toHaveValue('add');
+  });
 });
