@@ -1,11 +1,11 @@
 import { Component, ReactNode } from 'react';
-import Form from './components/Form/Form';
+import Resume from './components/Resume/Resume';
 
 class App extends Component {
   render(): ReactNode {
     return (
       <div>
-        <Form />
+        <Resume />
       </div>
     );
   }

@@ -3,6 +3,14 @@ import Form from '../Form';
 
 describe('Form component', () => {
   test('expect a Form component to be created', () => {
+    render(<Form attrs={{ ['data-testid']: 'form' }} />);
+
+    const form = screen.getByTestId('form');
+
+    expect(form).toBeInTheDocument();
+  });
+
+  test('expect three fieldset components to be in the Form component', () => {
     render(<Form />);
 
     const fieldsets = screen.getAllByRole('group');

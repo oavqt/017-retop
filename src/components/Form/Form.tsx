@@ -10,7 +10,7 @@ import FormPersonal from './FormPersonal/FormPersonal';
 
 interface form {
   attrs?: {
-    target?: string;
+    ['data-testid']?: string;
   };
   form?: {
     personal?: {
@@ -29,7 +29,7 @@ interface form {
       date?: string;
       description?: string;
     };
-    educational?: {
+    education?: {
       degree?: string;
       university?: string;
       date?: string;
@@ -41,10 +41,10 @@ interface form {
 class Form extends Component<form> {
   render(): ReactNode {
     return (
-      <FormStyled>
-        <FormPersonal />
-        <FormExperience />
-        <FormEducation />
+      <FormStyled {...this.props.attrs}>
+        <FormPersonal {...this.props.form?.personal} />
+        <FormExperience {...this.props.form?.experience} />
+        <FormEducation {...this.props.form?.education} />
         <ButtonReset attrs={{ type: 'button', value: 'reset' }}>
           reset
         </ButtonReset>
