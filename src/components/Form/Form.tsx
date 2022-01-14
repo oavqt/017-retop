@@ -1,4 +1,8 @@
 import { Component, ReactNode } from 'react';
+
+import ButtonExample from '../Utils/Button/ButtonExample/ButtonExample';
+import ButtonPrint from '../Utils/Button/ButtonPrint/ButtonPrint';
+import ButtonReset from '../Utils/Button/ButtonReset/ButtonReset';
 import FormStyled from './Form.styled';
 import FormEducation from './FormEducation/FormEducation';
 import FormExperience from './FormExperience/FormExperience';
@@ -41,6 +45,15 @@ class Form extends Component<form> {
         <FormPersonal />
         <FormExperience />
         <FormEducation />
+        <ButtonReset attrs={{ type: 'button', value: 'reset' }}>
+          reset
+        </ButtonReset>
+        <ButtonExample attrs={{ type: 'button', value: 'example' }}>
+          example
+        </ButtonExample>
+        <ButtonPrint attrs={{ type: 'button', value: 'print' }}>
+          print
+        </ButtonPrint>
       </FormStyled>
     );
   }

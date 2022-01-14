@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import ButtonStyled from '../Button.styled';
 
-const ButtonAddStyled = styled(ButtonStyled)`
+const ButtonResetStyled = styled(ButtonStyled)`
   align-self: center;
-  background: #84a59d;
+  background: #f28482;
   color: #fff;
-  width: 100%;
+  width: 75%;
 `;
 
-export default ButtonAddStyled;
+export default ButtonResetStyled;
