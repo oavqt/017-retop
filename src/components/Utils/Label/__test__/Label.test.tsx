@@ -3,25 +3,25 @@ import Label, { LabelFile } from '../Label';
 
 describe('Label component', () => {
   test('expect a Label component to be created', () => {
-    render(<Label>Personal Information</Label>);
+    render(<Label>FormPersonal Information</Label>);
 
-    const label = screen.getByText('Personal Information');
+    const label = screen.getByText('FormPersonal Information');
 
     expect(label).toBeInTheDocument();
   });
 
   test('expect a Label component with text', () => {
-    render(<Label text='Personal Information' />);
+    render(<Label text='FormPersonal Information' />);
 
-    const label = screen.getByText('Personal Information');
+    const label = screen.getByText('FormPersonal Information');
 
     expect(label).toBeInTheDocument();
   });
 
   test('expect a Label component with form, for, and etc... attrs', () => {
-    render(<Label attrs={{ htmlFor: 'for' }}>Personal Information</Label>);
+    render(<Label attrs={{ htmlFor: 'for' }}>FormPersonal Information</Label>);
 
-    const label = screen.getByText('Personal Information');
+    const label = screen.getByText('FormPersonal Information');
 
     expect(label).toHaveAttribute('for', 'for');
   });
@@ -29,27 +29,27 @@ describe('Label component', () => {
 
 describe('LabelFile component', () => {
   test('expect a Label component to be created', () => {
-    render(<LabelFile>Personal Information</LabelFile>);
+    render(<LabelFile>FormPersonal Information</LabelFile>);
 
-    const label = screen.getByText('Personal Information');
+    const label = screen.getByText('FormPersonal Information');
 
     expect(label).toBeInTheDocument();
   });
 
   test('expect a LabelFile component with text', () => {
-    render(<LabelFile text='Personal Information' />);
+    render(<LabelFile text='FormPersonal Information' />);
 
-    const label = screen.getByText('Personal Information');
+    const label = screen.getByText('FormPersonal Information');
 
     expect(label).toBeInTheDocument();
   });
 
   test('expect a Label component with form, for, and etc... attrs', () => {
     render(
-      <LabelFile attrs={{ htmlFor: 'for' }}>Personal Information</LabelFile>
+      <LabelFile attrs={{ htmlFor: 'for' }}>FormPersonal Information</LabelFile>
     );
 
-    const label = screen.getByText('Personal Information');
+    const label = screen.getByText('FormPersonal Information');
 
     expect(label).toHaveAttribute('for', 'for');
   });

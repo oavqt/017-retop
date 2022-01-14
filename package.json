@@ -1,7 +1,7 @@
 {
-  "name": "017-cvtop",
+  "name": "017-retop",
   "version": "123",
-  "description": "017-cvtop",
+  "description": "017-retop",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",

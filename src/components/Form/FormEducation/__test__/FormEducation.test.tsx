@@ -1,17 +1,17 @@
 import { render, screen } from '@testing-library/react';
-import FieldEducation from '../FieldEducation';
+import FormEducation from '../FormEducation';
 
-describe('FieldEducation component', () => {
-  test('expect a FieldEducation component to be created', () => {
-    render(<FieldEducation />);
+describe('FormEducation component', () => {
+  test('expect a FormEducation component to be created', () => {
+    render(<FormEducation />);
 
     const fieldEducation = screen.getByRole('group');
 
     expect(fieldEducation).toBeInTheDocument();
   });
 
-  test('expeact a FieldExperience component to be created with a ButtonAdd component', () => {
-    render(<FieldEducation />);
+  test('expeact a FormExperience component to be created with a ButtonAdd component', () => {
+    render(<FormEducation />);
 
     const buttonAdd = screen.getByText('add');
 

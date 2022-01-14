@@ -1,14 +1,14 @@
 import { Component, ReactElement } from 'react';
 
-import Input, { InputFile } from '../../elements/Input/Input';
-import Legend from '../../elements/Legend/Legend';
-import Textarea from '../../elements/Textarea/Textarea';
-import FieldPersonalStyled from './FieldPersonal.styled';
+import Input, { InputFile } from '../../Utils/Input/Input';
+import Legend from '../../Utils/Legend/Legend';
+import Textarea from '../../Utils/Textarea/Textarea';
+import FormPersonalStyled from './FormPersonal.styled';
 
-class FieldPersonal extends Component {
+class FormPersonal extends Component {
   render(): ReactElement {
     return (
-      <FieldPersonalStyled>
+      <FormPersonalStyled>
         <Legend>personal information</Legend>
         <Input attrs={{ placeholder: 'first name', type: 'text' }} />
         <Input attrs={{ placeholder: 'last name', type: 'text' }} />
@@ -21,9 +21,9 @@ class FieldPersonal extends Component {
         <Input attrs={{ placeholder: 'phone number', type: 'text' }} />
         <Input attrs={{ placeholder: 'email', type: 'text' }} />
         <Textarea attrs={{ placeholder: 'description' }} />
-      </FieldPersonalStyled>
+      </FormPersonalStyled>
     );
   }
 }
 
-export default FieldPersonal;
+export default FormPersonal;

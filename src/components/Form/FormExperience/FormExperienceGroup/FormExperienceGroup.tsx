@@ -1,9 +1,9 @@
 import { Component, Fragment, ReactNode } from 'react';
-import { ButtonRemove } from '../../../elements/Button/Button';
-import Input from '../../../elements/Input/Input';
-import Textarea from '../../../elements/Textarea/Textarea';
+import { ButtonRemove } from '../../../Utils/Button/Button';
+import Input from '../../../Utils/Input/Input';
+import Textarea from '../../../Utils/Textarea/Textarea';
 
-class FieldExperienceGroup extends Component {
+class FormExperienceGroup extends Component {
   render(): ReactNode {
     return (
       <Fragment>
@@ -19,4 +19,4 @@ class FieldExperienceGroup extends Component {
   }
 }
 
-export default FieldExperienceGroup;
+export default FormExperienceGroup;
