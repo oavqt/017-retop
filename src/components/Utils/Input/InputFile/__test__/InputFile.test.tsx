@@ -1,9 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import Input from '../Input';
+import { screen, render } from '@testing-library/react';
+import InputFile from '../InputFile';
 
-describe('Input component', () => {
+describe('InputFile component', () => {
   test('expect a Input component to be created', () => {
-    render(<Input attrs={{ placeholder: 'placeholder' }} />);
+    render(<InputFile attrs={{ type: 'file', placeholder: 'placeholder' }} />);
 
     const input = screen.getByPlaceholderText('placeholder');
 
@@ -11,11 +11,11 @@ describe('Input component', () => {
   });
 
   test('expect a Input component with type, placeholder, and etc... attrs', () => {
-    render(<Input attrs={{ type: 'text', placeholder: 'placeholder' }} />);
+    render(<InputFile attrs={{ type: 'file', placeholder: 'placeholder' }} />);
 
     const input = screen.getByPlaceholderText('placeholder');
 
-    expect(input).toHaveAttribute('type', 'text');
+    expect(input).toHaveAttribute('type', 'file');
     expect(input).toHaveAttribute('placeholder', 'placeholder');
   });
 });

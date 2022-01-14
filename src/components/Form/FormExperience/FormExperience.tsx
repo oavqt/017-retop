@@ -3,7 +3,7 @@ import { Component, ReactElement } from 'react';
 import FormExperienceStyled from './FormExperience.styled';
 import FormExperienceGroup from './FormExperienceGroup/FormExperienceGroup';
 import Legend from '../../Utils/Legend/Legend';
-import { ButtonAdd } from '../../Utils/Button/Button';
+import ButtonAdd from '../../Utils/Button/ButtonAdd/ButtonAdd';
 
 class FormExperience extends Component {
   render(): ReactElement {

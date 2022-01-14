@@ -1,6 +1,6 @@
 import { Component, ReactNode } from 'react';
-import Label, { LabelFile } from '../Label/Label';
-import InputStyled, { InputFileStyled } from './Input.styled';
+import Label from '../Label/Label';
+import InputStyled from './Input.styled';
 
 interface input {
   attrs?: {
@@ -32,18 +32,5 @@ class Input extends Component<input> {
   }
 }
 
-class InputFile extends Input {
-  render(): ReactNode {
-    return (
-      <LabelFile
-        attrs={{ htmlFor: this.props.label?.htmlFor || this.props.attrs?.id }}
-        text={this.props.label?.text}
-      >
-        <InputFileStyled {...this.props} />
-      </LabelFile>
-    );
-  }
-}
-
-export { InputFile, type input };
+export { type input };
 export default Input;

@@ -1,5 +1,5 @@
 import { Component, ReactNode } from 'react';
-import LabelStyled, { LabelFileStyled } from './Label.styled';
+import LabelStyled from './Label.styled';
 
 interface label {
   attrs?: {
@@ -23,16 +23,5 @@ class Label extends Component<label> {
   }
 }
 
-class LabelFile extends Label {
-  render(): ReactNode {
-    return (
-      <LabelFileStyled {...this.props}>
-        {this.props.text}
-        {this.props.children}
-      </LabelFileStyled>
-    );
-  }
-}
-
-export { LabelFile, type label };
+export { type label };
 export default Label;

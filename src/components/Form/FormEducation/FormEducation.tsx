@@ -3,7 +3,7 @@ import { Component, ReactElement } from 'react';
 import FormEducationStyled from './FormEducation.styled';
 import FormEducationGroup from './FormEducationGroup/FormEducationGroup';
 import Legend from '../../Utils/Legend/Legend';
-import { ButtonAdd } from '../../Utils/Button/Button';
+import ButtonAdd from '../../Utils/Button/ButtonAdd/ButtonAdd';
 
 class FormEducation extends Component {
   render(): ReactElement {

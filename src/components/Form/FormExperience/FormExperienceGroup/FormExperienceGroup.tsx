@@ -1,5 +1,5 @@
 import { Component, Fragment, ReactNode } from 'react';
-import { ButtonRemove } from '../../../Utils/Button/Button';
+import ButtonRemove from '../../../Utils/Button/ButtonRemove/ButtonRemove';
 import Input from '../../../Utils/Input/Input';
 import Textarea from '../../../Utils/Textarea/Textarea';
 

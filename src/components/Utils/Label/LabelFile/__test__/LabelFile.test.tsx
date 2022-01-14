@@ -1,17 +1,17 @@
 import { render, screen } from '@testing-library/react';
-import Label from '../Label';
+import LabelFile from '../LabelFile';
 
-describe('Label component', () => {
+describe('LabelFile component', () => {
   test('expect a Label component to be created', () => {
-    render(<Label>FormPersonal Information</Label>);
+    render(<LabelFile>FormPersonal Information</LabelFile>);
 
     const label = screen.getByText('FormPersonal Information');
 
     expect(label).toBeInTheDocument();
   });
 
-  test('expect a Label component with text', () => {
-    render(<Label text='FormPersonal Information' />);
+  test('expect a LabelFile component with text', () => {
+    render(<LabelFile text='FormPersonal Information' />);
 
     const label = screen.getByText('FormPersonal Information');
 
@@ -19,7 +19,9 @@ describe('Label component', () => {
   });
 
   test('expect a Label component with form, for, and etc... attrs', () => {
-    render(<Label attrs={{ htmlFor: 'for' }}>FormPersonal Information</Label>);
+    render(
+      <LabelFile attrs={{ htmlFor: 'for' }}>FormPersonal Information</LabelFile>
+    );
 
     const label = screen.getByText('FormPersonal Information');
 

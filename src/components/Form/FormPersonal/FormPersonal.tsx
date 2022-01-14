@@ -1,6 +1,7 @@
 import { Component, ReactElement } from 'react';
 
-import Input, { InputFile } from '../../Utils/Input/Input';
+import Input from '../../Utils/Input/Input';
+import InputFile from '../../Utils/Input/InputFile/InputFile';
 import Legend from '../../Utils/Legend/Legend';
 import Textarea from '../../Utils/Textarea/Textarea';
 import FormPersonalStyled from './FormPersonal.styled';

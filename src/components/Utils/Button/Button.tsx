@@ -1,8 +1,5 @@
 import { Component, ReactNode } from 'react';
-import ButtonStyled, {
-  ButtonAddStyled,
-  ButtonRemoveStyled
-} from './Button.styled';
+import ButtonStyled from './Button.styled';
 
 interface button {
   attrs?: {
@@ -21,17 +18,5 @@ class Button extends Component<button> {
   }
 }
 
-class ButtonAdd extends Button {
-  render(): ReactNode {
-    return <ButtonAddStyled {...this.props} />;
-  }
-}
-
-class ButtonRemove extends Button {
-  render(): ReactNode {
-    return <ButtonRemoveStyled {...this.props} />;
-  }
-}
-
-export { ButtonAdd, ButtonRemove, type button };
+export { type button };
 export default Button;

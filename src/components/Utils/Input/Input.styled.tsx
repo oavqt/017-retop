@@ -21,9 +21,4 @@ const InputStyled = styled.input.attrs((props: input) => ({
   }
 `;
 
-const InputFileStyled = styled(InputStyled)`
-  display: none;
-`;
-
-export { InputFileStyled };
 export default InputStyled;
