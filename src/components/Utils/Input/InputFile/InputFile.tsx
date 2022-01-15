@@ -10,7 +10,7 @@ class InputFile extends Input {
         attrs={{ htmlFor: this.props.label?.htmlFor || this.props.attrs?.id }}
         text={this.props.label?.text}
       >
-        <InputFileStyled {...this.props} />
+        <InputFileStyled attrs={{ ...this.props.attrs }} />
       </LabelFile>
     );
   }

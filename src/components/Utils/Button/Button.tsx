@@ -1,25 +1,19 @@
 import { Component, ReactNode } from 'react';
 import ButtonStyled from './Button.styled';
+import ButtonProps from './interfaces/Button.interfaces';
 
-interface button {
-  attrs?: {
-    type?: string;
-    value?: string;
-  };
-  events?: {
-    addExperienceGroup?: () => void;
-  };
-}
-
-class Button extends Component<button> {
-  constructor(props: button) {
+class Button extends Component<ButtonProps> {
+  constructor(props: ButtonProps) {
     super(props);
   }
 
   render(): ReactNode {
-    return <ButtonStyled {...this.props} />;
+    return (
+      <ButtonStyled attrs={{ ...this.props.attrs }}>
+        {this.props.children}
+      </ButtonStyled>
+    );
   }
 }
 
-export { type button };
 export default Button;

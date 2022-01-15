@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import type { input } from './Input';
+import { InputStyledProps } from './interfaces/Input.interfaces';
 
-const InputStyled = styled.input.attrs((props: input) => ({
+const InputStyled = styled.input.attrs((props: InputStyledProps) => ({
   type: props.attrs?.type,
   placeholder: props.attrs?.placeholder
-}))`
+}))<InputStyledProps>`
   border: none;
   border-bottom: 0.15em solid #f5cac3;
   border-bottom-style: dashed;

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import type { textarea } from './Textarea';
+import { TextareaStyledProps } from './interfaces/Textarea.interfaces';
 
-const TextareaStyled = styled.textarea.attrs((props: textarea) => ({
+const TextareaStyled = styled.textarea.attrs((props: TextareaStyledProps) => ({
   placeholder: props.attrs?.placeholder
-}))`
+}))<TextareaStyledProps>`
   border: none;
   border-bottom: 0.15em solid #f5cac3;
   border-bottom-style: dashed;

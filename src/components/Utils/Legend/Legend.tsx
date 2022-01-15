@@ -1,21 +1,19 @@
 import { Component, ReactNode } from 'react';
 import LegendStyled from './Legend.styled';
+import LegendProps from './interfaces/Legend.interfaces';
 
-interface legend {
-  attrs?: {
-    title?: string;
-  };
-}
-
-class Legend extends Component<legend> {
-  constructor(props: legend) {
+class Legend extends Component<LegendProps> {
+  constructor(props: LegendProps) {
     super(props);
   }
 
   render(): ReactNode {
-    return <LegendStyled {...this.props} />;
+    return (
+      <LegendStyled attrs={{ ...this.props.attrs }}>
+        {this.props.children}
+      </LegendStyled>
+    );
   }
 }
 
-export { type legend };
 export default Legend;

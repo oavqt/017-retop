@@ -1,22 +1,10 @@
 import { Component, ReactNode } from 'react';
 import Label from '../Label/Label';
 import InputStyled from './Input.styled';
+import InputProps from './interfaces/Input.interfaces';
 
-interface input {
-  attrs?: {
-    id?: string;
-    placeholder?: string;
-    type?: string;
-    value?: string;
-  };
-  label?: {
-    htmlFor?: string;
-    text?: string;
-  };
-}
-
-class Input extends Component<input> {
-  constructor(props: input) {
+class Input extends Component<InputProps> {
+  constructor(props: InputProps) {
     super(props);
   }
 
@@ -26,11 +14,10 @@ class Input extends Component<input> {
         attrs={{ htmlFor: this.props.label?.htmlFor || this.props.attrs?.id }}
         text={this.props.label?.text}
       >
-        <InputStyled {...this.props} />
+        <InputStyled attrs={{ ...this.props.attrs }} />
       </Label>
     );
   }
 }
 
-export { type input };
 export default Input;

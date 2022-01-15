@@ -1,10 +1,7 @@
 import styled from 'styled-components';
+import { FormStyledProps } from './interfaces/Form.interfaces';
 
-interface formStyled {
-  ['data-testid']: string;
-}
-
-const FormStyled = styled.form.attrs((props: formStyled) => ({
+const FormStyled = styled.form.attrs((props: FormStyledProps) => ({
   ['data-testid']: props['data-testid']
 }))`
   display: flex;

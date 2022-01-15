@@ -4,7 +4,11 @@ import ButtonRemoveStyled from './ButtonRemove.styled';
 
 class ButtonRemove extends Button {
   render(): ReactNode {
-    return <ButtonRemoveStyled {...this.props} />;
+    return (
+      <ButtonRemoveStyled attrs={{ ...this.props.attrs }}>
+        {this.props.children}
+      </ButtonRemoveStyled>
+    );
   }
 }
 

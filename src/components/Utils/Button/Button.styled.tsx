@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import type { button } from './Button';
+import { ButtonStyledProps } from './interfaces/Button.interfaces';
 
-const ButtonStyled = styled.button.attrs((props: button) => ({
+const ButtonStyled = styled.button.attrs((props: ButtonStyledProps) => ({
   type: props.attrs?.type,
   value: props.attrs?.value
-}))`
+}))<ButtonStyledProps>`
   border: none;
   border-radius: 0.2em;
   background: #f5cac3;

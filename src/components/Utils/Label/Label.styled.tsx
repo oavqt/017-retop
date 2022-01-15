@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import type { label } from './Label';
+import { LabelStyledProps } from './interfaces/Label.interfaces';
 
-const LabelStyled = styled.label.attrs((props: label) => ({
+const LabelStyled = styled.label.attrs((props: LabelStyledProps) => ({
   htmlFor: props.attrs?.htmlFor
-}))`
+}))<LabelStyledProps>`
   display: flex;
   flex-direction: column;
   position: relative;

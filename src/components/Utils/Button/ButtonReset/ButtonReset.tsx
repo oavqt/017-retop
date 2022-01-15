@@ -4,7 +4,11 @@ import ButtonResetStyled from './ButtonReset.styled';
 
 class ButtonReset extends Button {
   render(): ReactNode {
-    return <ButtonResetStyled {...this.props} />;
+    return (
+      <ButtonResetStyled attrs={{ ...this.props.attrs }}>
+        {this.props.children}
+      </ButtonResetStyled>
+    );
   }
 }
 

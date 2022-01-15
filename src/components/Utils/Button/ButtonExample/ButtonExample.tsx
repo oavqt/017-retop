@@ -4,7 +4,11 @@ import ButtonExampleStyled from './ButtonExample.styled';
 
 class ButtonExample extends Button {
   render(): ReactNode {
-    return <ButtonExampleStyled {...this.props} />;
+    return (
+      <ButtonExampleStyled attrs={{ ...this.props.attrs }}>
+        {this.props.children}
+      </ButtonExampleStyled>
+    );
   }
 }
 

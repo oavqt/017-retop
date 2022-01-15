@@ -1,21 +1,10 @@
 import { Component, ReactNode } from 'react';
 import Label from '../Label/Label';
 import TextareaStyled from './Textarea.styled';
+import TextareaProps from './interfaces/Textarea.interfaces';
 
-interface textarea {
-  attrs: {
-    id?: string;
-    placeholder?: string;
-    value?: string;
-  };
-  label?: {
-    htmlFor?: string;
-    text?: string;
-  };
-}
-
-class Textarea extends Component<textarea> {
-  constructor(props: textarea) {
+class Textarea extends Component<TextareaProps> {
+  constructor(props: TextareaProps) {
     super(props);
   }
 
@@ -25,11 +14,10 @@ class Textarea extends Component<textarea> {
         attrs={{ htmlFor: this.props.label?.htmlFor || this.props.attrs?.id }}
         text={this.props.label?.text}
       >
-        <TextareaStyled {...this.props} />
+        <TextareaStyled attrs={{ ...this.props.attrs }} />
       </Label>
     );
   }
 }
 
-export { type textarea };
 export default Textarea;

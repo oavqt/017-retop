@@ -4,7 +4,11 @@ import ButtonPrintStyled from './ButtonPrint.styled';
 
 class ButtonPrint extends Button {
   render(): ReactNode {
-    return <ButtonPrintStyled {...this.props} />;
+    return (
+      <ButtonPrintStyled attrs={{ ...this.props.attrs }}>
+        {this.props.children}
+      </ButtonPrintStyled>
+    );
   }
 }
 

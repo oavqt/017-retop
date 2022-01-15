@@ -6,9 +6,11 @@ class ButtonAdd extends Button {
   render(): ReactNode {
     return (
       <ButtonAddStyled
+        attrs={{ ...this.props.attrs }}
         onClick={this.props.events?.addExperienceGroup}
-        {...this.props}
-      />
+      >
+        {this.props.children}
+      </ButtonAddStyled>
     );
   }
 }

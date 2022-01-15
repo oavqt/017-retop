@@ -1,30 +1,12 @@
 import { Component, ReactElement } from 'react';
-
 import FormExperienceStyled from './FormExperience.styled';
 import FormExperienceGroup from './FormExperienceGroup/FormExperienceGroup';
 import Legend from '../../Utils/Legend/Legend';
 import ButtonAdd from '../../Utils/Button/ButtonAdd/ButtonAdd';
+import FormExperienceProps from './interfaces/FormExperience.interfaces';
 
-interface formExperienceObject {
-  title?: string;
-  company?: string;
-  date?: string;
-  description?: string;
-}
-
-interface formExperienceGroup {
-  group?: Array<formExperienceObject>;
-}
-
-interface formExperience {
-  experience?: formExperienceGroup;
-  events?: {
-    addExperienceGroup?: () => void;
-  };
-}
-
-class FormExperience extends Component<formExperience> {
-  constructor(props: formExperience) {
+class FormExperience extends Component<FormExperienceProps> {
+  constructor(props: FormExperienceProps) {
     super(props);
   }
 
@@ -50,5 +32,4 @@ class FormExperience extends Component<formExperience> {
   }
 }
 
-export { type formExperienceGroup };
 export default FormExperience;

@@ -1,49 +1,22 @@
 import { Component, ReactNode } from 'react';
-
 import ButtonExample from '../Utils/Button/ButtonExample/ButtonExample';
 import ButtonPrint from '../Utils/Button/ButtonPrint/ButtonPrint';
 import ButtonReset from '../Utils/Button/ButtonReset/ButtonReset';
 import FormStyled from './Form.styled';
-import FormEducation, {
-  type formEducationGroup
-} from './FormEducation/FormEducation';
-import FormExperience, {
-  type formExperienceGroup
-} from './FormExperience/FormExperience';
+import FormEducation from './FormEducation/FormEducation';
+import FormExperience from './FormExperience/FormExperience';
 import FormPersonal from './FormPersonal/FormPersonal';
+import FormProps from './interfaces/Form.interfaces';
 
-interface form {
-  attrs?: {
-    ['data-testid']?: string;
-  };
-  values?: {
-    personal?: {
-      first?: string;
-      last?: string;
-      title?: string;
-      photo?: string;
-      address?: string;
-      phone?: string;
-      email?: string;
-      description?: string;
-    };
-    experience?: formExperienceGroup;
-    education?: formEducationGroup;
-  };
-  events?: {
-    addExperienceGroup?: () => void;
-  };
-}
-
-class Form extends Component<form> {
-  constructor(props: form) {
+class Form extends Component<FormProps> {
+  constructor(props: FormProps) {
     super(props);
   }
 
   render(): ReactNode {
     return (
       <FormStyled {...this.props.attrs}>
-        <FormPersonal {...this.props.values?.personal} />
+        <FormPersonal personal={{ ...this.props.values?.personal }} />
         <FormExperience
           experience={{ ...this.props.values?.experience }}
           events={{ ...this.props.events }}
@@ -66,5 +39,4 @@ class Form extends Component<form> {
   }
 }
 
-export { type form };
 export default Form;

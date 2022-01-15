@@ -1,30 +1,12 @@
 import { Component, ReactElement } from 'react';
-
 import FormEducationStyled from './FormEducation.styled';
 import FormEducationGroup from './FormEducationGroup/FormEducationGroup';
 import Legend from '../../Utils/Legend/Legend';
 import ButtonAdd from '../../Utils/Button/ButtonAdd/ButtonAdd';
+import FormEducationProps from './interfaces/FormEducation.interfaces';
 
-interface formEducationObject {
-  title?: string;
-  company?: string;
-  date?: string;
-  description?: string;
-}
-
-interface formEducationGroup {
-  group?: Array<formEducationObject>;
-}
-
-interface formEducation {
-  education?: formEducationGroup;
-  events?: {
-    addExperienceGroup?: () => void;
-  };
-}
-
-class FormEducation extends Component<formEducation> {
-  constructor(props: formEducation) {
+class FormEducation extends Component<FormEducationProps> {
+  constructor(props: FormEducationProps) {
     super(props);
   }
   render(): ReactElement {
@@ -44,5 +26,4 @@ class FormEducation extends Component<formEducation> {
   }
 }
 
-export { type formEducationGroup };
 export default FormEducation;

@@ -1,21 +1,15 @@
 import { Component, ReactNode } from 'react';
 import LabelStyled from './Label.styled';
+import LabelProps from './interfaces/Label.interfaces';
 
-interface label {
-  attrs?: {
-    htmlFor?: string;
-  };
-  text?: string;
-}
-
-class Label extends Component<label> {
-  constructor(props: label) {
+class Label extends Component<LabelProps> {
+  constructor(props: LabelProps) {
     super(props);
   }
 
   render(): ReactNode {
     return (
-      <LabelStyled {...this.props}>
+      <LabelStyled attrs={{ ...this.props.attrs }}>
         {this.props.text}
         {this.props.children}
       </LabelStyled>
@@ -23,5 +17,4 @@ class Label extends Component<label> {
   }
 }
 
-export { type label };
 export default Label;

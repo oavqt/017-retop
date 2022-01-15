@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { legend } from './Legend';
+import { LegendStyledProps } from './interfaces/Legend.interfaces';
 
-const LegendStyled = styled.legend.attrs((props: legend) => ({
+const LegendStyled = styled.legend.attrs((props: LegendStyledProps) => ({
   title: props.attrs?.title
-}))`
+}))<LegendStyledProps>`
   font-size: 1.2rem;
 `;
 
