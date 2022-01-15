@@ -6,6 +6,9 @@ interface button {
     type?: string;
     value?: string;
   };
+  events?: {
+    addExperienceGroup?: () => void;
+  };
 }
 
 class Button extends Component<button> {

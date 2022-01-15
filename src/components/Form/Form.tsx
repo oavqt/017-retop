@@ -4,15 +4,19 @@ import ButtonExample from '../Utils/Button/ButtonExample/ButtonExample';
 import ButtonPrint from '../Utils/Button/ButtonPrint/ButtonPrint';
 import ButtonReset from '../Utils/Button/ButtonReset/ButtonReset';
 import FormStyled from './Form.styled';
-import FormEducation from './FormEducation/FormEducation';
-import FormExperience from './FormExperience/FormExperience';
+import FormEducation, {
+  type formEducationGroup
+} from './FormEducation/FormEducation';
+import FormExperience, {
+  type formExperienceGroup
+} from './FormExperience/FormExperience';
 import FormPersonal from './FormPersonal/FormPersonal';
 
 interface form {
   attrs?: {
     ['data-testid']?: string;
   };
-  form?: {
+  values?: {
     personal?: {
       first?: string;
       last?: string;
@@ -23,28 +27,31 @@ interface form {
       email?: string;
       description?: string;
     };
-    experience?: {
-      title?: string;
-      company?: string;
-      date?: string;
-      description?: string;
-    };
-    education?: {
-      degree?: string;
-      university?: string;
-      date?: string;
-      description?: string;
-    };
+    experience?: formExperienceGroup;
+    education?: formEducationGroup;
+  };
+  events?: {
+    addExperienceGroup?: () => void;
   };
 }
 
 class Form extends Component<form> {
+  constructor(props: form) {
+    super(props);
+  }
+
   render(): ReactNode {
     return (
       <FormStyled {...this.props.attrs}>
-        <FormPersonal {...this.props.form?.personal} />
-        <FormExperience {...this.props.form?.experience} />
-        <FormEducation {...this.props.form?.education} />
+        <FormPersonal {...this.props.values?.personal} />
+        <FormExperience
+          experience={{ ...this.props.values?.experience }}
+          events={{ ...this.props.events }}
+        />
+        <FormEducation
+          education={{ ...this.props.values?.education }}
+          events={{ ...this.props.events }}
+        />
         <ButtonReset attrs={{ type: 'button', value: 'reset' }}>
           reset
         </ButtonReset>

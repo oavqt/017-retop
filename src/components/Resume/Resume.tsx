@@ -1,5 +1,7 @@
 import { Component, ReactNode } from 'react';
 import Form from '../Form/Form';
+import { type formEducationGroup } from '../Form/FormEducation/FormEducation';
+import { type formExperienceGroup } from '../Form/FormExperience/FormExperience';
 import ResumeStyled from './Resume.styled';
 
 interface resume {
@@ -24,22 +26,29 @@ interface resume {
       email?: string;
       description?: string;
     };
-    experience?: {
-      title?: string;
-      company?: string;
-      date?: string;
-      description?: string;
-    };
-    educational?: {
-      degree?: string;
-      university?: string;
-      date?: string;
-      description?: string;
-    };
+    experience?: formExperienceGroup;
+    education?: formEducationGroup;
   };
 }
 
-class Resume extends Component<resume> {
+interface state {
+  values?: {
+    personal?: {
+      first?: string;
+      last?: string;
+      title?: string;
+      photo?: string;
+      address?: string;
+      phone?: string;
+      email?: string;
+      description?: string;
+    };
+    experience?: formExperienceGroup;
+    education?: formEducationGroup;
+  };
+}
+
+class Resume extends Component<resume, state> {
   constructor(props: resume) {
     super(props);
     this.state = {
@@ -55,26 +64,45 @@ class Resume extends Component<resume> {
           description: ''
         },
         experience: {
-          title: '',
-          company: '',
-          date: '',
-          description: ''
+          group: []
         },
         education: {
-          degree: '',
-          university: '',
-          date: '',
-          description: ''
+          group: []
         }
       }
     };
   }
+
+  addExperienceGroup = (): void => {
+    const experienceProperties = {
+      title: '',
+      company: '',
+      date: '',
+      description: ''
+    };
+
+    const experienceGroup = this.state.values?.experience?.group;
+
+    this.setState({
+      values: {
+        experience: {
+          group: [...(experienceGroup ?? []), { ...experienceProperties }]
+        }
+      }
+    });
+  };
+
   render(): ReactNode {
+    const addEduExp = {
+      addExperienceGroup: this.addExperienceGroup
+    };
+
     return (
       <ResumeStyled>
         <Form
           attrs={{ ...this.props.form?.attrs }}
-          form={{ ...this.props.values }}
+          values={{ ...this.state.values }}
+          events={{ ...addEduExp }}
         />
       </ResumeStyled>
     );

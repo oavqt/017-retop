@@ -4,7 +4,12 @@ import ButtonAddStyled from './ButtonAdd.styled';
 
 class ButtonAdd extends Button {
   render(): ReactNode {
-    return <ButtonAddStyled {...this.props} />;
+    return (
+      <ButtonAddStyled
+        onClick={this.props.events?.addExperienceGroup}
+        {...this.props}
+      />
+    );
   }
 }
 
