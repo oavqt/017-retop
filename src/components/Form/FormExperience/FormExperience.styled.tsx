@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 const FormExperienceStyled = styled.fieldset`
-  display: flex;
   border: none;
+  display: flex;
   flex-direction: column;
+  margin: 0.2em 0;
 `;
 
 export default FormExperienceStyled;

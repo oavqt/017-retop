@@ -3,7 +3,7 @@ import FormExperienceGroup from '../FormExperienceGroup';
 
 describe('FormExperienceGroup component', () => {
   const FormExperienceGroupElementPlaceholderText = [
-    'title',
+    'position',
     'company',
     'date',
     'description'

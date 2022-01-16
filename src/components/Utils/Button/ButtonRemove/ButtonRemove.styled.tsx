@@ -1,25 +1,28 @@
 import styled from 'styled-components';
+import FormEducationGroupStyled from '../../../Form/FormEducation/FormEducationGroup/FormEducationGroup.styled';
+import FormExperienceGroupStyled from '../../../Form/FormExperience/FormExperienceGroup/FormExperienceGroup.styled';
 import ButtonStyled from '../Button.styled';
 
 const ButtonRemoveStyled = styled(ButtonStyled)`
-  background: #f28482;
+  background: #101010cc;
   color: #fff;
-  position: relative;
   width: 100%;
 
-  ::before {
-    box-shadow: 0 -6.4em 5em 0.2em #f5cac3, 0 -6.4em 0 6.2em #fff;
-    content: '';
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: opacity ease-in-out 0.5s;
-    width: 100%;
+  ${FormExperienceGroupStyled}:hover & {
+    animation: animation--color 0.2s ease-in-out forwards;
   }
 
-  :hover::before {
-    opacity: 1;
+  ${FormEducationGroupStyled}:hover & {
+    animation: animation--color 0.2s ease-in-out forwards;
+  }
+
+  @keyframes animation--color {
+    from {
+      background: grey;
+    }
+    to {
+      background: #f28482;
+    }
   }
 `;
 
