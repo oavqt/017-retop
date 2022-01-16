@@ -21,20 +21,20 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
         experience: {
           group: [
             {
-              title: '',
-              company: '',
-              date: '',
-              description: ''
+              position: 'test',
+              company: 'test',
+              date: 'test',
+              description: 'test'
             }
           ]
         },
         education: {
           group: [
             {
-              degree: '',
-              university: '',
-              date: '',
-              description: ''
+              degree: 'test',
+              university: 'test',
+              date: 'test',
+              description: 'test'
             }
           ]
         }
@@ -44,7 +44,7 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
 
   addExperienceGroup = (): void => {
     const experienceProperties = {
-      title: '',
+      position: '',
       company: '',
       date: '',
       description: ''
@@ -84,10 +84,30 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     });
   };
 
+  removeExperienceGroup = (position: number): void => {
+    const experienceGroup = this.state.values?.experience?.group?.slice();
+
+    experienceGroup?.splice(position, 1);
+
+    this.setState({
+      ...this.state,
+      values: {
+        ...this.state.values,
+        experience: {
+          group: [...(experienceGroup ?? [])]
+        }
+      }
+    });
+  };
+
   render(): ReactNode {
     const addEduExp = {
       addExperienceGroup: this.addExperienceGroup,
       addEducationGroup: this.addEducationGroup
+    };
+
+    const removeEduExp = {
+      removeExperienceGroup: this.removeExperienceGroup
     };
 
     return (
@@ -95,7 +115,7 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
         <Form
           attrs={{ ...this.props.form?.attrs }}
           values={{ ...this.state.values }}
-          fns={{ ...addEduExp }}
+          fns={{ ...addEduExp, ...removeEduExp }}
         />
       </ResumeStyled>
     );

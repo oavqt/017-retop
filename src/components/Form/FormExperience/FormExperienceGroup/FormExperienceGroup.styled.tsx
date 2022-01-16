@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import ButtonRemoveStyled from '../../../Utils/Button/ButtonRemove/ButtonRemove.styled';
 
 const FormExperienceGroupStyled = styled.fieldset`
   animation: fade-in 1s ease-in-out;

@@ -1,13 +1,17 @@
+/* eslint-disable no-unused-vars */
+
 interface FormExperienceProps {
   experience?: FormExperiencePropsObjectGroup;
   fns?: {
     addExperienceGroup?: () => void;
     addEducationGroup?: () => void;
+    removeExperienceGroup?: (position: number) => void;
+    removeEducationGroup?: (position: number) => void;
   };
 }
 
 interface FormExperiencePropsObject {
-  title?: string;
+  position?: string;
   company?: string;
   date?: string;
   description?: string;

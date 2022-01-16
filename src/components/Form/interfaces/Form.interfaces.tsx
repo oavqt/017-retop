@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import { FormEducationPropsObjectGroup } from '../FormEducation/interfaces/FormEducation.interfaces';
 import { FormExperiencePropsObjectGroup } from '../FormExperience/interfaces/FormExperience.interfaces';
 
@@ -22,6 +24,8 @@ interface FormProps {
   fns?: {
     addExperienceGroup?: () => void;
     addEducationGroup?: () => void;
+    removeExperienceGroup?: (position: number) => void;
+    removeEducationGroup?: (position: number) => void;
   };
 }
 

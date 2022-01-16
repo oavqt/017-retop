@@ -13,11 +13,18 @@ class FormExperience extends Component<FormExperienceProps> {
   render(): ReactElement {
     const formExperienceGroup = this.props.experience?.group?.map(
       (object, index) => {
-        return <FormExperienceGroup key={index} {...object} />;
+        return (
+          <FormExperienceGroup
+            key={index}
+            value={{ ...object }}
+            position={index}
+            fns={{ ...this.props.fns }}
+          />
+        );
       }
     );
 
-    const btnEvent = this.props.fns?.addExperienceGroup;
+    const btnAddEvent = this.props.fns?.addExperienceGroup;
 
     return (
       <FormExperienceStyled>
@@ -25,7 +32,7 @@ class FormExperience extends Component<FormExperienceProps> {
         {formExperienceGroup}
         <ButtonAdd
           attrs={{ type: 'button', value: 'add' }}
-          event={{ btnEvent }}
+          event={{ btnAddEvent }}
         >
           add experience
         </ButtonAdd>

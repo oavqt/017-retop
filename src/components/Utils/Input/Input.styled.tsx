@@ -3,7 +3,8 @@ import { InputStyledProps } from './interfaces/Input.interfaces';
 
 const InputStyled = styled.input.attrs((props: InputStyledProps) => ({
   type: props.attrs?.type,
-  placeholder: props.attrs?.placeholder
+  placeholder: props.attrs?.placeholder,
+  value: props.attrs?.value
 }))<InputStyledProps>`
   border: none;
   border-bottom: 0.15em solid #f5cac3;

@@ -16,7 +16,7 @@ class FormEducation extends Component<FormEducationProps> {
       }
     );
 
-    const btnEvent = this.props.fns?.addEducationGroup;
+    const btnAddEvent = this.props.fns?.addEducationGroup;
 
     return (
       <FormEducationStyled>
@@ -24,7 +24,7 @@ class FormEducation extends Component<FormEducationProps> {
         {formEducationGroup}
         <ButtonAdd
           attrs={{ type: 'button', value: 'add' }}
-          event={{ btnEvent }}
+          event={{ btnAddEvent }}
         >
           add education
         </ButtonAdd>

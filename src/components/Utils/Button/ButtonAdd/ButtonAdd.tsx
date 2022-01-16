@@ -7,7 +7,7 @@ class ButtonAdd extends Button {
     return (
       <ButtonAddStyled
         attrs={{ ...this.props.attrs }}
-        onClick={this.props.event?.btnEvent}
+        onClick={this.props.event?.btnAddEvent}
       >
         {this.props.children}
       </ButtonAddStyled>

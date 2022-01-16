@@ -1,11 +1,15 @@
+/* eslint-disable no-unused-vars */
+
 interface ButtonProps {
   attrs?: {
     type?: string;
     value?: string;
   };
   event?: {
-    btnEvent?: () => void;
+    btnAddEvent?: () => void;
+    btnRemoveEvent?: (position: number) => void;
   };
+  position?: number;
 }
 
 interface ButtonStyledProps {
