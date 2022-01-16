@@ -19,11 +19,11 @@ class Form extends Component<FormProps> {
         <FormPersonal personal={{ ...this.props.values?.personal }} />
         <FormExperience
           experience={{ ...this.props.values?.experience }}
-          events={{ ...this.props.events }}
+          fns={{ ...this.props.fns }}
         />
         <FormEducation
           education={{ ...this.props.values?.education }}
-          events={{ ...this.props.events }}
+          fns={{ ...this.props.fns }}
         />
         <ButtonReset attrs={{ type: 'button', value: 'reset' }}>
           reset

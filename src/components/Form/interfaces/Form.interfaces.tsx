@@ -19,8 +19,9 @@ interface FormProps {
     experience?: FormExperiencePropsObjectGroup;
     education?: FormEducationPropsObjectGroup;
   };
-  events?: {
+  fns?: {
     addExperienceGroup?: () => void;
+    addEducationGroup?: () => void;
   };
 }
 

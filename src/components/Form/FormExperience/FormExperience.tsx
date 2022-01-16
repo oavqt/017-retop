@@ -17,15 +17,17 @@ class FormExperience extends Component<FormExperienceProps> {
       }
     );
 
+    const btnEvent = this.props.fns?.addExperienceGroup;
+
     return (
       <FormExperienceStyled>
         <Legend>experience</Legend>
         {formExperienceGroup}
         <ButtonAdd
           attrs={{ type: 'button', value: 'add' }}
-          events={{ ...this.props.events }}
+          event={{ btnEvent }}
         >
-          add
+          add experience
         </ButtonAdd>
       </FormExperienceStyled>
     );

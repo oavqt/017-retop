@@ -1,7 +1,8 @@
 interface FormExperienceProps {
   experience?: FormExperiencePropsObjectGroup;
-  events?: {
+  fns?: {
     addExperienceGroup?: () => void;
+    addEducationGroup?: () => void;
   };
 }
 

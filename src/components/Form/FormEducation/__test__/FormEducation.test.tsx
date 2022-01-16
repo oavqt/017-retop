@@ -13,7 +13,7 @@ describe('FormEducation component', () => {
   test('expeact a FormExperience component to be created with a ButtonAdd component', () => {
     render(<FormEducation />);
 
-    const buttonAdd = screen.getByText('add');
+    const buttonAdd = screen.getByText('add education');
 
     expect(buttonAdd).toBeInTheDocument();
     expect(buttonAdd).toHaveProperty('type', 'button');

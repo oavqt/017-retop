@@ -10,10 +10,10 @@ describe('FormExperience component', () => {
     expect(fieldExperience).toBeInTheDocument();
   });
 
-  test('expeact a FormExperience component to be created with a ButtonAdd component', () => {
+  test('expect a FormExperience component to be created with a ButtonAdd component', () => {
     render(<FormExperience />);
 
-    const buttonAdd = screen.getByText('add');
+    const buttonAdd = screen.getByText('add experience');
 
     expect(buttonAdd).toBeInTheDocument();
     expect(buttonAdd).toHaveProperty('type', 'button');

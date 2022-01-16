@@ -53,7 +53,9 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     const experienceGroup = this.state.values?.experience?.group;
 
     this.setState({
+      ...this.state,
       values: {
+        ...this.state.values,
         experience: {
           group: [...(experienceGroup ?? []), { ...experienceProperties }]
         }
@@ -61,9 +63,31 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     });
   };
 
+  addEducationGroup = (): void => {
+    const educationProperties = {
+      degree: '',
+      university: '',
+      date: '',
+      description: ''
+    };
+
+    const educationGroup = this.state.values?.education?.group;
+
+    this.setState({
+      ...this.state,
+      values: {
+        ...this.state.values,
+        education: {
+          group: [...(educationGroup ?? []), { ...educationProperties }]
+        }
+      }
+    });
+  };
+
   render(): ReactNode {
     const addEduExp = {
-      addExperienceGroup: this.addExperienceGroup
+      addExperienceGroup: this.addExperienceGroup,
+      addEducationGroup: this.addEducationGroup
     };
 
     return (
@@ -71,7 +95,7 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
         <Form
           attrs={{ ...this.props.form?.attrs }}
           values={{ ...this.state.values }}
-          events={{ ...addEduExp }}
+          fns={{ ...addEduExp }}
         />
       </ResumeStyled>
     );

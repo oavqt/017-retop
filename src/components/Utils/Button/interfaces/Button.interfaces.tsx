@@ -3,8 +3,8 @@ interface ButtonProps {
     type?: string;
     value?: string;
   };
-  events?: {
-    addExperienceGroup?: () => void;
+  event?: {
+    btnEvent?: () => void;
   };
 }
 

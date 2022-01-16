@@ -16,11 +16,18 @@ class FormEducation extends Component<FormEducationProps> {
       }
     );
 
+    const btnEvent = this.props.fns?.addEducationGroup;
+
     return (
       <FormEducationStyled>
         <Legend>education</Legend>
         {formEducationGroup}
-        <ButtonAdd attrs={{ type: 'button', value: 'add' }}>add</ButtonAdd>
+        <ButtonAdd
+          attrs={{ type: 'button', value: 'add' }}
+          event={{ btnEvent }}
+        >
+          add education
+        </ButtonAdd>
       </FormEducationStyled>
     );
   }
