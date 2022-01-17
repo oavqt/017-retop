@@ -5,7 +5,14 @@ import { FormExperiencePropsObjectGroup } from '../FormExperience/interfaces/For
 
 interface FormProps {
   attrs?: {
-    ['data-testid']?: string;
+    print?: boolean;
+    rtlTestID?: {
+      btn?: {
+        experience?: string;
+        education?: string;
+      };
+      form?: string;
+    };
   };
   values?: {
     personal?: {
@@ -30,7 +37,12 @@ interface FormProps {
 }
 
 interface FormStyledProps {
-  ['data-testid']: string;
+  attrs?: {
+    print?: boolean;
+    rtlTestID?: {
+      form?: string;
+    };
+  };
 }
 
 export { type FormStyledProps };

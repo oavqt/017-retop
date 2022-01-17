@@ -4,12 +4,19 @@ import { FormExperiencePropsObjectGroup } from '../../Form/FormExperience/interf
 interface ResumeProps {
   form?: {
     attrs?: {
-      ['data-testid']?: string;
+      print?: boolean;
+      rtlTestID?: {
+        btn?: {
+          experience?: string;
+          education?: string;
+        };
+        form?: string;
+      };
     };
   };
   preview?: {
     attrs?: {
-      ['data-testid']?: string;
+      print?: boolean;
     };
   };
   values?: {

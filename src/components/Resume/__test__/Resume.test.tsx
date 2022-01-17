@@ -1,4 +1,6 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
 import Resume from '../Resume';
 
 describe('Resume component', () => {
@@ -11,7 +13,7 @@ describe('Resume component', () => {
   });
 
   test('expect a Form component to be in the Resume component', () => {
-    render(<Resume form={{ attrs: { ['data-testid']: 'form' } }} />);
+    render(<Resume form={{ attrs: { rtlTestID: { form: 'form' } } }} />);
 
     const form = screen.getByTestId('form');
 
@@ -25,14 +27,14 @@ describe('FormExperience and FormEducation components', () => {
 
     const buttonAdd = screen.getByText('add experience');
 
-    fireEvent.click(buttonAdd);
-    fireEvent.click(buttonAdd);
-    fireEvent.click(buttonAdd);
-    fireEvent.click(buttonAdd);
+    userEvent.click(buttonAdd);
+    userEvent.click(buttonAdd);
+    userEvent.click(buttonAdd);
+    userEvent.click(buttonAdd);
 
-    const positionInputs = screen.getAllByPlaceholderText('position');
+    const inputs = screen.getAllByPlaceholderText('position');
 
-    expect(positionInputs).toHaveLength(5);
+    expect(inputs).toHaveLength(5);
   });
 
   test('expect FormEducation ButtonAdd to create a FormEducationGroup', () => {
@@ -40,13 +42,67 @@ describe('FormExperience and FormEducation components', () => {
 
     const buttonAdd = screen.getByText('add education');
 
-    fireEvent.click(buttonAdd);
-    fireEvent.click(buttonAdd);
-    fireEvent.click(buttonAdd);
-    fireEvent.click(buttonAdd);
+    userEvent.click(buttonAdd);
+    userEvent.click(buttonAdd);
+    userEvent.click(buttonAdd);
+    userEvent.click(buttonAdd);
 
-    const positionInputs = screen.getAllByPlaceholderText('university');
+    const inputs = screen.getAllByPlaceholderText('university');
 
-    expect(positionInputs).toHaveLength(5);
+    expect(inputs).toHaveLength(5);
+  });
+});
+
+describe('FormExperienceGroup and FormEducationGroup components', () => {
+  test('expect FormExperienceGroup ButtonRemove to remove a FormExperienceGroup', async () => {
+    render(
+      <Resume
+        form={{
+          attrs: { rtlTestID: { btn: { experience: 'btn--experience' } } }
+        }}
+      />
+    );
+
+    const experienceButtonAdd = screen.getByText('add experience');
+
+    for (let i = 0; i < 4; i++) userEvent.click(experienceButtonAdd);
+
+    const experienceButtonRemove = screen.queryAllByTestId('btn--experience');
+
+    expect(experienceButtonRemove).toHaveLength(5);
+
+    for (let i = experienceButtonRemove.length - 1; i >= 2; i--)
+      userEvent.click(experienceButtonRemove[i]);
+
+    const experienceButtonRemoveReQuery =
+      screen.queryAllByTestId('btn--experience');
+
+    expect(experienceButtonRemoveReQuery).toHaveLength(2);
+  });
+
+  test('expect FormEducationGroup ButtonRemove to remove a FormEducationGroup', async () => {
+    render(
+      <Resume
+        form={{
+          attrs: { rtlTestID: { btn: { education: 'btn--education' } } }
+        }}
+      />
+    );
+
+    const educationButtonAdd = screen.getByText('add education');
+
+    for (let i = 0; i < 4; i++) userEvent.click(educationButtonAdd);
+
+    const educationButtonRemove = screen.queryAllByTestId('btn--education');
+
+    expect(educationButtonRemove).toHaveLength(5);
+
+    for (let i = educationButtonRemove.length - 1; i >= 0; i--)
+      userEvent.click(educationButtonRemove[i]);
+
+    const educationButtonRemoveReQuery =
+      screen.queryAllByTestId('btn--education');
+
+    expect(educationButtonRemoveReQuery).toHaveLength(0);
   });
 });

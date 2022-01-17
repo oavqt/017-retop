@@ -15,13 +15,18 @@ class Form extends Component<FormProps> {
 
   render(): ReactNode {
     return (
-      <FormStyled {...this.props.attrs}>
-        <FormPersonal personal={{ ...this.props.values?.personal }} />
+      <FormStyled attrs={{ ...this.props.attrs }}>
+        <FormPersonal
+          attrs={{ ...this.props.attrs }}
+          personal={{ ...this.props.values?.personal }}
+        />
         <FormExperience
+          attrs={{ ...this.props.attrs }}
           experience={{ ...this.props.values?.experience }}
           fns={{ ...this.props.fns }}
         />
         <FormEducation
+          attrs={{ ...this.props.attrs }}
           education={{ ...this.props.values?.education }}
           fns={{ ...this.props.fns }}
         />

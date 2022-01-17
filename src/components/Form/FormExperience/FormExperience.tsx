@@ -15,10 +15,11 @@ class FormExperience extends Component<FormExperienceProps> {
       (object, index) => {
         return (
           <FormExperienceGroup
-            key={index}
-            value={{ ...object }}
-            position={index}
+            attrs={{ ...this.props.attrs }}
             fns={{ ...this.props.fns }}
+            key={index}
+            position={index}
+            value={{ ...object }}
           />
         );
       }

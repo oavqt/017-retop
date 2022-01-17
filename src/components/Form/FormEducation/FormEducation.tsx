@@ -12,7 +12,15 @@ class FormEducation extends Component<FormEducationProps> {
   render(): ReactElement {
     const formEducationGroup = this.props.education?.group?.map(
       (object, index) => {
-        return <FormEducationGroup key={index} {...object} />;
+        return (
+          <FormEducationGroup
+            attrs={{ ...this.props.attrs }}
+            fns={{ ...this.props.fns }}
+            key={index}
+            position={index}
+            value={{ ...object }}
+          />
+        );
       }
     );
 
@@ -23,7 +31,10 @@ class FormEducation extends Component<FormEducationProps> {
         <Legend>education</Legend>
         {formEducationGroup}
         <ButtonAdd
-          attrs={{ type: 'button', value: 'add' }}
+          attrs={{
+            type: 'button',
+            value: 'add'
+          }}
           event={{ btnAddEvent }}
         >
           add education

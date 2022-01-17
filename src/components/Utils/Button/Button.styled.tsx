@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { ButtonStyledProps } from './interfaces/Button.interfaces';
 
 const ButtonStyled = styled.button.attrs((props: ButtonStyledProps) => ({
+  ['data-testid']: props.attrs?.rtlTestID?.btn,
   type: props.attrs?.type,
   value: props.attrs?.value
 }))<ButtonStyledProps>`

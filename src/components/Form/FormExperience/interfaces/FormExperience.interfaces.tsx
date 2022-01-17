@@ -1,6 +1,16 @@
 /* eslint-disable no-unused-vars */
 
 interface FormExperienceProps {
+  attrs?: {
+    print?: boolean;
+    rtlTestID?: {
+      btn?: {
+        experience?: string;
+        education?: string;
+      };
+      form?: string;
+    };
+  };
   experience?: FormExperiencePropsObjectGroup;
   fns?: {
     addExperienceGroup?: () => void;

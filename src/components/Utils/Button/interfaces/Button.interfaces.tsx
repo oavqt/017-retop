@@ -2,6 +2,9 @@
 
 interface ButtonProps {
   attrs?: {
+    rtlTestID?: {
+      btn?: string;
+    };
     type?: string;
     value?: string;
   };
@@ -14,6 +17,9 @@ interface ButtonProps {
 
 interface ButtonStyledProps {
   attrs?: {
+    rtlTestID: {
+      btn: string;
+    };
     type?: string;
     value?: string;
   };

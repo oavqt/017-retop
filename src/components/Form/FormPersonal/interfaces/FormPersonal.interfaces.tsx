@@ -1,4 +1,14 @@
 interface FormPersonalProps {
+  attrs?: {
+    print?: boolean;
+    rtlTestID?: {
+      btn?: {
+        experience?: string;
+        education?: string;
+      };
+      form?: string;
+    };
+  };
   personal?: {
     first?: string;
     last?: string;

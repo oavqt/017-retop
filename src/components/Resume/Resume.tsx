@@ -100,6 +100,22 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     });
   };
 
+  removeEducationGroup = (position: number): void => {
+    const educationGroup = this.state.values?.education?.group?.slice();
+
+    educationGroup?.splice(position, 1);
+
+    this.setState({
+      ...this.state,
+      values: {
+        ...this.state.values,
+        education: {
+          group: [...(educationGroup ?? [])]
+        }
+      }
+    });
+  };
+
   render(): ReactNode {
     const addEduExp = {
       addExperienceGroup: this.addExperienceGroup,
@@ -107,7 +123,8 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     };
 
     const removeEduExp = {
-      removeExperienceGroup: this.removeExperienceGroup
+      removeExperienceGroup: this.removeExperienceGroup,
+      removeEducationGroup: this.removeEducationGroup
     };
 
     return (

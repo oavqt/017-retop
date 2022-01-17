@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-interface FormExperienceGroupProps {
+interface FormEducationGroupProps {
   attrs?: {
     print?: boolean;
     rtlTestID?: {
@@ -19,11 +19,11 @@ interface FormExperienceGroupProps {
   };
   position?: number;
   value?: {
-    position?: string;
-    company?: string;
+    university?: string;
+    degree?: string;
     date?: string;
     description?: string;
   };
 }
 
-export default FormExperienceGroupProps;
+export default FormEducationGroupProps;
