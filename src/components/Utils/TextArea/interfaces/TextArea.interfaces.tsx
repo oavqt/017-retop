@@ -1,6 +1,11 @@
+/* eslint-disable no-unused-vars */
+
+import { ChangeEvent } from 'react';
+
 interface TextareaProps {
   attrs: {
     id?: string;
+    name?: string;
     placeholder?: string;
     value?: string;
   };
@@ -8,11 +13,15 @@ interface TextareaProps {
     htmlFor?: string;
     text?: string;
   };
+  event?: {
+    textUpdateValueEvent?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
+  };
 }
 
 interface TextareaStyledProps {
   attrs: {
     id?: string;
+    name?: string;
     placeholder?: string;
     value?: string;
   };

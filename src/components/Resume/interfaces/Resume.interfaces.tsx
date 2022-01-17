@@ -28,7 +28,7 @@ interface ResumeProps {
       address?: string;
       phone?: string;
       email?: string;
-      description?: string;
+      about?: string;
     };
     experience?: FormExperiencePropsObjectGroup;
     education?: FormEducationPropsObjectGroup;
@@ -45,7 +45,7 @@ interface ResumeStateProps {
       address?: string;
       phone?: string;
       email?: string;
-      description?: string;
+      about?: string;
     };
     experience?: FormExperiencePropsObjectGroup;
     education?: FormEducationPropsObjectGroup;

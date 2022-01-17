@@ -13,9 +13,7 @@ interface FormEducationProps {
   };
   education?: FormEducationPropsObjectGroup;
   fns?: {
-    addExperienceGroup?: () => void;
     addEducationGroup?: () => void;
-    removeExperienceGroup?: (position: number) => void;
     removeEducationGroup?: (position: number) => void;
   };
 }

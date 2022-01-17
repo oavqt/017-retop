@@ -2,7 +2,7 @@ import { Component, ReactNode } from 'react';
 import ButtonRemove from '../../../Utils/Button/ButtonRemove/ButtonRemove';
 import Input from '../../../Utils/Input/Input';
 import Legend from '../../../Utils/Legend/Legend';
-import Textarea from '../../../Utils/Textarea/Textarea';
+import TextArea from '../../../Utils/TextArea/TextArea';
 import FormExperienceGroupStyled from './FormExperienceGroup.styled';
 import FormExperienceGroupProps from './interfaces/FormExperienceGroup.interaces';
 
@@ -19,6 +19,7 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
         <Legend>{this.props.value?.position}</Legend>
         <Input
           attrs={{
+            name: 'position',
             placeholder: 'position',
             type: 'text',
             value: this.props.value?.position
@@ -26,6 +27,7 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
         />
         <Input
           attrs={{
+            name: 'company',
             placeholder: 'company',
             type: 'text',
             value: this.props.value?.company
@@ -33,13 +35,15 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
         />
         <Input
           attrs={{
+            name: 'date',
             placeholder: 'date',
             type: 'text',
             value: this.props.value?.date
           }}
         />
-        <Textarea
+        <TextArea
           attrs={{
+            name: 'description',
             placeholder: 'description',
             value: this.props.value?.description
           }}

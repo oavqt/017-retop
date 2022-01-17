@@ -16,7 +16,9 @@ class FormExperience extends Component<FormExperienceProps> {
         return (
           <FormExperienceGroup
             attrs={{ ...this.props.attrs }}
-            fns={{ ...this.props.fns }}
+            fns={{
+              removeExperienceGroup: this.props.fns?.removeExperienceGroup
+            }}
             key={index}
             position={index}
             value={{ ...object }}

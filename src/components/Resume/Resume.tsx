@@ -1,4 +1,4 @@
-import { Component, ReactNode } from 'react';
+import { ChangeEvent, Component, ReactNode } from 'react';
 import Form from '../Form/Form';
 import ResumeStyled from './Resume.styled';
 import ResumeProps, { ResumeStateProps } from './interfaces/Resume.interfaces';
@@ -16,7 +16,7 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
           address: '',
           phone: '',
           email: '',
-          description: ''
+          about: ''
         },
         experience: {
           group: [
@@ -41,6 +41,34 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
       }
     };
   }
+
+  updateInptValuesPersonal = (event: ChangeEvent<HTMLInputElement>): void => {
+    this.setState({
+      ...this.state,
+      values: {
+        ...this.state.values,
+        personal: {
+          ...this.state.values?.personal,
+          [event.target.name]: event.target.value
+        }
+      }
+    });
+  };
+
+  updateTextValuesPersonal = (
+    event: ChangeEvent<HTMLTextAreaElement>
+  ): void => {
+    this.setState({
+      ...this.state,
+      values: {
+        ...this.state.values,
+        personal: {
+          ...this.state.values?.personal,
+          [event.target.name]: event.target.value
+        }
+      }
+    });
+  };
 
   addExperienceGroup = (): void => {
     const experienceProperties = {
@@ -127,12 +155,17 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
       removeEducationGroup: this.removeEducationGroup
     };
 
+    const updateValuesPerEduExp = {
+      updateInptValuesPersonal: this.updateInptValuesPersonal,
+      updateTextValuesPersonal: this.updateTextValuesPersonal
+    };
+
     return (
       <ResumeStyled>
         <Form
           attrs={{ ...this.props.form?.attrs }}
           values={{ ...this.state.values }}
-          fns={{ ...addEduExp, ...removeEduExp }}
+          fns={{ ...addEduExp, ...removeEduExp, ...updateValuesPerEduExp }}
         />
       </ResumeStyled>
     );

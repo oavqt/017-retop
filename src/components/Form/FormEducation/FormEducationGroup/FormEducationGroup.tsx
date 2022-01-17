@@ -2,7 +2,7 @@ import { Component, ReactNode } from 'react';
 import ButtonRemove from '../../../Utils/Button/ButtonRemove/ButtonRemove';
 import Input from '../../../Utils/Input/Input';
 import Legend from '../../../Utils/Legend/Legend';
-import Textarea from '../../../Utils/Textarea/Textarea';
+import TextArea from '../../../Utils/TextArea/TextArea';
 import FormEducationGroupStyled from './FormEducationGroup.styled';
 import FormEducationGroupProps from './interfaces/FormEducationGroup.interfaces';
 
@@ -15,6 +15,7 @@ class FormEducationGroup extends Component<FormEducationGroupProps> {
         <Legend>{this.props.value?.university}</Legend>
         <Input
           attrs={{
+            name: 'university',
             placeholder: 'university',
             type: 'text',
             value: this.props.value?.university
@@ -22,6 +23,7 @@ class FormEducationGroup extends Component<FormEducationGroupProps> {
         />
         <Input
           attrs={{
+            name: 'degree',
             placeholder: 'degree',
             type: 'text',
             value: this.props.value?.degree
@@ -29,13 +31,15 @@ class FormEducationGroup extends Component<FormEducationGroupProps> {
         />
         <Input
           attrs={{
+            name: 'date',
             placeholder: 'date',
             type: 'text',
             value: this.props.value?.date
           }}
         />
-        <Textarea
+        <TextArea
           attrs={{
+            name: 'description',
             placeholder: 'description',
             value: this.props.value?.description
           }}

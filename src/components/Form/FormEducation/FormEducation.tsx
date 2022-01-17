@@ -15,7 +15,7 @@ class FormEducation extends Component<FormEducationProps> {
         return (
           <FormEducationGroup
             attrs={{ ...this.props.attrs }}
-            fns={{ ...this.props.fns }}
+            fns={{ removeEducationGroup: this.props.fns?.removeEducationGroup }}
             key={index}
             position={index}
             value={{ ...object }}

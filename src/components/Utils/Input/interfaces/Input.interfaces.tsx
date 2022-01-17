@@ -1,6 +1,11 @@
+/* eslint-disable no-unused-vars */
+
+import { ChangeEvent } from 'react';
+
 interface InputProps {
   attrs?: {
     id?: string;
+    name?: string;
     placeholder?: string;
     type?: string;
     value?: string;
@@ -12,11 +17,15 @@ interface InputProps {
     htmlFor?: string;
     text?: string;
   };
+  event?: {
+    inptUpdateValueEvent?: (event: ChangeEvent<HTMLInputElement>) => void;
+  };
 }
 
 interface InputStyledProps {
   attrs?: {
     id?: string;
+    name?: string;
     placeholder?: string;
     type?: string;
     value?: string;

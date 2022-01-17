@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 
+import { ChangeEvent } from 'react';
 import { FormEducationPropsObjectGroup } from '../FormEducation/interfaces/FormEducation.interfaces';
 import { FormExperiencePropsObjectGroup } from '../FormExperience/interfaces/FormExperience.interfaces';
 
@@ -23,7 +24,7 @@ interface FormProps {
       address?: string;
       phone?: string;
       email?: string;
-      description?: string;
+      about?: string;
     };
     experience?: FormExperiencePropsObjectGroup;
     education?: FormEducationPropsObjectGroup;
@@ -33,6 +34,11 @@ interface FormProps {
     addEducationGroup?: () => void;
     removeExperienceGroup?: (position: number) => void;
     removeEducationGroup?: (position: number) => void;
+
+    updateInptValuesPersonal?: (event: ChangeEvent<HTMLInputElement>) => void;
+    updateTextValuesPersonal?: (
+      event: ChangeEvent<HTMLTextAreaElement>
+    ) => void;
   };
 }
 

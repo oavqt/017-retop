@@ -19,16 +19,26 @@ class Form extends Component<FormProps> {
         <FormPersonal
           attrs={{ ...this.props.attrs }}
           personal={{ ...this.props.values?.personal }}
+          fns={{
+            updateInptValuesPersonal: this.props.fns?.updateInptValuesPersonal,
+            updateTextValuesPersonal: this.props.fns?.updateTextValuesPersonal
+          }}
         />
         <FormExperience
           attrs={{ ...this.props.attrs }}
           experience={{ ...this.props.values?.experience }}
-          fns={{ ...this.props.fns }}
+          fns={{
+            addExperienceGroup: this.props.fns?.addExperienceGroup,
+            removeExperienceGroup: this.props.fns?.removeExperienceGroup
+          }}
         />
         <FormEducation
           attrs={{ ...this.props.attrs }}
           education={{ ...this.props.values?.education }}
-          fns={{ ...this.props.fns }}
+          fns={{
+            addEducationGroup: this.props.fns?.addEducationGroup,
+            removeEducationGroup: this.props.fns?.removeEducationGroup
+          }}
         />
         <ButtonReset attrs={{ type: 'button', value: 'reset' }}>
           reset

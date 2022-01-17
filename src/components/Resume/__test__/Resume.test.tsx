@@ -21,6 +21,31 @@ describe('Resume component', () => {
   });
 });
 
+describe('FormPersonal component', () => {
+  test('expect FormPersonal Input and TextArea components values to update', () => {
+    render(<Resume />);
+
+    const first = screen.getByPlaceholderText('first name');
+    const last = screen.getByPlaceholderText('last name');
+    const title = screen.getByPlaceholderText('title');
+    const address = screen.getByPlaceholderText('address');
+    const phone = screen.getByPlaceholderText('phone number');
+    const email = screen.getByPlaceholderText('email');
+
+    const about = screen.getByPlaceholderText('about');
+
+    const inptText = [first, last, title, address, phone, email, about];
+
+    inptText.forEach((inptText) =>
+      userEvent.type(inptText, 'i hecking love emma watson')
+    );
+
+    inptText.forEach((inptText) =>
+      expect(inptText).toHaveValue('i hecking love emma watson')
+    );
+  });
+});
+
 describe('FormExperience and FormEducation components', () => {
   test('expect FormExperience ButtonAdd to create a FormExperienceGroup', () => {
     render(<Resume />);

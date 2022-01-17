@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { InputStyledProps } from './interfaces/Input.interfaces';
 
 const InputStyled = styled.input.attrs((props: InputStyledProps) => ({
-  type: props.attrs?.type,
+  name: props.attrs?.name,
   placeholder: props.attrs?.placeholder,
+  type: props.attrs?.type,
   value: props.attrs?.value
 }))<InputStyledProps>`
   border: none;

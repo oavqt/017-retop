@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { TextareaStyledProps } from './interfaces/Textarea.interfaces';
+import { TextareaStyledProps } from './interfaces/TextArea.interfaces';
 
 const TextareaStyled = styled.textarea.attrs((props: TextareaStyledProps) => ({
+  name: props.attrs.name,
   placeholder: props.attrs?.placeholder,
   value: props.attrs.value
 }))<TextareaStyledProps>`

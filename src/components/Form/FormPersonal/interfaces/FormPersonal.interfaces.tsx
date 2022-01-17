@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+
+import { ChangeEvent } from 'react';
+
 interface FormPersonalProps {
   attrs?: {
     print?: boolean;
@@ -9,6 +13,12 @@ interface FormPersonalProps {
       form?: string;
     };
   };
+  fns?: {
+    updateInptValuesPersonal?: (event: ChangeEvent<HTMLInputElement>) => void;
+    updateTextValuesPersonal?: (
+      event: ChangeEvent<HTMLTextAreaElement>
+    ) => void;
+  };
   personal?: {
     first?: string;
     last?: string;
@@ -17,7 +27,7 @@ interface FormPersonalProps {
     address?: string;
     phone?: string;
     email?: string;
-    description?: string;
+    about?: string;
   };
 }
 

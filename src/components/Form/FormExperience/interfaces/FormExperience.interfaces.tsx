@@ -14,9 +14,7 @@ interface FormExperienceProps {
   experience?: FormExperiencePropsObjectGroup;
   fns?: {
     addExperienceGroup?: () => void;
-    addEducationGroup?: () => void;
     removeExperienceGroup?: (position: number) => void;
-    removeEducationGroup?: (position: number) => void;
   };
 }
 
