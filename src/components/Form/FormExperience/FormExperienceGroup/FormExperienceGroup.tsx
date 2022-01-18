@@ -12,7 +12,9 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
   }
 
   render(): ReactNode {
-    const btnRemoveEvent = this.props.fns?.removeExperienceGroup;
+    const btnRemoveEvent = this.props.fns?.updateGroupRemoveObject;
+    const updateValuesGroupObjectEvent =
+      this.props.fns?.updateValuesGroupObject;
 
     return (
       <FormExperienceGroupStyled>
@@ -24,6 +26,9 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
             type: 'text',
             value: this.props.value?.position
           }}
+          event={{ updateValuesGroupObjectEvent }}
+          group={this.props.group}
+          position={this.props.position}
         />
         <Input
           attrs={{
@@ -32,6 +37,9 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
             type: 'text',
             value: this.props.value?.company
           }}
+          event={{ updateValuesGroupObjectEvent }}
+          group={this.props.group}
+          position={this.props.position}
         />
         <Input
           attrs={{
@@ -40,6 +48,9 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
             type: 'text',
             value: this.props.value?.date
           }}
+          event={{ updateValuesGroupObjectEvent }}
+          group={this.props.group}
+          position={this.props.position}
         />
         <TextArea
           attrs={{
@@ -47,6 +58,9 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
             placeholder: 'description',
             value: this.props.value?.description
           }}
+          event={{ updateValuesGroupObjectEvent }}
+          group={this.props.group}
+          position={this.props.position}
         />
         <ButtonRemove
           attrs={{
@@ -55,6 +69,7 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
             rtlTestID: { btn: this.props.attrs?.rtlTestID?.btn?.experience }
           }}
           event={{ btnRemoveEvent }}
+          group={this.props.group}
           position={this.props.position}
         >
           delete

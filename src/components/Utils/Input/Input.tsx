@@ -17,8 +17,14 @@ class Input extends Component<InputProps> {
         <InputStyled
           attrs={{ ...this.props.attrs }}
           onChange={(event) =>
-            this.props.event?.inptUpdateValueEvent &&
-            this.props.event?.inptUpdateValueEvent(event)
+            (this.props.event?.updateValuesPersonalEvent &&
+              this.props.event?.updateValuesPersonalEvent(event)) ||
+            (this.props.event?.updateValuesGroupObjectEvent &&
+              this.props.event?.updateValuesGroupObjectEvent(
+                event,
+                this.props.group ?? '',
+                this.props.position ?? 0
+              ))
           }
         />
       </Label>

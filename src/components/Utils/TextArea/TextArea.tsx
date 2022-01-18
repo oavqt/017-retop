@@ -17,8 +17,14 @@ class TextArea extends Component<TextareaProps> {
         <TextareaStyled
           attrs={{ ...this.props.attrs }}
           onChange={(event: ChangeEvent<HTMLTextAreaElement>) =>
-            this.props.event?.textUpdateValueEvent &&
-            this.props.event?.textUpdateValueEvent(event)
+            (this.props.event?.updateValuesPersonalEvent &&
+              this.props.event?.updateValuesPersonalEvent(event)) ||
+            (this.props.event?.updateValuesGroupObjectEvent &&
+              this.props.event?.updateValuesGroupObjectEvent(
+                event,
+                this.props.group ?? '',
+                this.props.position ?? 0
+              ))
           }
         />
       </Label>

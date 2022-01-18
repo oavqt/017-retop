@@ -20,24 +20,25 @@ class Form extends Component<FormProps> {
           attrs={{ ...this.props.attrs }}
           personal={{ ...this.props.values?.personal }}
           fns={{
-            updateInptValuesPersonal: this.props.fns?.updateInptValuesPersonal,
-            updateTextValuesPersonal: this.props.fns?.updateTextValuesPersonal
+            updateValuesPersonal: this.props.fns?.updateValuesPersonal
           }}
         />
         <FormExperience
           attrs={{ ...this.props.attrs }}
           experience={{ ...this.props.values?.experience }}
           fns={{
-            addExperienceGroup: this.props.fns?.addExperienceGroup,
-            removeExperienceGroup: this.props.fns?.removeExperienceGroup
+            updateGroupAddObject: this.props.fns?.updateGroupAddObject,
+            updateGroupRemoveObject: this.props.fns?.updateGroupRemoveObject,
+            updateValuesGroupObject: this.props.fns?.updateValuesGroupObject
           }}
         />
         <FormEducation
           attrs={{ ...this.props.attrs }}
           education={{ ...this.props.values?.education }}
           fns={{
-            addEducationGroup: this.props.fns?.addEducationGroup,
-            removeEducationGroup: this.props.fns?.removeEducationGroup
+            updateGroupAddObject: this.props.fns?.updateGroupAddObject,
+            updateGroupRemoveObject: this.props.fns?.updateGroupRemoveObject,
+            updateValuesGroupObject: this.props.fns?.updateValuesGroupObject
           }}
         />
         <ButtonReset attrs={{ type: 'button', value: 'reset' }}>

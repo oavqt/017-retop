@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 
+import { ChangeEvent } from 'react';
+
 interface FormEducationGroupProps {
   attrs?: {
     print?: boolean;
@@ -12,8 +14,15 @@ interface FormEducationGroupProps {
     };
   };
   fns?: {
-    removeEducationGroup?: (position: number) => void;
+    updateGroupRemoveObject?: (nameOfGroup: string, position: number) => void;
+
+    updateValuesGroupObject?: (
+      event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
+      nameOfGroup: string,
+      position: number
+    ) => void;
   };
+  group?: string;
   position?: number;
   value?: {
     university?: string;

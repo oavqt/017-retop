@@ -2,6 +2,11 @@ import { ChangeEvent, Component, ReactNode } from 'react';
 import Form from '../Form/Form';
 import ResumeStyled from './Resume.styled';
 import ResumeProps, { ResumeStateProps } from './interfaces/Resume.interfaces';
+import {
+  FormExperienceEducationPropsObject,
+  FormExperienceEducationPropsObjectArray,
+  FormExperienceEducationPropsObjectGroup
+} from '../Form/interfaces/Form.interfaces';
 
 class Resume extends Component<ResumeProps, ResumeStateProps> {
   constructor(props: ResumeProps) {
@@ -21,20 +26,20 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
         experience: {
           group: [
             {
-              position: 'test',
-              company: 'test',
-              date: 'test',
-              description: 'test'
+              position: '',
+              company: '',
+              date: '',
+              description: ''
             }
           ]
         },
         education: {
           group: [
             {
-              degree: 'test',
-              university: 'test',
-              date: 'test',
-              description: 'test'
+              university: '',
+              degree: '',
+              date: '',
+              description: ''
             }
           ]
         }
@@ -42,21 +47,8 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     };
   }
 
-  updateInptValuesPersonal = (event: ChangeEvent<HTMLInputElement>): void => {
-    this.setState({
-      ...this.state,
-      values: {
-        ...this.state.values,
-        personal: {
-          ...this.state.values?.personal,
-          [event.target.name]: event.target.value
-        }
-      }
-    });
-  };
-
-  updateTextValuesPersonal = (
-    event: ChangeEvent<HTMLTextAreaElement>
+  updateValuesPersonal = (
+    event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
   ): void => {
     this.setState({
       ...this.state,
@@ -70,94 +62,101 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     });
   };
 
-  addExperienceGroup = (): void => {
-    const experienceProperties = {
-      position: '',
-      company: '',
-      date: '',
-      description: ''
+  updateValuesGroupObject = (
+    event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
+    nameOfGroup: string,
+    position: number
+  ): void => {
+    const copyGroup = [
+      ...(this.state.values?.[
+        nameOfGroup as keyof FormExperienceEducationPropsObjectGroup
+      ]?.group ?? [])
+    ] as FormExperienceEducationPropsObjectArray;
+
+    copyGroup[position][
+      event.target.name as keyof FormExperienceEducationPropsObject
+    ] = event.target.value;
+
+    this.setState({
+      ...this.state,
+      values: {
+        ...this.state.values,
+        [nameOfGroup]: {
+          group: copyGroup
+        }
+      }
+    });
+  };
+
+  updateGroupAddObject = (nameOfGroup: string): void => {
+    const addObject = {
+      experience: {
+        position: '',
+        company: '',
+        date: '',
+        description: ''
+      },
+      education: {
+        university: '',
+        degree: '',
+        date: '',
+        description: ''
+      }
     };
 
-    const experienceGroup = this.state.values?.experience?.group;
+    const copyGroup = [
+      ...(this.state.values?.[
+        nameOfGroup as keyof FormExperienceEducationPropsObjectGroup
+      ]?.group ?? []),
+      {
+        ...addObject[
+          nameOfGroup as keyof FormExperienceEducationPropsObjectGroup
+        ]
+      }
+    ] as FormExperienceEducationPropsObjectArray;
+
+    copyGroup[0];
 
     this.setState({
       ...this.state,
       values: {
         ...this.state.values,
-        experience: {
-          group: [...(experienceGroup ?? []), { ...experienceProperties }]
+        [nameOfGroup]: {
+          group: copyGroup
         }
       }
     });
   };
 
-  addEducationGroup = (): void => {
-    const educationProperties = {
-      degree: '',
-      university: '',
-      date: '',
-      description: ''
-    };
+  updateGroupRemoveObject = (nameOfGroup: string, position: number): void => {
+    const copyGroup = [
+      ...(this.state.values?.[
+        nameOfGroup as keyof FormExperienceEducationPropsObjectGroup
+      ]?.group ?? [])
+    ] as FormExperienceEducationPropsObjectArray;
 
-    const educationGroup = this.state.values?.education?.group;
-
-    this.setState({
-      ...this.state,
-      values: {
-        ...this.state.values,
-        education: {
-          group: [...(educationGroup ?? []), { ...educationProperties }]
-        }
-      }
-    });
-  };
-
-  removeExperienceGroup = (position: number): void => {
-    const experienceGroup = this.state.values?.experience?.group?.slice();
-
-    experienceGroup?.splice(position, 1);
+    copyGroup?.splice(position, 1);
 
     this.setState({
       ...this.state,
       values: {
         ...this.state.values,
-        experience: {
-          group: [...(experienceGroup ?? [])]
-        }
-      }
-    });
-  };
-
-  removeEducationGroup = (position: number): void => {
-    const educationGroup = this.state.values?.education?.group?.slice();
-
-    educationGroup?.splice(position, 1);
-
-    this.setState({
-      ...this.state,
-      values: {
-        ...this.state.values,
-        education: {
-          group: [...(educationGroup ?? [])]
+        [nameOfGroup]: {
+          group: copyGroup
         }
       }
     });
   };
 
   render(): ReactNode {
-    const addEduExp = {
-      addExperienceGroup: this.addExperienceGroup,
-      addEducationGroup: this.addEducationGroup
+    const updateExpEduAddRemove = {
+      updateGroupAddObject: this.updateGroupAddObject,
+      updateGroupRemoveObject: this.updateGroupRemoveObject
     };
 
-    const removeEduExp = {
-      removeExperienceGroup: this.removeExperienceGroup,
-      removeEducationGroup: this.removeEducationGroup
-    };
-
-    const updateValuesPerEduExp = {
-      updateInptValuesPersonal: this.updateInptValuesPersonal,
-      updateTextValuesPersonal: this.updateTextValuesPersonal
+    const updateValuesPerExpEdu = {
+      updateValuesPersonal: this.updateValuesPersonal,
+      updateValuesGroupObject: this.updateValuesGroupObject
     };
 
     return (
@@ -165,7 +164,7 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
         <Form
           attrs={{ ...this.props.form?.attrs }}
           values={{ ...this.state.values }}
-          fns={{ ...addEduExp, ...removeEduExp, ...updateValuesPerEduExp }}
+          fns={{ ...updateExpEduAddRemove, ...updateValuesPerExpEdu }}
         />
       </ResumeStyled>
     );

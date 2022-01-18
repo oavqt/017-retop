@@ -15,7 +15,11 @@ class FormEducation extends Component<FormEducationProps> {
         return (
           <FormEducationGroup
             attrs={{ ...this.props.attrs }}
-            fns={{ removeEducationGroup: this.props.fns?.removeEducationGroup }}
+            fns={{
+              updateGroupRemoveObject: this.props.fns?.updateGroupRemoveObject,
+              updateValuesGroupObject: this.props.fns?.updateValuesGroupObject
+            }}
+            group='education'
             key={index}
             position={index}
             value={{ ...object }}
@@ -24,7 +28,7 @@ class FormEducation extends Component<FormEducationProps> {
       }
     );
 
-    const btnAddEvent = this.props.fns?.addEducationGroup;
+    const btnAddEvent = this.props.fns?.updateGroupAddObject;
 
     return (
       <FormEducationStyled>
@@ -36,6 +40,7 @@ class FormEducation extends Component<FormEducationProps> {
             value: 'add'
           }}
           event={{ btnAddEvent }}
+          group='education'
         >
           add education
         </ButtonAdd>

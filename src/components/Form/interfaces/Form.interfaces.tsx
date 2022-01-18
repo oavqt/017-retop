@@ -1,8 +1,16 @@
 /* eslint-disable no-unused-vars */
 
 import { ChangeEvent } from 'react';
-import { FormEducationPropsObjectGroup } from '../FormEducation/interfaces/FormEducation.interfaces';
-import { FormExperiencePropsObjectGroup } from '../FormExperience/interfaces/FormExperience.interfaces';
+import {
+  FormEducationPropsObject,
+  FormEducationPropsObjectArray,
+  FormEducationPropsObjectGroup
+} from '../FormEducation/interfaces/FormEducation.interfaces';
+import {
+  FormExperiencePropsObject,
+  FormExperiencePropsObjectArray,
+  FormExperiencePropsObjectGroup
+} from '../FormExperience/interfaces/FormExperience.interfaces';
 
 interface FormProps {
   attrs?: {
@@ -30,14 +38,16 @@ interface FormProps {
     education?: FormEducationPropsObjectGroup;
   };
   fns?: {
-    addExperienceGroup?: () => void;
-    addEducationGroup?: () => void;
-    removeExperienceGroup?: (position: number) => void;
-    removeEducationGroup?: (position: number) => void;
+    updateGroupAddObject?: (nameOfGroup: string) => void;
+    updateGroupRemoveObject?: (nameOfGroup: string, position: number) => void;
 
-    updateInptValuesPersonal?: (event: ChangeEvent<HTMLInputElement>) => void;
-    updateTextValuesPersonal?: (
-      event: ChangeEvent<HTMLTextAreaElement>
+    updateValuesPersonal?: (
+      event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+    ) => void;
+    updateValuesGroupObject?: (
+      event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
+      nameOfGroup: string,
+      position: number
     ) => void;
   };
 }
@@ -51,5 +61,21 @@ interface FormStyledProps {
   };
 }
 
-export { type FormStyledProps };
+type FormExperienceEducationPropsObject = FormExperiencePropsObject &
+  FormEducationPropsObject;
+
+interface FormExperienceEducationPropsObjectGroup {
+  experience?: FormExperiencePropsObjectGroup;
+  education?: FormEducationPropsObjectGroup;
+}
+
+type FormExperienceEducationPropsObjectArray = FormExperiencePropsObjectArray &
+  FormEducationPropsObjectArray;
+
+export {
+  type FormExperienceEducationPropsObjectArray,
+  type FormExperienceEducationPropsObjectGroup,
+  type FormExperienceEducationPropsObject,
+  type FormStyledProps
+};
 export default FormProps;

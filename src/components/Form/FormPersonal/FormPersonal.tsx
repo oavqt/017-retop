@@ -8,8 +8,7 @@ import FormPersonalProps from './interfaces/FormPersonal.interfaces';
 
 class FormPersonal extends Component<FormPersonalProps> {
   render(): ReactElement {
-    const inptUpdateValueEvent = this.props.fns?.updateInptValuesPersonal;
-    const textUpdateValueEvent = this.props.fns?.updateTextValuesPersonal;
+    const updateValuesPersonalEvent = this.props.fns?.updateValuesPersonal;
 
     return (
       <FormPersonalStyled>
@@ -21,7 +20,7 @@ class FormPersonal extends Component<FormPersonalProps> {
             type: 'text',
             value: this.props.personal?.first
           }}
-          event={{ inptUpdateValueEvent }}
+          event={{ updateValuesPersonalEvent }}
         />
         <Input
           attrs={{
@@ -30,7 +29,7 @@ class FormPersonal extends Component<FormPersonalProps> {
             type: 'text',
             value: this.props.personal?.last
           }}
-          event={{ inptUpdateValueEvent }}
+          event={{ updateValuesPersonalEvent }}
         />
         <Input
           attrs={{
@@ -39,7 +38,7 @@ class FormPersonal extends Component<FormPersonalProps> {
             type: 'text',
             value: this.props.personal?.title
           }}
-          event={{ inptUpdateValueEvent }}
+          event={{ updateValuesPersonalEvent }}
         />
         <InputFile
           attrs={{
@@ -48,7 +47,7 @@ class FormPersonal extends Component<FormPersonalProps> {
             type: 'file'
           }}
           label={{ text: 'add photo...' }}
-          event={{ inptUpdateValueEvent }}
+          event={{ updateValuesPersonalEvent }}
         />
         <Input
           attrs={{
@@ -57,7 +56,7 @@ class FormPersonal extends Component<FormPersonalProps> {
             type: 'text',
             value: this.props.personal?.address
           }}
-          event={{ inptUpdateValueEvent }}
+          event={{ updateValuesPersonalEvent }}
         />
         <Input
           attrs={{
@@ -66,7 +65,7 @@ class FormPersonal extends Component<FormPersonalProps> {
             type: 'text',
             value: this.props.personal?.phone
           }}
-          event={{ inptUpdateValueEvent }}
+          event={{ updateValuesPersonalEvent }}
         />
         <Input
           attrs={{
@@ -75,7 +74,7 @@ class FormPersonal extends Component<FormPersonalProps> {
             type: 'text',
             value: this.props.personal?.email
           }}
-          event={{ inptUpdateValueEvent }}
+          event={{ updateValuesPersonalEvent }}
         />
         <TextArea
           attrs={{
@@ -83,7 +82,7 @@ class FormPersonal extends Component<FormPersonalProps> {
             placeholder: 'about',
             value: this.props.personal?.about
           }}
-          event={{ textUpdateValueEvent }}
+          event={{ updateValuesPersonalEvent }}
         />
       </FormPersonalStyled>
     );

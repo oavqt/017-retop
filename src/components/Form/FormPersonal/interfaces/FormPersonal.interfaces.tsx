@@ -14,9 +14,8 @@ interface FormPersonalProps {
     };
   };
   fns?: {
-    updateInptValuesPersonal?: (event: ChangeEvent<HTMLInputElement>) => void;
-    updateTextValuesPersonal?: (
-      event: ChangeEvent<HTMLTextAreaElement>
+    updateValuesPersonal?: (
+      event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
     ) => void;
   };
   personal?: {

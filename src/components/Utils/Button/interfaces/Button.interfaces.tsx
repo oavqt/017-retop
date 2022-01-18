@@ -9,9 +9,10 @@ interface ButtonProps {
     value?: string;
   };
   event?: {
-    btnAddEvent?: () => void;
-    btnRemoveEvent?: (position: number) => void;
+    btnAddEvent?: (nameOfGroup: string) => void;
+    btnRemoveEvent?: (nameOfGroup: string, position: number) => void;
   };
+  group?: string;
   position?: number;
 }
 

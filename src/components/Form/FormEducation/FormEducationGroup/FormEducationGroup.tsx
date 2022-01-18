@@ -8,7 +8,9 @@ import FormEducationGroupProps from './interfaces/FormEducationGroup.interfaces'
 
 class FormEducationGroup extends Component<FormEducationGroupProps> {
   render(): ReactNode {
-    const btnRemoveEvent = this.props.fns?.removeEducationGroup;
+    const btnRemoveEvent = this.props.fns?.updateGroupRemoveObject;
+    const updateValuesGroupObjectEvent =
+      this.props.fns?.updateValuesGroupObject;
 
     return (
       <FormEducationGroupStyled>
@@ -20,6 +22,9 @@ class FormEducationGroup extends Component<FormEducationGroupProps> {
             type: 'text',
             value: this.props.value?.university
           }}
+          event={{ updateValuesGroupObjectEvent }}
+          group={this.props.group}
+          position={this.props.position}
         />
         <Input
           attrs={{
@@ -28,6 +33,9 @@ class FormEducationGroup extends Component<FormEducationGroupProps> {
             type: 'text',
             value: this.props.value?.degree
           }}
+          event={{ updateValuesGroupObjectEvent }}
+          group={this.props.group}
+          position={this.props.position}
         />
         <Input
           attrs={{
@@ -36,6 +44,9 @@ class FormEducationGroup extends Component<FormEducationGroupProps> {
             type: 'text',
             value: this.props.value?.date
           }}
+          event={{ updateValuesGroupObjectEvent }}
+          group={this.props.group}
+          position={this.props.position}
         />
         <TextArea
           attrs={{
@@ -43,6 +54,9 @@ class FormEducationGroup extends Component<FormEducationGroupProps> {
             placeholder: 'description',
             value: this.props.value?.description
           }}
+          event={{ updateValuesGroupObjectEvent }}
+          group={this.props.group}
+          position={this.props.position}
         />
         <ButtonRemove
           attrs={{
@@ -51,6 +65,8 @@ class FormEducationGroup extends Component<FormEducationGroupProps> {
             rtlTestID: { btn: this.props.attrs?.rtlTestID?.btn?.education }
           }}
           event={{ btnRemoveEvent }}
+          group={this.props.group}
+          position={this.props.position}
         >
           delete
         </ButtonRemove>

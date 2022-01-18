@@ -17,8 +17,10 @@ class FormExperience extends Component<FormExperienceProps> {
           <FormExperienceGroup
             attrs={{ ...this.props.attrs }}
             fns={{
-              removeExperienceGroup: this.props.fns?.removeExperienceGroup
+              updateGroupRemoveObject: this.props.fns?.updateGroupRemoveObject,
+              updateValuesGroupObject: this.props.fns?.updateValuesGroupObject
             }}
+            group='experience'
             key={index}
             position={index}
             value={{ ...object }}
@@ -27,7 +29,7 @@ class FormExperience extends Component<FormExperienceProps> {
       }
     );
 
-    const btnAddEvent = this.props.fns?.addExperienceGroup;
+    const btnAddEvent = this.props.fns?.updateGroupAddObject;
 
     return (
       <FormExperienceStyled>
@@ -36,6 +38,7 @@ class FormExperience extends Component<FormExperienceProps> {
         <ButtonAdd
           attrs={{ type: 'button', value: 'add' }}
           event={{ btnAddEvent }}
+          group='experience'
         >
           add experience
         </ButtonAdd>

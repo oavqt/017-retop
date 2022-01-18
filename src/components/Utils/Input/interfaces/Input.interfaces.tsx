@@ -10,15 +10,24 @@ interface InputProps {
     type?: string;
     value?: string;
   };
-  styled?: {
-    color?: string;
+  event?: {
+    updateValuesPersonalEvent?: (
+      event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+    ) => void;
+    updateValuesGroupObjectEvent?: (
+      event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
+      nameOfGroup: string,
+      position: number
+    ) => void;
   };
+  group?: string;
   label?: {
     htmlFor?: string;
     text?: string;
   };
-  event?: {
-    inptUpdateValueEvent?: (event: ChangeEvent<HTMLInputElement>) => void;
+  position?: number;
+  styled?: {
+    color?: string;
   };
 }
 
