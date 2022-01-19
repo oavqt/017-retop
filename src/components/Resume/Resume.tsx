@@ -1,5 +1,6 @@
 import { ChangeEvent, Component, ReactNode } from 'react';
 import Form from '../Form/Form';
+import stateReset from './state/state.reset';
 import ResumeStyled from './Resume.styled';
 import ResumeProps, { ResumeStateProps } from './interfaces/Resume.interfaces';
 import {
@@ -148,6 +149,15 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     });
   };
 
+  updateStateReset = (): void => {
+    const numberOfExpGroups = this.state.values?.experience?.group?.length;
+    const numberOfEduGroups = this.state.values?.education?.group?.length;
+
+    this.setState({
+      ...stateReset(numberOfExpGroups ?? 1, numberOfEduGroups ?? 1)
+    });
+  };
+
   render(): ReactNode {
     const updateExpEduAddRemove = {
       updateGroupAddObject: this.updateGroupAddObject,
@@ -159,12 +169,20 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
       updateValuesGroupObject: this.updateValuesGroupObject
     };
 
+    const updateState = {
+      updateStateReset: this.updateStateReset
+    };
+
     return (
       <ResumeStyled>
         <Form
           attrs={{ ...this.props.form?.attrs }}
           values={{ ...this.state.values }}
-          fns={{ ...updateExpEduAddRemove, ...updateValuesPerExpEdu }}
+          fns={{
+            ...updateExpEduAddRemove,
+            ...updateValuesPerExpEdu,
+            ...updateState
+          }}
         />
       </ResumeStyled>
     );

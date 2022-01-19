@@ -19,4 +19,33 @@ describe('FormExperience component', () => {
     expect(buttonAdd).toHaveProperty('type', 'button');
     expect(buttonAdd).toHaveValue('add');
   });
+
+  test('expect the FormExperience component to map the experience props array and create FormExperienceGroup components', () => {
+    const expPropGroup = [
+      {
+        position: 'i hecking love emma watson',
+        company: 'i hecking love emma watson',
+        date: 'i hecking love emma watson',
+        description: 'i hecking love emma watson'
+      },
+      {
+        position: 'i hecking love emma watson',
+        company: 'i hecking love emma watson',
+        date: 'i hecking love emma watson',
+        description: 'i hecking love emma watson'
+      },
+      {
+        position: 'i hecking love emma watson',
+        company: 'i hecking love emma watson',
+        date: 'i hecking love emma watson',
+        description: 'i hecking love emma watson'
+      }
+    ];
+
+    render(<FormExperience experience={{ group: expPropGroup }} />);
+
+    const inptPosition = screen.getAllByPlaceholderText('position');
+
+    expect(inptPosition).toHaveLength(3);
+  });
 });

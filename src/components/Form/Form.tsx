@@ -14,6 +14,8 @@ class Form extends Component<FormProps> {
   }
 
   render(): ReactNode {
+    const updateStateResetEvent = this.props.fns?.updateStateReset;
+
     return (
       <FormStyled attrs={{ ...this.props.attrs }}>
         <FormPersonal
@@ -41,7 +43,10 @@ class Form extends Component<FormProps> {
             updateValuesGroupObject: this.props.fns?.updateValuesGroupObject
           }}
         />
-        <ButtonReset attrs={{ type: 'button', value: 'reset' }}>
+        <ButtonReset
+          attrs={{ type: 'button', value: 'reset' }}
+          event={{ updateStateResetEvent }}
+        >
           reset
         </ButtonReset>
         <ButtonExample attrs={{ type: 'button', value: 'example' }}>

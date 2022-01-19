@@ -49,6 +49,8 @@ interface FormProps {
       nameOfGroup: string,
       position: number
     ) => void;
+
+    updateStateReset?: () => void;
   };
 }
 

@@ -1,4 +1,6 @@
-const stateExample = {
+import StateExample from './interfaces/state.example.interfaces';
+
+const stateExample = (): StateExample => ({
   values: {
     personal: {
       first: 'i hecking love emma watson',
@@ -43,6 +45,6 @@ const stateExample = {
       ]
     }
   }
-};
+});
 
 export default stateExample;

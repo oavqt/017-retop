@@ -19,4 +19,33 @@ describe('FormEducation component', () => {
     expect(buttonAdd).toHaveProperty('type', 'button');
     expect(buttonAdd).toHaveValue('add');
   });
+
+  test('expect the FormEducation component to map the experience props array and create FormEducationGroup components', () => {
+    const eduPropGroup = [
+      {
+        university: 'i hecking love emma watson',
+        degree: 'i hecking love emma watson',
+        date: 'i hecking love emma watson',
+        description: 'i hecking love emma watson'
+      },
+      {
+        university: 'i hecking love emma watson',
+        degree: 'i hecking love emma watson',
+        date: 'i hecking love emma watson',
+        description: 'i hecking love emma watson'
+      },
+      {
+        university: 'i hecking love emma watson',
+        degree: 'i hecking love emma watson',
+        date: 'i hecking love emma watson',
+        description: 'i hecking love emma watson'
+      }
+    ];
+
+    render(<FormEducation education={{ group: eduPropGroup }} />);
+
+    const inptUniversity = screen.getAllByPlaceholderText('university');
+
+    expect(inptUniversity).toHaveLength(3);
+  });
 });

@@ -9,4 +9,20 @@ describe('Button component', () => {
 
     expect(button).toBeInTheDocument();
   });
+
+  test('expect a Button component with type, value, and etc... attrs', () => {
+    render(
+      <Button
+        attrs={{
+          type: 'type',
+          value: 'value'
+        }}
+      />
+    );
+
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('type', 'type');
+    expect(button).toHaveAttribute('value', 'value');
+  });
 });
