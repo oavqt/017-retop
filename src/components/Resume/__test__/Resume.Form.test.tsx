@@ -145,6 +145,59 @@ describe('Form component', () => {
     );
   });
 
+  test('expect Form component ButtonExample to fill all Input fields', () => {
+    render(<Resume />);
+
+    const inptFirst = screen.getByPlaceholderText('first name');
+    const inptLast = screen.getByPlaceholderText('last name');
+    const inptTitle = screen.getByPlaceholderText('title');
+    const inptAddress = screen.getByPlaceholderText('address');
+    const inptPhone = screen.getByPlaceholderText('phone number');
+    const inptEmail = screen.getByPlaceholderText('email');
+    const inptAbout = screen.getByPlaceholderText('about');
+
+    const inptPosition = screen.getAllByPlaceholderText('position');
+    const inptCompany = screen.getAllByPlaceholderText('company');
+
+    const inptUniversity = screen.getAllByPlaceholderText('university');
+    const inptDegree = screen.getAllByPlaceholderText('degree');
+
+    const inptDate = screen.getAllByPlaceholderText('date');
+    const inptDescription = screen.getAllByPlaceholderText('description');
+
+    const inptTextUnique = [
+      inptFirst,
+      inptLast,
+      inptTitle,
+      inptAddress,
+      inptPhone,
+      inptEmail,
+      inptAbout
+    ];
+    const inptTextCommon = [
+      inptPosition,
+      inptCompany,
+      inptUniversity,
+      inptDegree,
+      inptDate,
+      inptDescription
+    ];
+
+    const buttonExample = screen.getByText('example');
+
+    userEvent.click(buttonExample);
+
+    inptTextUnique.forEach((inputText) =>
+      expect(inputText).toHaveValue('i hecking love emma watson')
+    );
+
+    inptTextCommon.forEach((inputGroup) =>
+      inputGroup.forEach((inputText) =>
+        expect(inputText).toHaveValue('i hecking love emma watson')
+      )
+    );
+  });
+
   describe('FormPersonal component', () => {
     test('expect FormPersonal Input and TextArea components values to update', () => {
       render(<Resume />);

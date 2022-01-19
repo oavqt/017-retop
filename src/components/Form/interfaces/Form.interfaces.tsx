@@ -51,6 +51,7 @@ interface FormProps {
     ) => void;
 
     updateStateReset?: () => void;
+    updateStateExample?: () => void;
   };
 }
 

@@ -8,6 +8,7 @@ import {
   FormExperienceEducationPropsObjectArray,
   FormExperienceEducationPropsObjectGroup
 } from '../Form/interfaces/Form.interfaces';
+import stateExample from './state/state.example';
 
 class Resume extends Component<ResumeProps, ResumeStateProps> {
   constructor(props: ResumeProps) {
@@ -158,6 +159,10 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     });
   };
 
+  updateStateExample = (): void => {
+    this.setState({ ...stateExample() });
+  };
+
   render(): ReactNode {
     const updateExpEduAddRemove = {
       updateGroupAddObject: this.updateGroupAddObject,
@@ -170,7 +175,8 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     };
 
     const updateState = {
-      updateStateReset: this.updateStateReset
+      updateStateReset: this.updateStateReset,
+      updateStateExample: this.updateStateExample
     };
 
     return (

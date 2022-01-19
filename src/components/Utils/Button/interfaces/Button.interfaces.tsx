@@ -13,6 +13,7 @@ interface ButtonProps {
     btnRemoveEvent?: (nameOfGroup: string, position: number) => void;
 
     updateStateResetEvent?: () => void;
+    updateStateExampleEvent?: () => void;
   };
   group?: string;
   position?: number;
