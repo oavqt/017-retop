@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import PreviewEducationPropsObject from '../../interfaces/PreviewEducation.interfaces';
+import { PreviewEducationPropsObject } from '../../interfaces/PreviewEducation.interfaces';
 import PreviewEducationGroup from '../PreviewEducationGroup';
 
 describe('PreviewEducationGroup component', () => {

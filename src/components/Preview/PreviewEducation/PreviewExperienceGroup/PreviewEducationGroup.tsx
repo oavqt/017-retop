@@ -13,13 +13,15 @@ class PreviewEducationGroup extends Component<PreviewEducationGroupProps> {
   render(): ReactNode {
     return (
       <PreviewEducationGroupStyled>
-        <Div>
-          <Paragraph>{this.props.value?.date}</Paragraph>
-        </Div>
-        <Div>
-          <H4>{this.props.value?.university}</H4>
-          <H5>{this.props.value?.degree}</H5>
-          <Paragraph>{this.props.value?.description}</Paragraph>
+        <Div styled={{ display: 'flex' }}>
+          <Div>
+            <Paragraph>{this.props.value?.date}</Paragraph>
+          </Div>
+          <Div>
+            <H4>{this.props.value?.university}</H4>
+            <H5>{this.props.value?.degree}</H5>
+            <Paragraph>{this.props.value?.description}</Paragraph>
+          </Div>
         </Div>
       </PreviewEducationGroupStyled>
     );

@@ -1,3 +1,7 @@
+interface PreviewEducationProps {
+  education?: PreviewEducationPropsObjectGroup;
+}
+
 interface PreviewEducationPropsObject {
   university?: string;
   degree?: string;
@@ -5,4 +9,16 @@ interface PreviewEducationPropsObject {
   description?: string;
 }
 
-export default PreviewEducationPropsObject;
+type PreviewEducationPropsObjectArray = Array<PreviewEducationPropsObject>;
+
+interface PreviewEducationPropsObjectGroup {
+  group?: PreviewEducationPropsObjectArray;
+}
+
+export {
+  type PreviewEducationPropsObject,
+  type PreviewEducationPropsObjectArray,
+  type PreviewEducationPropsObjectGroup
+};
+
+export default PreviewEducationProps;
