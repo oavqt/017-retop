@@ -1,3 +1,7 @@
+interface PreviewExperienceProps {
+  experience?: PreviewExperiencePropsObjectGroup;
+}
+
 interface PreviewExperiencePropsObject {
   position?: string;
   company?: string;
@@ -5,4 +9,16 @@ interface PreviewExperiencePropsObject {
   description?: string;
 }
 
-export default PreviewExperiencePropsObject;
+type PreviewExperiencePropsObjectArray = Array<PreviewExperiencePropsObject>;
+
+interface PreviewExperiencePropsObjectGroup {
+  group?: PreviewExperiencePropsObjectArray;
+}
+
+export {
+  type PreviewExperiencePropsObject,
+  type PreviewExperiencePropsObjectArray,
+  type PreviewExperiencePropsObjectGroup
+};
+
+export default PreviewExperienceProps;

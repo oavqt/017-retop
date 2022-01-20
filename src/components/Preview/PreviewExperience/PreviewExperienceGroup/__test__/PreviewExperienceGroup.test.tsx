@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import PreviewExperienceGroup from '../PreviewExperienceGroup';
-import PreviewExperiencePropsObject from '../../interfaces/PreviewExperience.interfaces';
+import { PreviewExperiencePropsObject } from '../../interfaces/PreviewExperience.interfaces';
 
 describe('PreviewExperienceGroup component', () => {
   const previewExpGroupPropsTest = (expGroup: PreviewExperiencePropsObject) =>

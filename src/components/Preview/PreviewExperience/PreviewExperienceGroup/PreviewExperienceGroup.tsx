@@ -13,13 +13,15 @@ class PreviewExperienceGroup extends Component<PreviewExperienceGroupProps> {
   render(): ReactNode {
     return (
       <PreviewExperienceGroupStyled>
-        <Div>
-          <Paragraph>{this.props.value?.date}</Paragraph>
-        </Div>
-        <Div>
-          <H4>{this.props.value?.position}</H4>
-          <H5>{this.props.value?.company}</H5>
-          <Paragraph>{this.props.value?.description}</Paragraph>
+        <Div styled={{ display: 'flex' }}>
+          <Div>
+            <Paragraph>{this.props.value?.date}</Paragraph>
+          </Div>
+          <Div>
+            <H4>{this.props.value?.position}</H4>
+            <H5>{this.props.value?.company}</H5>
+            <Paragraph>{this.props.value?.description}</Paragraph>
+          </Div>
         </Div>
       </PreviewExperienceGroupStyled>
     );
