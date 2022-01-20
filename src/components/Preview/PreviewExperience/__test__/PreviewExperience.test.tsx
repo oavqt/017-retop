@@ -9,9 +9,12 @@ describe('PreviewExperience', () => {
   test('expect a PreviewExperience component to be created', () => {
     render(<PreviewExperience />);
 
+    const expHeading = screen.getByRole('heading');
     const expList = screen.getByRole('list');
 
     expect(expList).toBeInTheDocument();
+    expect(expHeading).toBeInTheDocument();
+    expect(expHeading).toHaveTextContent('experience');
   });
 
   test('expect the PreviewExperience component to map the experience props array and create PreviewExperienceGroup components', () => {
