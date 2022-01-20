@@ -3,11 +3,7 @@ import Resume from './components/Resume/Resume';
 
 class App extends Component {
   render(): ReactNode {
-    return (
-      <div>
-        <Resume />
-      </div>
-    );
+    return <Resume />;
   }
 }
 
