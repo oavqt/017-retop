@@ -171,18 +171,20 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     URL.revokeObjectURL(currentPhoto ?? '');
 
     if (eventTarget.files) {
-      const URLPhotoFile = URL.createObjectURL(eventTarget.files[0]);
+      if (eventTarget.files[0]) {
+        const URLPhotoFile = URL.createObjectURL(eventTarget.files[0]);
 
-      this.setState({
-        ...this.state,
-        values: {
-          ...this.state.values,
-          personal: {
-            ...this.state.values?.personal,
-            photo: URLPhotoFile
+        this.setState({
+          ...this.state,
+          values: {
+            ...this.state.values,
+            personal: {
+              ...this.state.values?.personal,
+              photo: URLPhotoFile
+            }
           }
-        }
-      });
+        });
+      }
     }
   };
 
