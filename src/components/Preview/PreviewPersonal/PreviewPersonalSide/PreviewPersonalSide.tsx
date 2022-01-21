@@ -14,7 +14,7 @@ class PreviewPersonalSide extends Component<PreviewPersonalSideProps> {
       <PreviewPersonalSideStyled>
         <Article>
           <Div>
-            <Img />
+            <Img attrs={{ src: this.props.personal?.photo, alt: '--photo' }} />
             <Div>
               <H3>contact</H3>
               <Div>

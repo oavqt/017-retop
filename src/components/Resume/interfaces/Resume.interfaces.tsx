@@ -17,6 +17,9 @@ interface ResumeProps {
   preview?: {
     attrs?: {
       print?: boolean;
+      rtlTestID?: {
+        preview?: string;
+      };
     };
   };
   values?: {

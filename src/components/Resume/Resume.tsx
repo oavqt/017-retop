@@ -9,6 +9,7 @@ import {
   FormExperienceEducationPropsObjectGroup
 } from '../Form/interfaces/Form.interfaces';
 import stateExample from './state/state.example';
+import Preview from '../Preview/Preview';
 
 class Resume extends Component<ResumeProps, ResumeStateProps> {
   constructor(props: ResumeProps) {
@@ -165,6 +166,9 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
 
   updateValuesPersonalPhoto = (event: ChangeEvent<HTMLInputElement>): void => {
     const eventTarget = event.target as HTMLInputElement;
+    const currentPhoto = this.state.values?.personal?.photo;
+
+    URL.revokeObjectURL(currentPhoto ?? '');
 
     if (eventTarget.files) {
       const URLPhotoFile = URL.createObjectURL(eventTarget.files[0]);
@@ -179,7 +183,6 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
           }
         }
       });
-      URL.revokeObjectURL(URLPhotoFile);
     }
   };
 
@@ -210,6 +213,10 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
             ...updateValuesPerExpEdu,
             ...updateState
           }}
+        />
+        <Preview
+          attrs={{ ...this.props.preview?.attrs }}
+          values={{ ...this.state.values }}
         />
       </ResumeStyled>
     );

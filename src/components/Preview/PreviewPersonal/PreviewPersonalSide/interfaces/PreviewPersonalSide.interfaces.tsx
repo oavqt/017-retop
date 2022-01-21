@@ -3,6 +3,7 @@ interface PreviewPersonalSideProps {
     address?: string;
     email?: string;
     phone?: string;
+    photo?: string;
   };
 }
 

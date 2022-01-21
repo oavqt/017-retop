@@ -10,7 +10,9 @@ class PreviewPersonalHeader extends Component<PreviewPersonalHeaderProps> {
     return (
       <PreviewPersonalHeaderStyled>
         <Div>
-          <H1>{this.props.personal?.first}</H1>
+          <H1>
+            {this.props.personal?.first} {this.props.personal?.last}
+          </H1>
           <H2>{this.props.personal?.title}</H2>
         </Div>
       </PreviewPersonalHeaderStyled>

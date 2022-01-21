@@ -17,4 +17,14 @@ describe('Resume component', () => {
 
     expect(form).toBeInTheDocument();
   });
+
+  test('expect a Preview component to be created', () => {
+    render(
+      <Resume preview={{ attrs: { rtlTestID: { preview: 'preview' } } }} />
+    );
+
+    const preview = screen.getByTestId('preview');
+
+    expect(preview).toBeInTheDocument();
+  });
 });
