@@ -163,6 +163,26 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
     this.setState({ ...stateExample() });
   };
 
+  updateValuesPersonalPhoto = (event: ChangeEvent<HTMLInputElement>): void => {
+    const eventTarget = event.target as HTMLInputElement;
+
+    if (eventTarget.files) {
+      const URLPhotoFile = URL.createObjectURL(eventTarget.files[0]);
+
+      this.setState({
+        ...this.state,
+        values: {
+          ...this.state.values,
+          personal: {
+            ...this.state.values?.personal,
+            photo: URLPhotoFile
+          }
+        }
+      });
+      URL.revokeObjectURL(URLPhotoFile);
+    }
+  };
+
   render(): ReactNode {
     const updateExpEduAddRemove = {
       updateGroupAddObject: this.updateGroupAddObject,
@@ -171,6 +191,7 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
 
     const updateValuesPerExpEdu = {
       updateValuesPersonal: this.updateValuesPersonal,
+      updateValuesPersonalPhoto: this.updateValuesPersonalPhoto,
       updateValuesGroupObject: this.updateValuesGroupObject
     };
 

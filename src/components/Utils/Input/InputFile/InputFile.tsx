@@ -10,7 +10,13 @@ class InputFile extends Input {
         attrs={{ htmlFor: this.props.label?.htmlFor || this.props.attrs?.id }}
         text={this.props.label?.text}
       >
-        <InputFileStyled attrs={{ ...this.props.attrs }} />
+        <InputFileStyled
+          attrs={{ ...this.props.attrs }}
+          onChange={(event) =>
+            this.props.event?.updateValuesPersonalPhotoEvent &&
+            this.props.event?.updateValuesPersonalPhotoEvent(event)
+          }
+        />
       </LabelFile>
     );
   }

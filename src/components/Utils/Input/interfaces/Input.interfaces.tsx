@@ -4,6 +4,7 @@ import { ChangeEvent } from 'react';
 
 interface InputProps {
   attrs?: {
+    accept?: string;
     id?: string;
     name?: string;
     placeholder?: string;
@@ -13,6 +14,9 @@ interface InputProps {
   event?: {
     updateValuesPersonalEvent?: (
       event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+    ) => void;
+    updateValuesPersonalPhotoEvent?: (
+      event: ChangeEvent<HTMLInputElement>
     ) => void;
     updateValuesGroupObjectEvent?: (
       event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
@@ -33,6 +37,7 @@ interface InputProps {
 
 interface InputStyledProps {
   attrs?: {
+    accept?: string;
     id?: string;
     name?: string;
     placeholder?: string;

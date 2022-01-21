@@ -17,6 +17,7 @@ interface FormPersonalProps {
     updateValuesPersonal?: (
       event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
     ) => void;
+    updateValuesPersonalPhoto?: (event: ChangeEvent<HTMLInputElement>) => void;
   };
   personal?: {
     first?: string;

@@ -9,6 +9,8 @@ import FormPersonalProps from './interfaces/FormPersonal.interfaces';
 class FormPersonal extends Component<FormPersonalProps> {
   render(): ReactElement {
     const updateValuesPersonalEvent = this.props.fns?.updateValuesPersonal;
+    const updateValuesPersonalPhotoEvent =
+      this.props.fns?.updateValuesPersonalPhoto;
 
     return (
       <FormPersonalStyled>
@@ -42,12 +44,13 @@ class FormPersonal extends Component<FormPersonalProps> {
         />
         <InputFile
           attrs={{
+            accept: 'image/png, image/jpg',
             name: 'photo',
             placeholder: 'photo',
             type: 'file'
           }}
           label={{ text: 'add photo...' }}
-          event={{ updateValuesPersonalEvent }}
+          event={{ updateValuesPersonalPhotoEvent }}
         />
         <Input
           attrs={{

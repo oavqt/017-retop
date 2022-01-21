@@ -23,7 +23,8 @@ class Form extends Component<FormProps> {
           attrs={{ ...this.props.attrs }}
           personal={{ ...this.props.values?.personal }}
           fns={{
-            updateValuesPersonal: this.props.fns?.updateValuesPersonal
+            updateValuesPersonal: this.props.fns?.updateValuesPersonal,
+            updateValuesPersonalPhoto: this.props.fns?.updateValuesPersonalPhoto
           }}
         />
         <FormExperience

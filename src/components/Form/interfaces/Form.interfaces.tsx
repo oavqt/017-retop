@@ -44,6 +44,7 @@ interface FormProps {
     updateValuesPersonal?: (
       event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
     ) => void;
+    updateValuesPersonalPhoto?: (event: ChangeEvent<HTMLInputElement>) => void;
     updateValuesGroupObject?: (
       event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
       nameOfGroup: string,
