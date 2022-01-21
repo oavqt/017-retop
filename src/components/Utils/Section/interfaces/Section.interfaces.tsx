@@ -1,22 +1,24 @@
-interface DivProps {
+interface SectionProps {
   styled?: {
     ['align-items']?: string;
     display?: string;
     height?: string;
     ['justify-content']?: string;
+    ['overflow-y']?: string;
     width?: string;
   };
 }
 
-interface DivStyledProps {
+interface SectionStyledProps {
   styled?: {
     ['align-items']?: string;
     display?: string;
     height?: string;
     ['justify-content']?: string;
+    ['overflow-y']?: string;
     width?: string;
   };
 }
 
-export { type DivStyledProps };
-export default DivProps;
+export { type SectionStyledProps };
+export default SectionProps;

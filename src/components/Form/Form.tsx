@@ -19,7 +19,12 @@ class Form extends Component<FormProps> {
     const updateStateExampleEvent = this.props.fns?.updateStateExample;
 
     return (
-      <Section>
+      <Section
+        styled={{
+          height: '100%',
+          ['overflow-y']: 'scroll'
+        }}
+      >
         <FormStyled attrs={{ ...this.props.attrs }}>
           <FormPersonal
             attrs={{ ...this.props.attrs }}

@@ -1,9 +1,14 @@
 import { Component, ReactNode } from 'react';
+import SectionProps from './interfaces/Section.interfaces';
 import SectionStyled from './Section.styled';
 
-class Section extends Component {
+class Section extends Component<SectionProps> {
   render(): ReactNode {
-    return <SectionStyled>{this.props.children}</SectionStyled>;
+    return (
+      <SectionStyled styled={{ ...this.props.styled }}>
+        {this.props.children}
+      </SectionStyled>
+    );
   }
 }
 
