@@ -25,10 +25,12 @@ class Preview extends Component<PreviewProps> {
     };
 
     const sideProps = {
-      address: this.props.values?.personal?.address,
-      email: this.props.values?.personal?.email,
+      photo: this.props.values?.personal?.photo,
       phone: this.props.values?.personal?.phone,
-      photo: this.props.values?.personal?.photo
+      email: this.props.values?.personal?.email,
+      website: this.props.values?.personal?.website,
+      github: this.props.values?.personal?.github,
+      linkedin: this.props.values?.personal?.linkedin
     };
 
     return (

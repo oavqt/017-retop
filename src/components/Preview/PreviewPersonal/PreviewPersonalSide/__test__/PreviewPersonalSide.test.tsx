@@ -3,9 +3,11 @@ import PreviewPersonalSide from '../PreviewPersonalSide';
 
 describe('PreviewPersonalSide', () => {
   const previewPerSideTest = (side: {
-    address: string;
-    email: string;
     phone: string;
+    email: string;
+    website: string;
+    github: string;
+    linkedin: string;
   }) => render(<PreviewPersonalSide personal={{ ...side }} />);
 
   test('expect a PreviewPersonalSide component to be created', () => {
@@ -15,32 +17,44 @@ describe('PreviewPersonalSide', () => {
 
     const previewPerSideImage = screen.getByRole('img');
 
-    const previewPerSideAddress = screen.getByText('address');
-    const previewPerSideEmail = screen.getByText('email');
     const previewPerSidePhone = screen.getByText('phone');
+    const previewPerSideEmail = screen.getByText('email');
+    const previewPerSideWebsite = screen.getByText('website');
+    const previewPerSideGithub = screen.getByText('github');
+    const previewPerSideLinkedin = screen.getByText('linkedin');
 
     expect(previewPerSideContact).toBeInTheDocument();
     expect(previewPerSideImage).toBeInTheDocument();
-    expect(previewPerSideAddress).toBeInTheDocument();
-    expect(previewPerSideEmail).toBeInTheDocument();
     expect(previewPerSidePhone).toBeInTheDocument();
+    expect(previewPerSideEmail).toBeInTheDocument();
+    expect(previewPerSideWebsite).toBeInTheDocument();
+    expect(previewPerSideGithub).toBeInTheDocument();
+    expect(previewPerSideLinkedin).toBeInTheDocument();
   });
 
-  test('expect a PreviewPersonalSide component to be created with p tags that match the address, email, and phone number props', () => {
+  test('expect a PreviewPersonalSide component to be created with p tags that match the phone, email, website, github, and linkedin props', () => {
     const previewPerSideProps = {
-      address: 'i hecking love emma watson --p1',
+      phone: 'i hecking love emma watson --p1',
       email: 'i hecking love emma watson --p2',
-      phone: 'i hecking love emma watson --p3'
+      website: 'i hecking love emma watson --p3',
+      github: 'i hecking love emma watson --p4',
+      linkedin: 'i hecking love emma watson --p5'
     };
 
     previewPerSideTest(previewPerSideProps);
 
-    const previewPerSideAddress = screen.getByText(previewPerSideProps.address);
-    const previewPerSideEmail = screen.getByText(previewPerSideProps.email);
     const previewPerSidePhone = screen.getByText(previewPerSideProps.phone);
+    const previewPerSideEmail = screen.getByText(previewPerSideProps.email);
+    const previewPerSideWebsite = screen.getByText(previewPerSideProps.website);
+    const previewPerSideGithub = screen.getByText(previewPerSideProps.github);
+    const previewPerSideLinkedin = screen.getByText(
+      previewPerSideProps.linkedin
+    );
 
-    expect(previewPerSideAddress).toBeInTheDocument();
-    expect(previewPerSideEmail).toBeInTheDocument();
     expect(previewPerSidePhone).toBeInTheDocument();
+    expect(previewPerSideEmail).toBeInTheDocument();
+    expect(previewPerSideWebsite).toBeInTheDocument();
+    expect(previewPerSideGithub).toBeInTheDocument();
+    expect(previewPerSideLinkedin).toBeInTheDocument();
   });
 });

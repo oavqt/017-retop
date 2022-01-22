@@ -21,9 +21,11 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
           last: '',
           title: '',
           photo: '',
-          address: '',
           phone: '',
           email: '',
+          website: '',
+          linkedin: '',
+          github: '',
           about: ''
         },
         experience: {

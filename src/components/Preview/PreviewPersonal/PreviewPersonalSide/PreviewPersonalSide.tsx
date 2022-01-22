@@ -18,16 +18,24 @@ class PreviewPersonalSide extends Component<PreviewPersonalSideProps> {
             <Div>
               <H3>contact</H3>
               <Div>
-                <H4>address</H4>
-                <Paragraph>{this.props.personal?.address}</Paragraph>
+                <H4>phone</H4>
+                <Paragraph>{this.props.personal?.phone}</Paragraph>
               </Div>
               <Div>
                 <H4>email</H4>
                 <Paragraph>{this.props.personal?.email}</Paragraph>
               </Div>
               <Div>
-                <H4>phone</H4>
-                <Paragraph>{this.props.personal?.phone}</Paragraph>
+                <H4>website</H4>
+                <Paragraph>{this.props.personal?.website}</Paragraph>
+              </Div>
+              <Div>
+                <H4>github</H4>
+                <Paragraph>{this.props.personal?.github}</Paragraph>
+              </Div>
+              <Div>
+                <H4>linkedin</H4>
+                <Paragraph>{this.props.personal?.linkedin}</Paragraph>
               </Div>
             </Div>
           </Div>

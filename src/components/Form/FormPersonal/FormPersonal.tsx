@@ -54,15 +54,6 @@ class FormPersonal extends Component<FormPersonalProps> {
         />
         <Input
           attrs={{
-            name: 'address',
-            placeholder: 'address',
-            type: 'text',
-            value: this.props.personal?.address
-          }}
-          event={{ updateValuesPersonalEvent }}
-        />
-        <Input
-          attrs={{
             name: 'phone',
             placeholder: 'phone number',
             type: 'text',
@@ -76,6 +67,33 @@ class FormPersonal extends Component<FormPersonalProps> {
             placeholder: 'email',
             type: 'text',
             value: this.props.personal?.email
+          }}
+          event={{ updateValuesPersonalEvent }}
+        />{' '}
+        <Input
+          attrs={{
+            name: 'website',
+            placeholder: 'website',
+            type: 'text',
+            value: this.props.personal?.website
+          }}
+          event={{ updateValuesPersonalEvent }}
+        />
+        <Input
+          attrs={{
+            name: 'github',
+            placeholder: 'github',
+            type: 'text',
+            value: this.props.personal?.github
+          }}
+          event={{ updateValuesPersonalEvent }}
+        />
+        <Input
+          attrs={{
+            name: 'linkedin',
+            placeholder: 'linkedin',
+            type: 'text',
+            value: this.props.personal?.linkedin
           }}
           event={{ updateValuesPersonalEvent }}
         />

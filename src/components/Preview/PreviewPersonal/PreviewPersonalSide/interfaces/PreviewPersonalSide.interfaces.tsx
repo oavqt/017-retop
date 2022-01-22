@@ -1,9 +1,11 @@
 interface PreviewPersonalSideProps {
   personal?: {
-    address?: string;
-    email?: string;
-    phone?: string;
     photo?: string;
+    phone?: string;
+    email?: string;
+    website?: string;
+    github?: string;
+    linkedin?: string;
   };
 }
 

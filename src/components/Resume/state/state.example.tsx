@@ -7,9 +7,11 @@ const stateExample = (): StateExample => ({
       last: 'i hecking love emma watson',
       title: 'i hecking love emma watson',
       photo: 'i hecking love emma watson',
-      address: 'i hecking love emma watson',
       phone: 'i hecking love emma watson',
       email: 'i hecking love emma watson',
+      website: 'i hecking love emma watson',
+      github: 'i hecking love emma watson',
+      linkedin: 'i hecking love emma watson',
       about: 'i hecking love emma watson'
     },
     experience: {

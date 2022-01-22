@@ -58,9 +58,11 @@ describe('Form component', () => {
     const inptFirst = screen.getByPlaceholderText('first name');
     const inptLast = screen.getByPlaceholderText('last name');
     const inptTitle = screen.getByPlaceholderText('title');
-    const inptAddress = screen.getByPlaceholderText('address');
     const inptPhone = screen.getByPlaceholderText('phone number');
     const inptEmail = screen.getByPlaceholderText('email');
+    const inptWebsite = screen.getByPlaceholderText('website');
+    const inptGithub = screen.getByPlaceholderText('github');
+    const inptLinkedin = screen.getByPlaceholderText('linkedin');
     const inptAbout = screen.getByPlaceholderText('about');
 
     const inptPosition = screen.getByPlaceholderText('position');
@@ -76,9 +78,11 @@ describe('Form component', () => {
       inptFirst,
       inptLast,
       inptTitle,
-      inptAddress,
       inptPhone,
       inptEmail,
+      inptWebsite,
+      inptGithub,
+      inptLinkedin,
       inptAbout,
       inptPosition,
       inptCompany,
@@ -151,9 +155,11 @@ describe('Form component', () => {
     const inptFirst = screen.getByPlaceholderText('first name');
     const inptLast = screen.getByPlaceholderText('last name');
     const inptTitle = screen.getByPlaceholderText('title');
-    const inptAddress = screen.getByPlaceholderText('address');
     const inptPhone = screen.getByPlaceholderText('phone number');
     const inptEmail = screen.getByPlaceholderText('email');
+    const inptWebsite = screen.getByPlaceholderText('website');
+    const inptGithub = screen.getByPlaceholderText('github');
+    const inptLinkedin = screen.getByPlaceholderText('linkedin');
     const inptAbout = screen.getByPlaceholderText('about');
 
     const inptPosition = screen.getAllByPlaceholderText('position');
@@ -169,9 +175,11 @@ describe('Form component', () => {
       inptFirst,
       inptLast,
       inptTitle,
-      inptAddress,
       inptPhone,
       inptEmail,
+      inptWebsite,
+      inptGithub,
+      inptLinkedin,
       inptAbout
     ];
     const inptTextCommon = [
@@ -205,18 +213,22 @@ describe('Form component', () => {
       const inptFirst = screen.getByPlaceholderText('first name');
       const inptLast = screen.getByPlaceholderText('last name');
       const inptTitle = screen.getByPlaceholderText('title');
-      const inptAddress = screen.getByPlaceholderText('address');
       const inptPhone = screen.getByPlaceholderText('phone number');
       const inptEmail = screen.getByPlaceholderText('email');
+      const inptWebsite = screen.getByPlaceholderText('website');
+      const inptGithub = screen.getByPlaceholderText('github');
+      const inptLinkedin = screen.getByPlaceholderText('linkedin');
       const inptAbout = screen.getByPlaceholderText('about');
 
       const inptTextUnique = [
         inptFirst,
         inptLast,
         inptTitle,
-        inptAddress,
         inptPhone,
         inptEmail,
+        inptWebsite,
+        inptGithub,
+        inptLinkedin,
         inptAbout
       ];
 

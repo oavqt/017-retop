@@ -31,9 +31,11 @@ const stateReset = (
         last: '',
         title: '',
         photo: '',
-        address: '',
         phone: '',
         email: '',
+        website: '',
+        github: '',
+        linkedin: '',
         about: ''
       },
       experience: {

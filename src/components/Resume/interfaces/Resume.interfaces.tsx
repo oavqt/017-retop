@@ -28,9 +28,11 @@ interface ResumeProps {
       last?: string;
       title?: string;
       photo?: string;
-      address?: string;
       phone?: string;
       email?: string;
+      website?: string;
+      github?: string;
+      linkedin?: string;
       about?: string;
     };
     experience?: FormExperiencePropsObjectGroup;
@@ -45,9 +47,11 @@ interface ResumeStateProps {
       last?: string;
       title?: string;
       photo?: string;
-      address?: string;
       phone?: string;
       email?: string;
+      website?: string;
+      github?: string;
+      linkedin?: string;
       about?: string;
     };
     experience?: FormExperiencePropsObjectGroup;
