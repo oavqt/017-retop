@@ -23,9 +23,9 @@ class PreviewEducation extends Component<PreviewEducationProps> {
 
     return (
       <PreviewEducationStyled>
-        <Div>
-          <H3>education</H3>
-          <UL styled={{ listStyle: 'none' }}>{previewEduGroup}</UL>
+        <Div styled={{ padding: '.5em' }}>
+          <H3>education \⤥</H3>
+          <UL styled={{ ['list-style']: 'none' }}>{previewEduGroup}</UL>
         </Div>
       </PreviewEducationStyled>
     );

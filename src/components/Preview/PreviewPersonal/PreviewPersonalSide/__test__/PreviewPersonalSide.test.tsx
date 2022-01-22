@@ -13,15 +13,15 @@ describe('PreviewPersonalSide', () => {
   test('expect a PreviewPersonalSide component to be created', () => {
     render(<PreviewPersonalSide />);
 
-    const previewPerSideContact = screen.getByText('contact');
+    const previewPerSideContact = screen.getByText('contact ⤦/');
 
     const previewPerSideImage = screen.getByRole('img');
 
-    const previewPerSidePhone = screen.getByText('phone');
-    const previewPerSideEmail = screen.getByText('email');
-    const previewPerSideWebsite = screen.getByText('website');
-    const previewPerSideGithub = screen.getByText('github');
-    const previewPerSideLinkedin = screen.getByText('linkedin');
+    const previewPerSidePhone = screen.getByText('phone ⤦/');
+    const previewPerSideEmail = screen.getByText('email ⤦/');
+    const previewPerSideWebsite = screen.getByText('website ⤦/');
+    const previewPerSideGithub = screen.getByText('github ⤦/');
+    const previewPerSideLinkedin = screen.getByText('linkedin ⤦/');
 
     expect(previewPerSideContact).toBeInTheDocument();
     expect(previewPerSideImage).toBeInTheDocument();

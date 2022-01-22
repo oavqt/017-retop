@@ -21,7 +21,8 @@ class Preview extends Component<PreviewProps> {
     };
 
     const aboutProps = {
-      about: this.props.values?.personal?.about
+      about: this.props.values?.personal?.about,
+      skills: this.props.values?.personal?.skills
     };
 
     const sideProps = {

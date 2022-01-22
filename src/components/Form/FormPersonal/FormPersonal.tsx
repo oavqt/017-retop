@@ -107,6 +107,14 @@ class FormPersonal extends Component<FormPersonalProps> {
             }}
             event={{ updateValuesPersonalEvent }}
           />
+          <TextArea
+            attrs={{
+              name: 'skills',
+              placeholder: 'skills',
+              value: this.props.personal?.skills
+            }}
+            event={{ updateValuesPersonalEvent }}
+          />
         </FormPersonalStyled>
       </Section>
     );

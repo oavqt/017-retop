@@ -9,7 +9,7 @@ class PreviewPersonalHeader extends Component<PreviewPersonalHeaderProps> {
   render(): ReactNode {
     return (
       <PreviewPersonalHeaderStyled>
-        <Div>
+        <Div styled={{ padding: '.5em' }}>
           <H1>
             {this.props.personal?.first} {this.props.personal?.last}
           </H1>

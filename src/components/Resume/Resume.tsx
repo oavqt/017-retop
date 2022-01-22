@@ -26,7 +26,8 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
           website: '',
           linkedin: '',
           github: '',
-          about: ''
+          about: '',
+          skills: ''
         },
         experience: {
           group: [

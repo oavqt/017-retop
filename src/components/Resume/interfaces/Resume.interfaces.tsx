@@ -34,6 +34,7 @@ interface ResumeProps {
       github?: string;
       linkedin?: string;
       about?: string;
+      skills?: string;
     };
     experience?: FormExperiencePropsObjectGroup;
     education?: FormEducationPropsObjectGroup;
@@ -53,6 +54,7 @@ interface ResumeStateProps {
       github?: string;
       linkedin?: string;
       about?: string;
+      skills?: string;
     };
     experience?: FormExperiencePropsObjectGroup;
     education?: FormEducationPropsObjectGroup;

@@ -1,12 +1,12 @@
 interface ULProps {
   styled?: {
-    listStyle?: string;
+    ['list-style']?: string;
   };
 }
 
 interface ULStyledProps {
   styled?: {
-    listStyle?: string;
+    ['list-style']?: string;
   };
 }
 

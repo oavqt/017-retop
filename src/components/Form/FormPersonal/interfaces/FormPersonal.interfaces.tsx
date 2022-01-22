@@ -30,6 +30,7 @@ interface FormPersonalProps {
     github?: string;
     linkedin?: string;
     about?: string;
+    skills?: string;
   };
 }
 

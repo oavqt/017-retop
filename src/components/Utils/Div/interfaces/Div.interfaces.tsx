@@ -5,6 +5,7 @@ interface DivProps {
     ['grid-template']?: string;
     height?: string;
     ['justify-content']?: string;
+    padding?: string;
     width?: string;
   };
 }
@@ -16,6 +17,7 @@ interface DivStyledProps {
     ['grid-template']?: string;
     height?: string;
     ['justify-content']?: string;
+    padding?: string;
     width?: string;
   };
 }

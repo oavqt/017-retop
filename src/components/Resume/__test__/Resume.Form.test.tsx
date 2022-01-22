@@ -64,6 +64,7 @@ describe('Form component', () => {
     const inptGithub = screen.getByPlaceholderText('github');
     const inptLinkedin = screen.getByPlaceholderText('linkedin');
     const inptAbout = screen.getByPlaceholderText('about');
+    const inptSkills = screen.getByPlaceholderText('skills');
 
     const inptPosition = screen.getByPlaceholderText('position');
     const inptCompany = screen.getByPlaceholderText('company');
@@ -84,6 +85,7 @@ describe('Form component', () => {
       inptGithub,
       inptLinkedin,
       inptAbout,
+      inptSkills,
       inptPosition,
       inptCompany,
       inptUniversity,
@@ -161,6 +163,7 @@ describe('Form component', () => {
     const inptGithub = screen.getByPlaceholderText('github');
     const inptLinkedin = screen.getByPlaceholderText('linkedin');
     const inptAbout = screen.getByPlaceholderText('about');
+    const inptSkills = screen.getByPlaceholderText('skills');
 
     const inptPosition = screen.getAllByPlaceholderText('position');
     const inptCompany = screen.getAllByPlaceholderText('company');
@@ -179,16 +182,14 @@ describe('Form component', () => {
       inptEmail,
       inptWebsite,
       inptGithub,
-      inptLinkedin,
-      inptAbout
+      inptLinkedin
     ];
     const inptTextCommon = [
       inptPosition,
       inptCompany,
       inptUniversity,
       inptDegree,
-      inptDate,
-      inptDescription
+      inptDate
     ];
 
     const buttonExample = screen.getByText('example');
@@ -203,6 +204,20 @@ describe('Form component', () => {
       inputGroup.forEach((inputText) =>
         expect(inputText).toHaveValue('i hecking love emma watson')
       )
+    );
+
+    inptDescription.forEach((inputText) =>
+      expect(inputText).toHaveValue(
+        'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+      )
+    );
+
+    expect(inptAbout).toHaveValue(
+      'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+    );
+
+    expect(inptSkills).toHaveValue(
+      'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
     );
   });
 
@@ -219,6 +234,7 @@ describe('Form component', () => {
       const inptGithub = screen.getByPlaceholderText('github');
       const inptLinkedin = screen.getByPlaceholderText('linkedin');
       const inptAbout = screen.getByPlaceholderText('about');
+      const inptSkills = screen.getByPlaceholderText('skills');
 
       const inptTextUnique = [
         inptFirst,
@@ -229,7 +245,8 @@ describe('Form component', () => {
         inptWebsite,
         inptGithub,
         inptLinkedin,
-        inptAbout
+        inptAbout,
+        inptSkills
       ];
 
       inptTextTest(inptTextUnique, 'i hecking love emma watson');

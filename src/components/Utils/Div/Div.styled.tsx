@@ -7,6 +7,7 @@ const DivStyled = styled.div<DivStyledProps>`
   grid-template: ${(props) => props.styled?.['grid-template']};
   height: ${(props) => props.styled?.height};
   justify-content: ${(props) => props.styled?.['justify-content']};
+  padding: ${(props) => props.styled?.padding};
   width: ${(props) => props.styled?.width};
 `;
 

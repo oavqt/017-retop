@@ -1,6 +1,7 @@
 interface PreviewPersonalAboutProps {
   personal?: {
     about?: string;
+    skills?: string;
   };
 }
 

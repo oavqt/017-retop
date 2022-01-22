@@ -36,7 +36,8 @@ const stateReset = (
         website: '',
         github: '',
         linkedin: '',
-        about: ''
+        about: '',
+        skills: ''
       },
       experience: {
         group: expGroups

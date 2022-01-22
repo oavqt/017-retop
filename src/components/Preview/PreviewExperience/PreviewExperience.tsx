@@ -23,9 +23,9 @@ class PreviewExperience extends Component<PreviewExperienceProps> {
 
     return (
       <PreviewExperienceStyled>
-        <Div>
-          <H3>experience</H3>
-          <UL styled={{ listStyle: 'none' }}>{previewExpGroup}</UL>
+        <Div styled={{ padding: '.5em' }}>
+          <H3>experience \⤥</H3>
+          <UL styled={{ ['list-style']: 'none' }}>{previewExpGroup}</UL>
         </Div>
       </PreviewExperienceStyled>
     );

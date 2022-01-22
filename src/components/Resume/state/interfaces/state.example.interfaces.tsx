@@ -11,6 +11,7 @@ interface StateExample {
       github?: string;
       linkedin?: string;
       about: string;
+      skills?: string;
     };
     experience: {
       group: [

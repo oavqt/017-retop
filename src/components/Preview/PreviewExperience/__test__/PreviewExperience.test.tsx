@@ -14,7 +14,7 @@ describe('PreviewExperience', () => {
 
     expect(expList).toBeInTheDocument();
     expect(expHeading).toBeInTheDocument();
-    expect(expHeading).toHaveTextContent('experience');
+    expect(expHeading).toHaveTextContent('experience \\⤥');
   });
 
   test('expect the PreviewExperience component to map the experience props array and create PreviewExperienceGroup components', () => {

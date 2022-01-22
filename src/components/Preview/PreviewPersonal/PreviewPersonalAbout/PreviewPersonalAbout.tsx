@@ -11,9 +11,13 @@ class PreviewPersonalAbout extends Component<PreviewPersonalAboutProps> {
     return (
       <PreviewPersonalAboutStyled>
         <Article>
-          <Div>
-            <H3>about</H3>
+          <Div styled={{ padding: '.5em' }}>
+            <H3>about \⤥</H3>
             <Paragraph>{this.props.personal?.about}</Paragraph>
+          </Div>
+          <Div styled={{ padding: '.5em' }}>
+            <H3>skills \⤥</H3>
+            <Paragraph>{this.props.personal?.skills}</Paragraph>
           </Div>
         </Article>
       </PreviewPersonalAboutStyled>

@@ -12,7 +12,10 @@ const stateExample = (): StateExample => ({
       website: 'i hecking love emma watson',
       github: 'i hecking love emma watson',
       linkedin: 'i hecking love emma watson',
-      about: 'i hecking love emma watson'
+      about:
+        'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson',
+      skills:
+        'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
     },
     experience: {
       group: [
@@ -20,19 +23,22 @@ const stateExample = (): StateExample => ({
           position: 'i hecking love emma watson',
           company: 'i hecking love emma watson',
           date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          description:
+            'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
         },
         {
           position: 'i hecking love emma watson',
           company: 'i hecking love emma watson',
           date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          description:
+            'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
         },
         {
           position: 'i hecking love emma watson',
           company: 'i hecking love emma watson',
           date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          description:
+            'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
         }
       ]
     },
@@ -42,7 +48,8 @@ const stateExample = (): StateExample => ({
           university: 'i hecking love emma watson',
           degree: 'i hecking love emma watson',
           date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          description:
+            'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
         }
       ]
     }

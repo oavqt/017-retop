@@ -20,6 +20,7 @@ interface PreviewProps {
       github?: string;
       linkedin?: string;
       about?: string;
+      skills?: string;
     };
     experience?: PreviewExperiencePropsObjectGroup;
     education?: PreviewEducationPropsObjectGroup;
