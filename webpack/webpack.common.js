@@ -37,6 +37,7 @@ const commonConfig = {
       }
     }),
     new HtmlWebpackPlugin({
+      favicon: './src/assets/images/vlogo3.png',
       template: './public/index.html',
       title: 'cv vclecv'
     })

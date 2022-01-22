@@ -11,6 +11,7 @@ import {
 import stateExample from './state/state.example';
 import Preview from '../Preview/Preview';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 class Resume extends Component<ResumeProps, ResumeStateProps> {
   constructor(props: ResumeProps) {
@@ -225,6 +226,7 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
           attrs={{ ...this.props.preview?.attrs }}
           values={{ ...this.state.values }}
         />
+        <Footer />
       </ResumeStyled>
     );
   }

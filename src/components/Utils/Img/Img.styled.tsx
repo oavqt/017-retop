@@ -7,7 +7,7 @@ const ImgStyled = styled.img.attrs((props: ImgStyledProps) => ({
 }))<ImgStyledProps>`
   height: auto;
   object-fit: ${(props) => props.styled?.objectFit};
-  width: 100%;
+  width: ${(props) => props.styled?.width};
 `;
 
 export default ImgStyled;

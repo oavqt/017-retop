@@ -14,7 +14,10 @@ class PreviewPersonalSide extends Component<PreviewPersonalSideProps> {
       <PreviewPersonalSideStyled>
         <Article>
           <Div styled={{ padding: '.5em' }}>
-            <Img attrs={{ src: this.props.personal?.photo, alt: '--photo' }} />
+            <Img
+              attrs={{ src: this.props.personal?.photo, alt: '--photo' }}
+              styled={{ width: '100%' }}
+            />
             <Div>
               <H3>contact ⤦/</H3>
               <Div>

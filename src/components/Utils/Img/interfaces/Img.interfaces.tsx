@@ -5,6 +5,7 @@ interface ImgProps {
   };
   styled?: {
     objectFit?: string;
+    width?: string;
   };
 }
 
@@ -15,6 +16,7 @@ interface ImgStyledProps {
   };
   styled?: {
     objectFit?: string;
+    width?: string;
   };
 }
 

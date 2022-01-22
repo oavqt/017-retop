@@ -39,6 +39,7 @@ class Preview extends Component<PreviewProps> {
         <Div
           styled={{
             display: 'grid',
+            height: '100%',
             ['grid-template']:
               "'header header' 'about contact' 'exp contact' 'edu contact'"
           }}

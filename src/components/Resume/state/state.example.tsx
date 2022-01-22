@@ -1,4 +1,5 @@
 import StateExample from './interfaces/state.example.interfaces';
+import vlogo2 from '../../../assets/images/vlogo2.png';
 
 const stateExample = (): StateExample => ({
   values: {
@@ -6,7 +7,7 @@ const stateExample = (): StateExample => ({
       first: 'i hecking love emma watson',
       last: 'i hecking love emma watson',
       title: 'i hecking love emma watson',
-      photo: 'i hecking love emma watson',
+      photo: vlogo2,
       phone: 'i hecking love emma watson',
       email: 'i hecking love emma watson',
       website: 'i hecking love emma watson',

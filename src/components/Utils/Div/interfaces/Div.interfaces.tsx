@@ -8,6 +8,7 @@ interface DivProps {
     height?: string;
     ['justify-content']?: string;
     padding?: string;
+    position?: string;
     ['text-align']?: string;
     width?: string;
   };
@@ -23,6 +24,7 @@ interface DivStyledProps {
     height?: string;
     ['justify-content']?: string;
     padding?: string;
+    position?: string;
     ['text-align']?: string;
     width?: string;
   };

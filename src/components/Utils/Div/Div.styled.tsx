@@ -10,6 +10,7 @@ const DivStyled = styled.div<DivStyledProps>`
   height: ${(props) => props.styled?.height};
   justify-content: ${(props) => props.styled?.['justify-content']};
   padding: ${(props) => props.styled?.padding};
+  position: ${(props) => props.styled?.position};
   text-align: ${(props) => props.styled?.['text-align']};
   width: ${(props) => props.styled?.width};
 `;
