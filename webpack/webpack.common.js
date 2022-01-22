@@ -38,7 +38,7 @@ const commonConfig = {
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      title: 'le cvlevc'
+      title: 'cv vclecv'
     })
   ],
   resolve: {

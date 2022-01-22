@@ -10,6 +10,7 @@ import {
 } from '../Form/interfaces/Form.interfaces';
 import stateExample from './state/state.example';
 import Preview from '../Preview/Preview';
+import Header from '../Header/Header';
 
 class Resume extends Component<ResumeProps, ResumeStateProps> {
   constructor(props: ResumeProps) {
@@ -210,6 +211,7 @@ class Resume extends Component<ResumeProps, ResumeStateProps> {
 
     return (
       <ResumeStyled>
+        <Header />
         <Form
           attrs={{ ...this.props.form?.attrs }}
           values={{ ...this.state.values }}

@@ -16,7 +16,7 @@ class FormPersonal extends Component<FormPersonalProps> {
     return (
       <Section>
         <FormPersonalStyled>
-          <Legend>personal information</Legend>
+          <Legend>personal \⤥</Legend>
           <Input
             attrs={{
               name: 'first',

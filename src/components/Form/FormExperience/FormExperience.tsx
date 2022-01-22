@@ -35,7 +35,7 @@ class FormExperience extends Component<FormExperienceProps> {
     return (
       <Section>
         <FormExperienceStyled>
-          <Legend>experience</Legend>
+          <Legend>experience \⤥</Legend>
           {formExperienceGroup}
           <ButtonAdd
             attrs={{ type: 'button', value: 'add' }}

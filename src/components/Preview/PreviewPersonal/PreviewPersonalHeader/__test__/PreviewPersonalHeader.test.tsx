@@ -8,9 +8,11 @@ describe('PreviewPersonalHeader', () => {
   test('expect a PreviewPersonalHeader component to be created', () => {
     render(<PreviewPersonalHeader />);
 
-    const previewPerHeader = screen.getAllByRole('heading');
+    const previewPerHeader = screen.getByRole('banner');
+    const previewPerHeaders = screen.getAllByRole('heading');
 
-    expect(previewPerHeader).toHaveLength(2);
+    expect(previewPerHeader).toBeInTheDocument();
+    expect(previewPerHeaders).toHaveLength(2);
   });
 
   test('expect a PreviewPersonalHeader component to be created with a h1 and a h2 that match the first name and title personal props', () => {

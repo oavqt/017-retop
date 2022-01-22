@@ -34,7 +34,7 @@ class FormEducation extends Component<FormEducationProps> {
     return (
       <Section>
         <FormEducationStyled>
-          <Legend>education</Legend>
+          <Legend>education \⤥</Legend>
           {formEducationGroup}
           <ButtonAdd
             attrs={{
