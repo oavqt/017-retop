@@ -4,9 +4,10 @@ import FormExperienceGroupStyled from '../../../Form/FormExperience/FormExperien
 import ButtonStyled from '../Button.styled';
 
 const ButtonRemoveStyled = styled(ButtonStyled)`
+  align-self: center;
   background: #101010cc;
   color: #fff;
-  width: 100%;
+  width: 75%;
 
   ${FormExperienceGroupStyled}:hover & {
     animation: animation--color 0.2s ease-in-out forwards;

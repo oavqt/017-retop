@@ -35,7 +35,13 @@ class Preview extends Component<PreviewProps> {
 
     return (
       <PreviewStyled attrs={{ ...this.props.attrs }}>
-        <Div>
+        <Div
+          styled={{
+            display: 'grid',
+            ['grid-template']:
+              "'header header' 'about contact' 'exp contact' 'edu contact'"
+          }}
+        >
           <PreviewPersonalHeader personal={{ ...headerProps }} />
           <PreviewPersonalAbout personal={{ ...aboutProps }} />
           <PreviewPersonalSide personal={{ ...sideProps }} />

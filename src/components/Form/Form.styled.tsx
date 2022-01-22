@@ -7,6 +7,7 @@ const FormStyled = styled.form.attrs((props: FormStyledProps) => ({
   display: flex;
   flex-direction: column;
   padding: 1em;
+  width: 100%;
 `;
 
 export default FormStyled;

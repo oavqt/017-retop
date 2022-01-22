@@ -22,7 +22,8 @@ class Form extends Component<FormProps> {
       <Section
         styled={{
           height: '100%',
-          ['overflow-y']: 'scroll'
+          ['overflow-y']: 'scroll',
+          width: '25%'
         }}
       >
         <FormStyled attrs={{ ...this.props.attrs }}>

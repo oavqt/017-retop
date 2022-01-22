@@ -13,6 +13,7 @@ const InputStyled = styled.input.attrs((props: InputStyledProps) => ({
   height: 1.5em;
   margin: 0.2em 0;
   outline: none;
+  width: 100%;
 
   ::placeholder {
     color: #0101015c;

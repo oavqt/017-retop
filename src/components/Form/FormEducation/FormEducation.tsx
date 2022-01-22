@@ -4,6 +4,7 @@ import FormEducationGroup from './FormEducationGroup/FormEducationGroup';
 import Legend from '../../Utils/Legend/Legend';
 import ButtonAdd from '../../Utils/Button/ButtonAdd/ButtonAdd';
 import FormEducationProps from './interfaces/FormEducation.interfaces';
+import Section from '../../Utils/Section/Section';
 
 class FormEducation extends Component<FormEducationProps> {
   constructor(props: FormEducationProps) {
@@ -31,20 +32,22 @@ class FormEducation extends Component<FormEducationProps> {
     const btnAddEvent = this.props.fns?.updateGroupAddObject;
 
     return (
-      <FormEducationStyled>
-        <Legend>education</Legend>
-        {formEducationGroup}
-        <ButtonAdd
-          attrs={{
-            type: 'button',
-            value: 'add'
-          }}
-          event={{ btnAddEvent }}
-          group='education'
-        >
-          add education
-        </ButtonAdd>
-      </FormEducationStyled>
+      <Section>
+        <FormEducationStyled>
+          <Legend>education</Legend>
+          {formEducationGroup}
+          <ButtonAdd
+            attrs={{
+              type: 'button',
+              value: 'add'
+            }}
+            event={{ btnAddEvent }}
+            group='education'
+          >
+            add education
+          </ButtonAdd>
+        </FormEducationStyled>
+      </Section>
     );
   }
 }

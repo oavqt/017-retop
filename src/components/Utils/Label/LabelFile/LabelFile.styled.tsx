@@ -8,6 +8,7 @@ const LabelFileStyled = styled(LabelStyled)`
   font-size: 1rem;
   height: 1.5em;
   margin: 0.2em 0;
+  text-align: center;
 `;
 
 export default LabelFileStyled;

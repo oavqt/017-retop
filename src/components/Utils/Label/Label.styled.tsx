@@ -7,6 +7,7 @@ const LabelStyled = styled.label.attrs((props: LabelStyledProps) => ({
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
 `;
 
 export default LabelStyled;

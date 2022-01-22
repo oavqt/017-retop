@@ -6,6 +6,11 @@ const Styled = createGlobalStyle`
     body{
        font-family: 'Poppins', sans-serif
     }
+
+    fieldset {
+        margin: 0;
+        min-width: 25%
+    }   
 `;
 
 export default Styled;
