@@ -23,8 +23,8 @@ class Header extends Component {
             <H1>c</H1>
             <H1>l</H1>
             <H1>e</H1>
-            <H1 styled={{ color: '#AFD2E9' }}>c</H1>
-            <H1 styled={{ color: '#AFD2E9' }}>v</H1>
+            <H1 styled={{ color: '#AA8200' }}>c</H1>
+            <H1 styled={{ color: '#AA8200' }}>v</H1>
           </Div>
         </Div>
       </HeaderStyled>

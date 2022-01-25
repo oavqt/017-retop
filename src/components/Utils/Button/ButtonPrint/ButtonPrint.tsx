@@ -5,7 +5,10 @@ import ButtonPrintStyled from './ButtonPrint.styled';
 class ButtonPrint extends Button {
   render(): ReactNode {
     return (
-      <ButtonPrintStyled attrs={{ ...this.props.attrs }}>
+      <ButtonPrintStyled
+        attrs={{ ...this.props.attrs }}
+        onClick={() => window.print()}
+      >
         {this.props.children}
       </ButtonPrintStyled>
     );
