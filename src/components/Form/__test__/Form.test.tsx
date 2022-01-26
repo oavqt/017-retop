@@ -3,7 +3,7 @@ import Form from '../Form';
 
 describe('Form component', () => {
   test('expect a Form component to be created', () => {
-    render(<Form attrs={{ rtlTestID: { form: 'form' } }} />);
+    render(<Form rtlTestID={{ form: 'form' }} />);
 
     const form = screen.getByTestId('form');
 

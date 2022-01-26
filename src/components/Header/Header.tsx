@@ -2,11 +2,12 @@ import { Component, ReactNode } from 'react';
 import Div from '../Utils/Div/Div';
 import H1 from '../Utils/Headings/H1/H1';
 import HeaderStyled from './Header.styled';
+import HeaderProps from './interfaces/Header.interfaces';
 
-class Header extends Component {
+class Header extends Component<HeaderProps> {
   render(): ReactNode {
     return (
-      <HeaderStyled>
+      <HeaderStyled mobile={{ ...this.props.mobile }}>
         <Div
           styled={{
             display: 'flex',

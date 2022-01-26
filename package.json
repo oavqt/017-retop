@@ -12,7 +12,8 @@
     "lint": "eslint --fix \"./src/**/*.{tsx,ts,jsx,js,json}\"",
     "pretty": "prettier --write \"./src/**/*.{tsx,ts,jsx,js,json,css}\"",
     "server": "webpack serve --config webpack/webpack.dev.js",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "types": "npx tsc --watch"
   },
   "author": "Oav",
   "license": "ISC",

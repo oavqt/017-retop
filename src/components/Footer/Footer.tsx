@@ -6,11 +6,12 @@ import FooterStyled from './Footer.styled';
 import vlogo from '../../assets/images/vlogo.png';
 import vlogo1 from '../../assets/images/vlogo1.png';
 import Span from '../Utils/Span/Span';
+import FooterProps from './interfaces/Footer.interfaces';
 
-class Footer extends Component {
+class Footer extends Component<FooterProps> {
   render(): ReactNode {
     return (
-      <FooterStyled>
+      <FooterStyled mobile={{ ...this.props.mobile }}>
         <Div styled={{ position: 'relative' }}>
           <Img
             attrs={{ src: vlogo1, alt: 'a custom logo' }}

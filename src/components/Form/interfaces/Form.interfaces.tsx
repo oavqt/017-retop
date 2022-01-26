@@ -13,33 +13,6 @@ import {
 } from '../FormExperience/interfaces/FormExperience.interfaces';
 
 interface FormProps {
-  attrs?: {
-    print?: boolean;
-    rtlTestID?: {
-      btn?: {
-        experience?: string;
-        education?: string;
-      };
-      form?: string;
-    };
-  };
-  values?: {
-    personal?: {
-      first?: string;
-      last?: string;
-      title?: string;
-      photo?: string;
-      phone?: string;
-      email?: string;
-      website?: string;
-      github?: string;
-      linkedin?: string;
-      about?: string;
-      skills?: string;
-    };
-    experience?: FormExperiencePropsObjectGroup;
-    education?: FormEducationPropsObjectGroup;
-  };
   fns?: {
     updateGroupAddObject?: (nameOfGroup: string) => void;
     updateGroupRemoveObject?: (nameOfGroup: string, position: number) => void;
@@ -57,12 +30,53 @@ interface FormProps {
     updateStateReset?: () => void;
     updateStateExample?: () => void;
   };
+  mobile?: {
+    display?: { preview?: boolean };
+    width?: {
+      '1200px'?: boolean;
+    };
+  };
+  values?: {
+    education?: FormEducationPropsObjectGroup;
+    experience?: FormExperiencePropsObjectGroup;
+    personal?: {
+      first?: string;
+      last?: string;
+      title?: string;
+      photo?: string;
+      phone?: string;
+      email?: string;
+      website?: string;
+      github?: string;
+      linkedin?: string;
+      about?: string;
+      skills?: string;
+    };
+  };
+  rtlTestID?: {
+    btn?: {
+      education?: string;
+      experience?: string;
+    };
+    mobile?: string;
+    form?: string;
+    preview?: string;
+    section?: {
+      form?: string;
+    };
+  };
 }
 
 interface FormStyledProps {
-  attrs?: {
-    print?: boolean;
-    rtlTestID?: {
+  rtlTestID?: {
+    btn?: {
+      education?: string;
+      experience?: string;
+    };
+    mobile?: string;
+    form?: string;
+    preview?: string;
+    section?: {
       form?: string;
     };
   };

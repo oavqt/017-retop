@@ -20,39 +20,41 @@ class Form extends Component<FormProps> {
 
     return (
       <Section
+        mobile={{ ...this.props.mobile }}
         styled={{
           height: '100%',
           ['overflow-y']: 'scroll',
           width: '25%'
         }}
+        rtlTestID={{ ...this.props.rtlTestID }}
       >
-        <FormStyled attrs={{ ...this.props.attrs }}>
+        <FormStyled rtlTestID={{ ...this.props.rtlTestID }}>
           <FormPersonal
-            attrs={{ ...this.props.attrs }}
             personal={{ ...this.props.values?.personal }}
             fns={{
               updateValuesPersonal: this.props.fns?.updateValuesPersonal,
               updateValuesPersonalPhoto:
                 this.props.fns?.updateValuesPersonalPhoto
             }}
+            rtlTestID={{ ...this.props.rtlTestID }}
           />
           <FormExperience
-            attrs={{ ...this.props.attrs }}
             experience={{ ...this.props.values?.experience }}
             fns={{
               updateGroupAddObject: this.props.fns?.updateGroupAddObject,
               updateGroupRemoveObject: this.props.fns?.updateGroupRemoveObject,
               updateValuesGroupObject: this.props.fns?.updateValuesGroupObject
             }}
+            rtlTestID={{ ...this.props.rtlTestID }}
           />
           <FormEducation
-            attrs={{ ...this.props.attrs }}
             education={{ ...this.props.values?.education }}
             fns={{
               updateGroupAddObject: this.props.fns?.updateGroupAddObject,
               updateGroupRemoveObject: this.props.fns?.updateGroupRemoveObject,
               updateValuesGroupObject: this.props.fns?.updateValuesGroupObject
             }}
+            rtlTestID={{ ...this.props.rtlTestID }}
           />
           <ButtonReset
             attrs={{ type: 'button', value: 'reset' }}

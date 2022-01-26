@@ -2,9 +2,6 @@
 
 interface ButtonProps {
   attrs?: {
-    rtlTestID?: {
-      btn?: string;
-    };
     type?: string;
     value?: string;
   };
@@ -14,18 +11,43 @@ interface ButtonProps {
 
     updateStateResetEvent?: () => void;
     updateStateExampleEvent?: () => void;
+
+    updateMobileDisplayEvent?: () => void;
   };
   group?: string;
   position?: number;
+  rtlTestID?: {
+    btn?: {
+      education?: string;
+      experience?: string;
+      remove?: string;
+    };
+    mobile?: string;
+    form?: string;
+    preview?: string;
+    section?: {
+      form?: string;
+    };
+  };
 }
 
 interface ButtonStyledProps {
   attrs?: {
-    rtlTestID: {
-      btn: string;
-    };
     type?: string;
     value?: string;
+  };
+  rtlTestID?: {
+    btn?: {
+      education?: string;
+      experience?: string;
+      remove?: string;
+    };
+    mobile?: string;
+    form?: string;
+    preview?: string;
+    section?: {
+      form?: string;
+    };
   };
 }
 

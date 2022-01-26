@@ -3,7 +3,7 @@ import Preview from '../Preview';
 
 describe('Preview component', () => {
   test('expect a Preview component to be created', () => {
-    render(<Preview attrs={{ rtlTestID: { preview: 'preview' } }} />);
+    render(<Preview rtlTestID={{ preview: 'preview' }} />);
 
     const preview = screen.getByTestId('preview');
 

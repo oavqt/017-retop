@@ -2,27 +2,15 @@ import { FormEducationPropsObjectGroup } from '../../Form/FormEducation/interfac
 import { FormExperiencePropsObjectGroup } from '../../Form/FormExperience/interfaces/FormExperience.interfaces';
 
 interface ResumeProps {
-  form?: {
-    attrs?: {
-      print?: boolean;
-      rtlTestID?: {
-        btn?: {
-          experience?: string;
-          education?: string;
-        };
-        form?: string;
-      };
-    };
-  };
-  preview?: {
-    attrs?: {
-      print?: boolean;
-      rtlTestID?: {
-        preview?: string;
-      };
+  mobile?: {
+    display?: { preview?: boolean };
+    width?: {
+      '1200px'?: boolean;
     };
   };
   values?: {
+    education?: FormEducationPropsObjectGroup;
+    experience?: FormExperiencePropsObjectGroup;
     personal?: {
       first?: string;
       last?: string;
@@ -36,13 +24,31 @@ interface ResumeProps {
       about?: string;
       skills?: string;
     };
-    experience?: FormExperiencePropsObjectGroup;
-    education?: FormEducationPropsObjectGroup;
+  };
+  rtlTestID?: {
+    btn?: {
+      education?: string;
+      experience?: string;
+    };
+    mobile?: string;
+    form?: string;
+    preview?: string;
+    section?: {
+      form?: string;
+    };
   };
 }
 
 interface ResumeStateProps {
+  mobile?: {
+    display?: { preview?: boolean };
+    width?: {
+      '1200px'?: boolean;
+    };
+  };
   values?: {
+    education?: FormEducationPropsObjectGroup;
+    experience?: FormExperiencePropsObjectGroup;
     personal?: {
       first?: string;
       last?: string;
@@ -56,8 +62,6 @@ interface ResumeStateProps {
       about?: string;
       skills?: string;
     };
-    experience?: FormExperiencePropsObjectGroup;
-    education?: FormEducationPropsObjectGroup;
   };
 }
 

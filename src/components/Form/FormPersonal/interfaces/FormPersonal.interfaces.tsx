@@ -3,16 +3,6 @@
 import { ChangeEvent } from 'react';
 
 interface FormPersonalProps {
-  attrs?: {
-    print?: boolean;
-    rtlTestID?: {
-      btn?: {
-        experience?: string;
-        education?: string;
-      };
-      form?: string;
-    };
-  };
   fns?: {
     updateValuesPersonal?: (
       event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
@@ -31,6 +21,18 @@ interface FormPersonalProps {
     linkedin?: string;
     about?: string;
     skills?: string;
+  };
+  rtlTestID?: {
+    btn?: {
+      education?: string;
+      experience?: string;
+    };
+    mobile?: string;
+    form?: string;
+    preview?: string;
+    section?: {
+      form?: string;
+    };
   };
 }
 

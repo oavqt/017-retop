@@ -2,13 +2,15 @@ import { PreviewEducationPropsObjectGroup } from '../PreviewEducation/interfaces
 import { PreviewExperiencePropsObjectGroup } from '../PreviewExperience/interfaces/PreviewExperience.interfaces';
 
 interface PreviewProps {
-  attrs?: {
-    print?: boolean;
-    rtlTestID?: {
-      preview?: string;
+  mobile?: {
+    display?: { preview?: boolean };
+    width?: {
+      '1200px'?: boolean;
     };
   };
   values?: {
+    education?: PreviewEducationPropsObjectGroup;
+    experience?: PreviewExperiencePropsObjectGroup;
     personal?: {
       first?: string;
       last?: string;
@@ -22,16 +24,38 @@ interface PreviewProps {
       about?: string;
       skills?: string;
     };
-    experience?: PreviewExperiencePropsObjectGroup;
-    education?: PreviewEducationPropsObjectGroup;
+  };
+  rtlTestID?: {
+    btn?: {
+      education?: string;
+      experience?: string;
+    };
+    mobile?: string;
+    form?: string;
+    preview?: string;
+    section?: {
+      form?: string;
+    };
   };
 }
 
 interface PreviewStyledProps {
-  attrs?: {
-    print?: boolean;
-    rtlTestID?: {
-      preview?: string;
+  mobile?: {
+    display?: { preview?: boolean };
+    width?: {
+      '1200px'?: boolean;
+    };
+  };
+  rtlTestID?: {
+    btn?: {
+      education?: string;
+      experience?: string;
+    };
+    mobile?: string;
+    form?: string;
+    preview?: string;
+    section?: {
+      form?: string;
     };
   };
 }

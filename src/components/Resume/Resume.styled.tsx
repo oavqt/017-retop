@@ -6,6 +6,7 @@ const ResumeStyled = styled.main`
   height: 100%;
   justify-content: center;
   padding: 1em;
+  position: relative;
   width: 100%;
 `;
 

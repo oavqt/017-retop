@@ -35,7 +35,10 @@ class Preview extends Component<PreviewProps> {
     };
 
     return (
-      <PreviewStyled attrs={{ ...this.props.attrs }}>
+      <PreviewStyled
+        mobile={{ ...this.props.mobile }}
+        rtlTestID={{ ...this.props.rtlTestID }}
+      >
         <Div
           styled={{
             display: 'grid',

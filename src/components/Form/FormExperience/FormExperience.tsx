@@ -16,7 +16,6 @@ class FormExperience extends Component<FormExperienceProps> {
       (object, index) => {
         return (
           <FormExperienceGroup
-            attrs={{ ...this.props.attrs }}
             fns={{
               updateGroupRemoveObject: this.props.fns?.updateGroupRemoveObject,
               updateValuesGroupObject: this.props.fns?.updateValuesGroupObject
@@ -25,6 +24,7 @@ class FormExperience extends Component<FormExperienceProps> {
             key={index}
             position={index}
             value={{ ...object }}
+            rtlTestID={{ ...this.props.rtlTestID }}
           />
         );
       }

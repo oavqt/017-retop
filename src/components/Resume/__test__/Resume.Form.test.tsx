@@ -5,6 +5,20 @@ import Resume from '../Resume';
 import userEvent from '@testing-library/user-event';
 
 describe('Form component', () => {
+  beforeEach(() => {
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn((query) => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn()
+      }))
+    });
+  });
+
   afterEach(cleanup);
 
   const inptTextTest = (
@@ -309,11 +323,7 @@ describe('Form component', () => {
 
       test('expect FormExperienceGroup ButtonRemove to remove all FormExperienceGroups', () => {
         render(
-          <Resume
-            form={{
-              attrs: { rtlTestID: { btn: { experience: 'btn--experience' } } }
-            }}
-          />
+          <Resume rtlTestID={{ btn: { experience: 'btn--experience' } }} />
         );
 
         const expButtonAdd = screen.getByText('add experience');
@@ -335,11 +345,7 @@ describe('Form component', () => {
 
       test('expect FormExperienceGroup ButtonRemove to remove a FormExperienceGroup', () => {
         render(
-          <Resume
-            form={{
-              attrs: { rtlTestID: { btn: { experience: 'btn--experience' } } }
-            }}
-          />
+          <Resume rtlTestID={{ btn: { experience: 'btn--experience' } }} />
         );
 
         const expButtonAdd = screen.getByText('add experience');
@@ -396,13 +402,7 @@ describe('Form component', () => {
       });
 
       test('expect FormEducationGroup ButtonRemove to remove all FormEducationGroups', () => {
-        render(
-          <Resume
-            form={{
-              attrs: { rtlTestID: { btn: { education: 'btn--education' } } }
-            }}
-          />
-        );
+        render(<Resume rtlTestID={{ btn: { education: 'btn--education' } }} />);
 
         const eduButtonAdd = screen.getByText('add education');
 
@@ -422,13 +422,7 @@ describe('Form component', () => {
       });
 
       test('expect FormEducationGroup ButtonRemove to remove a FormEducationGroup', () => {
-        render(
-          <Resume
-            form={{
-              attrs: { rtlTestID: { btn: { education: 'btn--education' } } }
-            }}
-          />
-        );
+        render(<Resume rtlTestID={{ btn: { education: 'btn--education' } }} />);
 
         const eduButtonAdd = screen.getByText('add education');
 

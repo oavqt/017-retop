@@ -3,8 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 const styled = { createGlobalStyle };
 
 const Styled = styled.createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
   body {
     font-family: 'Poppins', sans-serif;
   }
@@ -15,31 +13,61 @@ const Styled = styled.createGlobalStyle`
   }
 
   @media print {
-    body {
-      -webkit-print-color-adjust: exact !important;
+    @page {
+      margin: 5mm;
+      size: auto;
     }
 
-    .root > div {
-      height: 100%;
+    body {
+      -webkit-print-color-adjust: exact !important;
     }
 
     main {
       padding: 0 !important;
     }
 
-    main > section:first-of-type,
+    main > section:nth-of-type(1),
+    main > section:nth-of-type(2),
     main > footer {
       display: none !important;
     }
 
-    main section:nth-of-type(2) {
+    main section:nth-of-type(3) {
+      display: block !important;
       overflow-y: unset;
     }
   }
 
-  @page {
-    margin: 5mm;
-    size: auto;
+  @media screen and (max-width: 1200px) {
+    main > section:nth-of-type(1) {
+      display: block;
+    }
+
+    main > section:nth-of-type(2) {
+      width: 100%;
+    }
+
+    main > section:nth-of-type(2) {
+      width: 100%;
+    }
+
+    main > section:nth-of-type(3) {
+      display: none;
+    }
+
+    main > footer {
+      left: 0;
+      position: absolute;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    main > header {
+      display: none !important;
+    }
+    main > footer {
+      display: none !important;
+    }
   }
 `;
 

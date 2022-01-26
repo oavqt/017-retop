@@ -3,16 +3,6 @@
 import { ChangeEvent } from 'react';
 
 interface FormEducationGroupProps {
-  attrs?: {
-    print?: boolean;
-    rtlTestID?: {
-      btn?: {
-        experience?: string;
-        education?: string;
-      };
-      form?: string;
-    };
-  };
   fns?: {
     updateGroupRemoveObject?: (nameOfGroup: string, position: number) => void;
 
@@ -29,6 +19,18 @@ interface FormEducationGroupProps {
     degree?: string;
     date?: string;
     description?: string;
+  };
+  rtlTestID?: {
+    btn?: {
+      education?: string;
+      experience?: string;
+    };
+    mobile?: string;
+    form?: string;
+    preview?: string;
+    section?: {
+      form?: string;
+    };
   };
 }
 

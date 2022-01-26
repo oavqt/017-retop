@@ -61,12 +61,15 @@ class FormEducationGroup extends Component<FormEducationGroupProps> {
         <ButtonRemove
           attrs={{
             type: 'button',
-            value: 'remove',
-            rtlTestID: { btn: this.props.attrs?.rtlTestID?.btn?.education }
+            value: 'remove'
           }}
           event={{ btnRemoveEvent }}
           group={this.props.group}
           position={this.props.position}
+          rtlTestID={{
+            ...this.props.rtlTestID,
+            ...{ btn: { remove: 'btn--education' } }
+          }}
         >
           delete
         </ButtonRemove>

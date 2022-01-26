@@ -15,7 +15,6 @@ class FormEducation extends Component<FormEducationProps> {
       (object, index) => {
         return (
           <FormEducationGroup
-            attrs={{ ...this.props.attrs }}
             fns={{
               updateGroupRemoveObject: this.props.fns?.updateGroupRemoveObject,
               updateValuesGroupObject: this.props.fns?.updateValuesGroupObject
@@ -24,6 +23,7 @@ class FormEducation extends Component<FormEducationProps> {
             key={index}
             position={index}
             value={{ ...object }}
+            rtlTestID={{ ...this.props.rtlTestID }}
           />
         );
       }

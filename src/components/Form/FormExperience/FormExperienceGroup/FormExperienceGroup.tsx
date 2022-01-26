@@ -65,12 +65,15 @@ class FormExperienceGroup extends Component<FormExperienceGroupProps> {
         <ButtonRemove
           attrs={{
             type: 'button',
-            value: 'remove',
-            rtlTestID: { btn: this.props.attrs?.rtlTestID?.btn?.experience }
+            value: 'remove'
           }}
           event={{ btnRemoveEvent }}
           group={this.props.group}
           position={this.props.position}
+          rtlTestID={{
+            ...this.props.rtlTestID,
+            ...{ btn: { remove: 'btn--experience' } }
+          }}
         >
           delete
         </ButtonRemove>

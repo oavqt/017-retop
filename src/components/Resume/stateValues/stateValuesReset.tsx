@@ -1,7 +1,7 @@
 import { FormExperienceEducationPropsObjectArray } from '../../Form/interfaces/Form.interfaces';
-import State from './interfaces/state.interfaces';
+import State from './interfaces/stateValuesReset.interfaces';
 
-const stateReset = (
+const stateValuesReset = (
   numberOfExpGroups: number,
   numberOfEduGroups: number
 ): State => {
@@ -25,28 +25,26 @@ const stateReset = (
     });
 
   return {
-    values: {
-      personal: {
-        first: '',
-        last: '',
-        title: '',
-        photo: '',
-        phone: '',
-        email: '',
-        website: '',
-        github: '',
-        linkedin: '',
-        about: '',
-        skills: ''
-      },
-      experience: {
-        group: expGroups
-      },
-      education: {
-        group: eduGroups
-      }
+    education: {
+      group: eduGroups
+    },
+    experience: {
+      group: expGroups
+    },
+    personal: {
+      first: '',
+      last: '',
+      title: '',
+      photo: '',
+      phone: '',
+      email: '',
+      website: '',
+      github: '',
+      linkedin: '',
+      about: '',
+      skills: ''
     }
   };
 };
 
-export default stateReset;
+export default stateValuesReset;

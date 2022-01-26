@@ -14,6 +14,7 @@ class ButtonRemove extends Button {
             this.props.position ?? 0
           )
         }
+        rtlTestID={{ ...this.props.rtlTestID }}
       >
         {this.props.children}
       </ButtonRemoveStyled>

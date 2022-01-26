@@ -5,7 +5,11 @@ import SectionStyled from './Section.styled';
 class Section extends Component<SectionProps> {
   render(): ReactNode {
     return (
-      <SectionStyled styled={{ ...this.props.styled }}>
+      <SectionStyled
+        mobile={{ ...this.props.mobile }}
+        styled={{ ...this.props.styled }}
+        rtlTestID={{ ...this.props.rtlTestID }}
+      >
         {this.props.children}
       </SectionStyled>
     );
