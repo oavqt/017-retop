@@ -14,16 +14,13 @@ const Styled = styled.createGlobalStyle`
 
   @media print {
     @page {
-      margin: 5mm;
+      margin: 0mm;
       size: auto;
     }
 
     body {
       -webkit-print-color-adjust: exact !important;
-    }
-
-    main {
-      padding: 0 !important;
+      color-adjust: exact !important;
     }
 
     main > section:nth-of-type(1),
