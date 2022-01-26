@@ -34,11 +34,11 @@ describe('PreviewPersonalSide', () => {
 
   test('expect a PreviewPersonalSide component to be created with p tags that match the phone, email, website, github, and linkedin props', () => {
     const previewPerSideProps = {
-      phone: 'i hecking love emma watson --p1',
-      email: 'i hecking love emma watson --p2',
-      website: 'i hecking love emma watson --p3',
-      github: 'i hecking love emma watson --p4',
-      linkedin: 'i hecking love emma watson --p5'
+      phone: 'dieu te bénisse --p1',
+      email: 'dieu te bénisse --p2',
+      website: 'dieu te bénisse --p3',
+      github: 'dieu te bénisse --p4',
+      linkedin: 'dieu te bénisse --p5'
     };
 
     previewPerSideTest(previewPerSideProps);

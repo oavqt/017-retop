@@ -107,8 +107,8 @@ describe('Form component', () => {
     ];
     const inptTextCommon = [inptDate, inptDescription];
 
-    inptTextTest(inptTextUnique, 'i hecking love emma watson');
-    inptGroupTextTest(inptTextCommon, 'i hecking love emma watson', 2);
+    inptTextTest(inptTextUnique, 'dieu te bénisse');
+    inptGroupTextTest(inptTextCommon, 'dieu te bénisse', 2);
 
     const buttonReset = screen.getByText('reset');
 
@@ -149,8 +149,8 @@ describe('Form component', () => {
     ];
     const inptTextCommon = [inptDate, inptDescription];
 
-    inptGroupTextTest(inptTextUnique, 'i hecking love emma watson', 4);
-    inptGroupTextTest(inptTextCommon, 'i hecking love emma watson', 8);
+    inptGroupTextTest(inptTextUnique, 'dieu te bénisse', 4);
+    inptGroupTextTest(inptTextCommon, 'dieu te bénisse', 8);
 
     const buttonReset = screen.getByText('reset');
 
@@ -211,27 +211,27 @@ describe('Form component', () => {
     userEvent.click(buttonExample);
 
     inptTextUnique.forEach((inputText) =>
-      expect(inputText).toHaveValue('i hecking love emma watson')
+      expect(inputText).toHaveValue('dieu te bénisse')
     );
 
     inptTextCommon.forEach((inputGroup) =>
       inputGroup.forEach((inputText) =>
-        expect(inputText).toHaveValue('i hecking love emma watson')
+        expect(inputText).toHaveValue('dieu te bénisse')
       )
     );
 
     inptDescription.forEach((inputText) =>
       expect(inputText).toHaveValue(
-        'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+        'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
       )
     );
 
     expect(inptAbout).toHaveValue(
-      'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+      'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse '
     );
 
     expect(inptSkills).toHaveValue(
-      'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+      'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
     );
   });
 
@@ -263,7 +263,7 @@ describe('Form component', () => {
         inptSkills
       ];
 
-      inptTextTest(inptTextUnique, 'i hecking love emma watson');
+      inptTextTest(inptTextUnique, 'dieu te bénisse');
     });
   });
 
@@ -317,8 +317,8 @@ describe('Form component', () => {
         const inptTextUnique = [inptPosition, inptCompany];
         const inptTextCommon = [inptDate, inptDescription];
 
-        inptGroupTextTest(inptTextUnique, 'i hecking love emma watson', 5);
-        inptGroupTextTest(inptTextCommon, 'i hecking love emma watson', 6);
+        inptGroupTextTest(inptTextUnique, 'dieu te bénisse', 5);
+        inptGroupTextTest(inptTextCommon, 'dieu te bénisse', 6);
       });
 
       test('expect FormExperienceGroup ButtonRemove to remove all FormExperienceGroups', () => {
@@ -356,14 +356,14 @@ describe('Form component', () => {
 
         const inptTextUnique = [inptPosition];
 
-        inptGroupTextTest(inptTextUnique, 'i hecking love emma watson', 5);
+        inptGroupTextTest(inptTextUnique, 'dieu te bénisse', 5);
 
         expect(inptTextUnique[0][2]).toHaveValue(
-          'i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, '
+          'dieu te bénisse, dieu te bénisse, dieu te bénisse, '
         );
 
         expect(inptTextUnique[0][3]).toHaveValue(
-          'i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, '
+          'dieu te bénisse, dieu te bénisse, dieu te bénisse, dieu te bénisse, '
         );
 
         const expButtonRemove = screen.queryAllByTestId('btn--experience');
@@ -371,11 +371,11 @@ describe('Form component', () => {
         userEvent.click(expButtonRemove[2]);
 
         expect(inptTextUnique[0][2]).not.toHaveValue(
-          'i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, '
+          'dieu te bénisse, dieu te bénisse, dieu te bénisse, '
         );
 
         expect(inptTextUnique[0][2]).toHaveValue(
-          'i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, '
+          'dieu te bénisse, dieu te bénisse, dieu te bénisse, dieu te bénisse, '
         );
       });
     });
@@ -397,8 +397,8 @@ describe('Form component', () => {
         const inptTextUnique = [inptUniversity, inptDegree];
         const inptTextCommon = [inptDate, inptDescription];
 
-        inptGroupTextTest(inptTextUnique, 'i hecking love emma watson', 5);
-        inptGroupTextTest(inptTextCommon, 'i hecking love emma watson', 6);
+        inptGroupTextTest(inptTextUnique, 'dieu te bénisse', 5);
+        inptGroupTextTest(inptTextCommon, 'dieu te bénisse', 6);
       });
 
       test('expect FormEducationGroup ButtonRemove to remove all FormEducationGroups', () => {
@@ -432,14 +432,14 @@ describe('Form component', () => {
 
         const inptTextUnique = [inptUniversity];
 
-        inptGroupTextTest(inptTextUnique, 'i hecking love emma watson', 5);
+        inptGroupTextTest(inptTextUnique, 'dieu te bénisse', 5);
 
         expect(inptTextUnique[0][2]).toHaveValue(
-          'i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, '
+          'dieu te bénisse, dieu te bénisse, dieu te bénisse, '
         );
 
         expect(inptTextUnique[0][3]).toHaveValue(
-          'i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, '
+          'dieu te bénisse, dieu te bénisse, dieu te bénisse, dieu te bénisse, '
         );
 
         const eduButtonRemove = screen.queryAllByTestId('btn--education');
@@ -447,11 +447,11 @@ describe('Form component', () => {
         userEvent.click(eduButtonRemove[2]);
 
         expect(inptTextUnique[0][2]).not.toHaveValue(
-          'i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, '
+          'dieu te bénisse, dieu te bénisse, dieu te bénisse, '
         );
 
         expect(inptTextUnique[0][2]).toHaveValue(
-          'i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, i hecking love emma watson, '
+          'dieu te bénisse, dieu te bénisse, dieu te bénisse, dieu te bénisse, '
         );
       });
     });

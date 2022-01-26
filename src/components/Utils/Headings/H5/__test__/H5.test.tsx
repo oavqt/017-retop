@@ -13,8 +13,7 @@ describe('H5 component', () => {
   });
 
   test('expect a H5 component to be created containing passed in string', () => {
-    const heading5String = 'i hecking love emma watson';
-
+    const heading5String = 'dieu te bénisse';
     h5StringTest(heading5String);
 
     const heading5 = screen.getByRole('heading');

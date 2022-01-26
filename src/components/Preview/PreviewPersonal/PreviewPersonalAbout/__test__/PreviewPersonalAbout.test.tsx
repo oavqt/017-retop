@@ -18,29 +18,23 @@ describe('PreviewPersonalAbout', () => {
 
   test('expect a PreviewPersonalAbout component to be created with a Paragraph component that matches the about prop value', () => {
     const prevPerAboutProp = {
-      about: 'i hecking love emma watson --about',
-      skills: 'i hecking love emma watson --skills'
+      about: 'dieu te bénisse --about',
+      skills: 'dieu te bénisse --skills'
     };
 
     prevPerAboutParagraphTest(prevPerAboutProp);
 
-    const prevPerAboutParagraph = screen.getByText(
-      'i hecking love emma watson --about'
-    );
+    const prevPerAboutParagraph = screen.getByText('dieu te bénisse --about');
 
-    const prevPerSkillsParagraph = screen.getByText(
-      'i hecking love emma watson --skills'
-    );
+    const prevPerSkillsParagraph = screen.getByText('dieu te bénisse --skills');
 
     expect(prevPerAboutParagraph).toBeInTheDocument();
-    expect(prevPerAboutParagraph).toHaveTextContent(
-      'i hecking love emma watson --about'
-    );
+    expect(prevPerAboutParagraph).toHaveTextContent('dieu te bénisse --about');
     expect(prevPerAboutParagraph.tagName).toBe('P');
 
     expect(prevPerSkillsParagraph).toBeInTheDocument();
     expect(prevPerSkillsParagraph).toHaveTextContent(
-      'i hecking love emma watson --skills'
+      'dieu te bénisse --skills'
     );
     expect(prevPerSkillsParagraph.tagName).toBe('P');
   });

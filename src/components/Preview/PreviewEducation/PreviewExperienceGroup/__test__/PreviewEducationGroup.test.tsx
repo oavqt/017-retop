@@ -16,10 +16,10 @@ describe('PreviewEducationGroup component', () => {
 
   test('expect a PreviewEducationGroup to be created with properties passed in set as p, h4, h5, and p tags', () => {
     const eduPropGroup = {
-      university: 'i hecking love emma watson --h4',
-      degree: 'i hecking love emma watson --h5',
-      date: 'i hecking love emma watson --date',
-      description: 'i hecking love emma watson --description'
+      university: 'dieu te bénisse --h4',
+      degree: 'dieu te bénisse --h5',
+      date: 'dieu te bénisse --date',
+      description: 'dieu te bénisse --description'
     };
 
     previewEduGroupPropsTest(eduPropGroup);

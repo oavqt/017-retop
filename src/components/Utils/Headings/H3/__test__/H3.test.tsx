@@ -13,8 +13,7 @@ describe('H3 component', () => {
   });
 
   test('expect a H3 component to be created containing passed in string', () => {
-    const heading3String = 'i hecking love emma watson';
-
+    const heading3String = 'dieu te bénisse';
     h3StringTest(heading3String);
 
     const heading3 = screen.getByRole('heading');

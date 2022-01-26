@@ -14,8 +14,7 @@ describe('Section component', () => {
   });
 
   test('expect a Section component to be created containing passed in string', () => {
-    const sectionString = 'i hecking love emma watson';
-
+    const sectionString = 'dieu te bénisse';
     sectionStringTest(sectionString);
 
     const section = screen.getByText(sectionString);

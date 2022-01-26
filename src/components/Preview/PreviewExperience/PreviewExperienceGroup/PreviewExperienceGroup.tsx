@@ -13,7 +13,7 @@ class PreviewExperienceGroup extends Component<PreviewExperienceGroupProps> {
   render(): ReactNode {
     return (
       <PreviewExperienceGroupStyled>
-        <Div styled={{ display: 'flex' }}>
+        <Div styled={{ display: 'flex', gap: '1em' }}>
           <Div>
             <Paragraph>{this.props.value?.date}</Paragraph>
           </Div>

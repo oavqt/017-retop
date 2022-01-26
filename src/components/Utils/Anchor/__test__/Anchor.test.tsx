@@ -16,8 +16,7 @@ describe('Anchor component', () => {
   });
 
   test('expect a Anchor component to be created containing passed in string', () => {
-    const anchorString = 'i hecking love emma watson';
-
+    const anchorString = 'dieu te bénisse';
     anchorStringTest(anchorString);
 
     const anchor = screen.getByText(anchorString);

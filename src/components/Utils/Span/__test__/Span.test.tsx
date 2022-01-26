@@ -13,8 +13,7 @@ describe('Span component', () => {
   });
 
   test('expect a Span component to be created containing passed in string', () => {
-    const spanString = 'i hecking love emma watson';
-
+    const spanString = 'dieu te bénisse';
     spanStringTest(spanString);
 
     const span = screen.getByText(spanString);

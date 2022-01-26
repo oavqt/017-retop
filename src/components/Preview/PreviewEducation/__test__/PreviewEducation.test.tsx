@@ -18,34 +18,32 @@ describe('PreviewEducation', () => {
     const eduPropGroup = {
       group: [
         {
-          university: 'i hecking love emma watson',
-          degree: 'i hecking love emma watson',
-          date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          university: 'dieu te bénisse',
+          degree: 'dieu te bénisse',
+          date: 'dieu te bénisse',
+          description: 'dieu te bénisse'
         },
         {
-          university: 'i hecking love emma watson',
-          degree: 'i hecking love emma watson',
-          date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          university: 'dieu te bénisse',
+          degree: 'dieu te bénisse',
+          date: 'dieu te bénisse',
+          description: 'dieu te bénisse'
         },
         {
-          university: 'i hecking love emma watson',
-          degree: 'i hecking love emma watson',
-          date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          university: 'dieu te bénisse',
+          degree: 'dieu te bénisse',
+          date: 'dieu te bénisse',
+          description: 'dieu te bénisse'
         }
       ]
     };
 
     previewEduMapTest(eduPropGroup);
 
-    const eduHeadings4 = screen.getAllByText('i hecking love emma watson');
-    const eduHeadings5 = screen.getAllByText('i hecking love emma watson');
-    const eduParagraphDate = screen.getAllByText('i hecking love emma watson');
-    const eduParagraphDescription = screen.getAllByText(
-      'i hecking love emma watson'
-    );
+    const eduHeadings4 = screen.getAllByText('dieu te bénisse');
+    const eduHeadings5 = screen.getAllByText('dieu te bénisse');
+    const eduParagraphDate = screen.getAllByText('dieu te bénisse');
+    const eduParagraphDescription = screen.getAllByText('dieu te bénisse');
 
     const eduGroupElements = [
       eduHeadings4,

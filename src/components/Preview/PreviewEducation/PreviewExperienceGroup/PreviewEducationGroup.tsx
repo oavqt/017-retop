@@ -13,7 +13,7 @@ class PreviewEducationGroup extends Component<PreviewEducationGroupProps> {
   render(): ReactNode {
     return (
       <PreviewEducationGroupStyled>
-        <Div styled={{ display: 'flex' }}>
+        <Div styled={{ display: 'flex', gap: '1em' }}>
           <Div>
             <Paragraph>{this.props.value?.date}</Paragraph>
           </Div>

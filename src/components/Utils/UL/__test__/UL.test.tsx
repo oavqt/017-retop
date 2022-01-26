@@ -14,12 +14,12 @@ describe('UL component', () => {
   });
 
   test('expect a UL component to be created containing passed in string', () => {
-    const listItem = <li>i hecking love emma watson</li>;
+    const listItem = <li>dieu te bénisse</li>;
 
     listItemTest(listItem);
 
     const li = screen.getByRole('listitem');
 
-    expect(li).toHaveTextContent('i hecking love emma watson');
+    expect(li).toHaveTextContent('dieu te bénisse');
   });
 });

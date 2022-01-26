@@ -14,8 +14,7 @@ describe('Article component', () => {
   });
 
   test('expect a Article component to be created containing passed in string', () => {
-    const articleString = 'i hecking love emma watson';
-
+    const articleString = 'dieu te bénisse';
     articleStringTest(articleString);
 
     const article = screen.getByText(articleString);

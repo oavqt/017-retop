@@ -16,10 +16,10 @@ describe('PreviewExperienceGroup component', () => {
 
   test('expect a PreviewExperienceGroup to be created with properties passed in set as p, h4, h5, and p tags', () => {
     const expPropGroup = {
-      position: 'i hecking love emma watson --h4',
-      company: 'i hecking love emma watson --h5',
-      date: 'i hecking love emma watson --date',
-      description: 'i hecking love emma watson --description'
+      position: 'dieu te bénisse --h4',
+      company: 'dieu te bénisse --h5',
+      date: 'dieu te bénisse --date',
+      description: 'dieu te bénisse --description'
     };
 
     previewExpGroupPropsTest(expPropGroup);

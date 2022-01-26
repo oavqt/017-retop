@@ -23,22 +23,22 @@ describe('FormEducation component', () => {
   test('expect the FormEducation component to map the experience props array and create FormEducationGroup components', () => {
     const eduPropGroup = [
       {
-        university: 'i hecking love emma watson',
-        degree: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
-        description: 'i hecking love emma watson'
+        university: 'dieu te bénisse',
+        degree: 'dieu te bénisse',
+        date: 'dieu te bénisse',
+        description: 'dieu te bénisse'
       },
       {
-        university: 'i hecking love emma watson',
-        degree: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
-        description: 'i hecking love emma watson'
+        university: 'dieu te bénisse',
+        degree: 'dieu te bénisse',
+        date: 'dieu te bénisse',
+        description: 'dieu te bénisse'
       },
       {
-        university: 'i hecking love emma watson',
-        degree: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
-        description: 'i hecking love emma watson'
+        university: 'dieu te bénisse',
+        degree: 'dieu te bénisse',
+        date: 'dieu te bénisse',
+        description: 'dieu te bénisse'
       }
     ];
 

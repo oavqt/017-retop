@@ -5,53 +5,53 @@ const stateValuesExample = (): StateValuesExample => ({
   education: {
     group: [
       {
-        university: 'i hecking love emma watson',
-        degree: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
+        university: 'dieu te bénisse',
+        degree: 'dieu te bénisse',
+        date: 'dieu te bénisse',
         description:
-          'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+          'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
       }
     ]
   },
   experience: {
     group: [
       {
-        position: 'i hecking love emma watson',
-        company: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
+        position: 'dieu te bénisse',
+        company: 'dieu te bénisse',
+        date: 'dieu te bénisse',
         description:
-          'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+          'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
       },
       {
-        position: 'i hecking love emma watson',
-        company: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
+        position: 'dieu te bénisse',
+        company: 'dieu te bénisse',
+        date: 'dieu te bénisse',
         description:
-          'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+          'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
       },
       {
-        position: 'i hecking love emma watson',
-        company: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
+        position: 'dieu te bénisse',
+        company: 'dieu te bénisse',
+        date: 'dieu te bénisse',
         description:
-          'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+          'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
       }
     ]
   },
   personal: {
-    first: 'i hecking love emma watson',
-    last: 'i hecking love emma watson',
-    title: 'i hecking love emma watson',
+    first: 'dieu te bénisse',
+    last: 'dieu te bénisse',
+    title: 'dieu te bénisse',
     photo: vlogo2,
-    phone: 'i hecking love emma watson',
-    email: 'i hecking love emma watson',
-    website: 'i hecking love emma watson',
-    github: 'i hecking love emma watson',
-    linkedin: 'i hecking love emma watson',
+    phone: 'dieu te bénisse',
+    email: 'dieu te bénisse',
+    website: 'dieu te bénisse',
+    github: 'dieu te bénisse',
+    linkedin: 'dieu te bénisse',
     about:
-      'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson',
+      'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse ',
     skills:
-      'i hecking love emma watson i hecking love emma watson i hecking love emma watson i hecking love emma watson'
+      'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
   }
 });
 

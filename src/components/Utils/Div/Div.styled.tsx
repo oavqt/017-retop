@@ -6,6 +6,7 @@ const DivStyled = styled.div<DivStyledProps>`
   color: ${(props) => props.styled?.color};
   display: ${(props) => props.styled?.display};
   font-size: ${(props) => props.styled?.['font-size']};
+  gap: ${(props) => props.styled?.gap};
   grid-template: ${(props) => props.styled?.['grid-template']};
   height: ${(props) => props.styled?.height};
   justify-content: ${(props) => props.styled?.['justify-content']};

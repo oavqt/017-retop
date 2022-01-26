@@ -4,6 +4,7 @@ interface DivProps {
     color?: string;
     display?: string;
     'font-size'?: string;
+    gap?: string;
     ['grid-template']?: string;
     height?: string;
     ['justify-content']?: string;
@@ -20,6 +21,7 @@ interface DivStyledProps {
     color?: string;
     display?: string;
     'font-size'?: string;
+    gap?: string;
     ['grid-template']?: string;
     height?: string;
     ['justify-content']?: string;

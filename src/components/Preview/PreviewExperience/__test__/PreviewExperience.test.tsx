@@ -21,34 +21,32 @@ describe('PreviewExperience', () => {
     const expPropGroup = {
       group: [
         {
-          position: 'i hecking love emma watson',
-          company: 'i hecking love emma watson',
-          date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          position: 'dieu te bénisse',
+          company: 'dieu te bénisse',
+          date: 'dieu te bénisse',
+          description: 'dieu te bénisse'
         },
         {
-          position: 'i hecking love emma watson',
-          company: 'i hecking love emma watson',
-          date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          position: 'dieu te bénisse',
+          company: 'dieu te bénisse',
+          date: 'dieu te bénisse',
+          description: 'dieu te bénisse'
         },
         {
-          position: 'i hecking love emma watson',
-          company: 'i hecking love emma watson',
-          date: 'i hecking love emma watson',
-          description: 'i hecking love emma watson'
+          position: 'dieu te bénisse',
+          company: 'dieu te bénisse',
+          date: 'dieu te bénisse',
+          description: 'dieu te bénisse'
         }
       ]
     };
 
     previewExpMapTest(expPropGroup);
 
-    const expHeadings4 = screen.getAllByText('i hecking love emma watson');
-    const expHeadings5 = screen.getAllByText('i hecking love emma watson');
-    const expParagraphDate = screen.getAllByText('i hecking love emma watson');
-    const expParagraphDescription = screen.getAllByText(
-      'i hecking love emma watson'
-    );
+    const expHeadings4 = screen.getAllByText('dieu te bénisse');
+    const expHeadings5 = screen.getAllByText('dieu te bénisse');
+    const expParagraphDate = screen.getAllByText('dieu te bénisse');
+    const expParagraphDescription = screen.getAllByText('dieu te bénisse');
 
     const expGroupElements = [
       expHeadings4,

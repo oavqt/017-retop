@@ -13,12 +13,11 @@ describe('LI component', () => {
   });
 
   test('expect a LI component to be created containing passed in string', () => {
-    const listItemString = 'i hecking love emma watson';
-
+    const listItemString = 'dieu te bénisse';
     listItemStringTest(listItemString);
 
     const li = screen.getByText(listItemString);
 
-    expect(li).toHaveTextContent('i hecking love emma watson');
+    expect(li).toHaveTextContent('dieu te bénisse');
   });
 });

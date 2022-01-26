@@ -13,8 +13,7 @@ describe('H2 component', () => {
   });
 
   test('expect a H2 component to be created containing passed in string', () => {
-    const heading2String = 'i hecking love emma watson';
-
+    const heading2String = 'dieu te bénisse';
     h2StringTest(heading2String);
 
     const heading2 = screen.getByRole('heading');

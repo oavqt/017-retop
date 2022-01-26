@@ -23,22 +23,22 @@ describe('FormExperience component', () => {
   test('expect the FormExperience component to map the experience props array and create FormExperienceGroup components', () => {
     const expPropGroup = [
       {
-        position: 'i hecking love emma watson',
-        company: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
-        description: 'i hecking love emma watson'
+        position: 'dieu te bénisse',
+        company: 'dieu te bénisse',
+        date: 'dieu te bénisse',
+        description: 'dieu te bénisse'
       },
       {
-        position: 'i hecking love emma watson',
-        company: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
-        description: 'i hecking love emma watson'
+        position: 'dieu te bénisse',
+        company: 'dieu te bénisse',
+        date: 'dieu te bénisse',
+        description: 'dieu te bénisse'
       },
       {
-        position: 'i hecking love emma watson',
-        company: 'i hecking love emma watson',
-        date: 'i hecking love emma watson',
-        description: 'i hecking love emma watson'
+        position: 'dieu te bénisse',
+        company: 'dieu te bénisse',
+        date: 'dieu te bénisse',
+        description: 'dieu te bénisse'
       }
     ];
 

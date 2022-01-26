@@ -13,8 +13,7 @@ describe('Div component', () => {
   });
 
   test('expect a Div component to be created containing passed in string', () => {
-    const divString = 'i hecking love emma watson';
-
+    const divString = 'dieu te bénisse';
     divStringTest(divString);
 
     const div = screen.getByText(divString);

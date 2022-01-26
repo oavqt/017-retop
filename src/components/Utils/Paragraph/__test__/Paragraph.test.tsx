@@ -14,8 +14,7 @@ describe('Paragraph component', () => {
   });
 
   test('expect a Paragraph component to be created containing passed in string', () => {
-    const paragraphString = 'i hecking love emma watson';
-
+    const paragraphString = 'dieu te bénisse';
     paragraphStringTest(paragraphString);
 
     const paragraph = screen.getByText(paragraphString);

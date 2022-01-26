@@ -44,7 +44,7 @@ describe('InputFile component', () => {
       'placeholder'
     ) as HTMLInputElement;
 
-    const pngFile = new File(['batchest'], 'i hecking love emma watson', {
+    const pngFile = new File(['merci'], 'dieu te bénisse', {
       type: 'image/png'
     });
 
@@ -53,7 +53,7 @@ describe('InputFile component', () => {
     expect(inputFile.files).toHaveLength(1);
     expect(inputFile.files?.[0]).toStrictEqual(pngFile);
 
-    const jpegFile = new File(['batchest'], 'i hecking love emma watson', {
+    const jpegFile = new File(['merci'], 'dieu te bénisse', {
       type: 'image/jpeg'
     });
 

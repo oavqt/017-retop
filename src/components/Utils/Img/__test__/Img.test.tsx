@@ -15,8 +15,8 @@ describe('Img component', () => {
 
   test('expect a Img component to be created containing passed in props', () => {
     const imgProps = {
-      alt: 'i hecking love emma watson',
-      src: 'i hecking love emma watson'
+      alt: 'dieu te bénisse',
+      src: 'dieu te bénisse'
     };
 
     imgPropsTest(imgProps);

@@ -13,8 +13,7 @@ describe('H1 component', () => {
   });
 
   test('expect a H1 component to be created containing passed in string', () => {
-    const heading1String = 'i hecking love emma watson';
-
+    const heading1String = 'dieu te bénisse';
     h1StringTest(heading1String);
 
     const heading1 = screen.getByRole('heading');
