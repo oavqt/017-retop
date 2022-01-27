@@ -4,12 +4,10 @@ import ButtonStyled from '../Button.styled';
 const ButtonExpandStyled = styled(ButtonStyled)`
   align-self: center;
   background: #f6bd60;
-  border-bottom-right-radius: unset;
-  border-top-left-radius: unset;
-  border-top-right-radius: unset;
+  border-radius: unset;
   color: #fff;
   margin: 0;
-  width: 5em;
+  width: 8em;
 `;
 
 export default ButtonExpandStyled;

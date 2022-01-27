@@ -14,13 +14,17 @@ const Styled = styled.createGlobalStyle`
 
   @media print {
     @page {
-      margin: 0mm;
+      margin: 0mm !important;
       size: auto;
     }
 
     body {
       -webkit-print-color-adjust: exact !important;
       color-adjust: exact !important;
+    }
+
+    .root > div {
+      width: 100%;
     }
 
     main > section:nth-of-type(1),
@@ -62,6 +66,7 @@ const Styled = styled.createGlobalStyle`
     main > header {
       display: none !important;
     }
+
     main > footer {
       display: none !important;
     }

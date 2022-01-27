@@ -13,7 +13,7 @@ class PreviewPersonalSide extends Component<PreviewPersonalSideProps> {
     return (
       <PreviewPersonalSideStyled>
         <Article>
-          <Div styled={{ padding: '.5em' }}>
+          <Div styled={{ padding: '0 .5em' }}>
             <Img
               attrs={{ src: this.props.personal?.photo, alt: '--photo' }}
               styled={{ width: '100%' }}

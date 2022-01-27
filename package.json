@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
     "build-dev": "webpack --config webpack/webpack.dev.js",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "husky": "husky install",
     "husky-lint": "npx lint-staged",
     "husky-test": "jest --passWithNoTests",
